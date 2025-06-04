@@ -15,7 +15,6 @@ const App = () => {
   return (
     <div>
       <HeroSection />
-      <Header />
       <AboutSection />
       <ServicesSection />
       <TeamSection />

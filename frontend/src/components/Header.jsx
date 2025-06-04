@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./Button";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState("Home");

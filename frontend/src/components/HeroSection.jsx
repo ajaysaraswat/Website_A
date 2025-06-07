@@ -180,52 +180,66 @@ import Header from "./Header";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
-      {/* 🔁 Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        src="./video.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      ></video>
+    <section className="relative min-h-screen bg-black font-[Fira_Code] overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          className="w-full h-full object-cover"
+          src="./video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        ></video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black/90"></div>
+      </div>
 
-      {/* ✅ Green Overlay */}
-      <div className="absolute inset-0 bg-green-800/50 z-0 mix-blend-multiply"></div>
+      {/* Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-6 md:px-12">
+        <div className="max-w-4xl text-white text-center space-y-8">
+          {/* Company Name */}
+          <h1 className="text-6xl font-semibold tracking-tight">
+            Instrek Technologies
+          </h1>
 
-      {/* 🎯 Main Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-28 pb-16">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-          Empowering Futures, Engineered Today
-        </h1>
+          {/* Tagline */}
+          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-white/90">
+            Empowering Futures, Engineered Today
+          </h2>
 
-        <p className="text-lg md:text-2xl text-green-100 font-light mb-10 leading-relaxed">
-          Instrek Technologies – Empowering futures with next-gen,
-          purpose-driven tech innovations. We design, build, and deliver
-          solutions that integrate technology with societal impact — across
-          education, smart cities, digital identity, and automation.
-        </p>
+          {/* Description */}
+          <p className="text-[16px] leading-relaxed text-white/70">
+            Instrek Technologies – Empowering futures with next-gen,
+            purpose-driven tech innovations. We design, build, and deliver
+            solutions that integrate technology with societal impact — across
+            education, smart cities, digital identity, and automation.
+          </p>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          <Button
-            size="lg"
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg transition-all duration-300"
-          >
-            Get Started
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-white text-white hover:bg-white hover:text-green-800 px-8 py-4 text-lg transition-all duration-300"
-          >
-            View Portfolio
-          </Button>
+          {/* Call to Action */}
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
+            <Button className="bg-white text-black px-6 py-3 text-[16px]">
+              Get Started
+            </Button>
+            {/* <Button
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-black px-6 py-3 text-[16px]"
+            >
+              View Portfolio
+            </Button> */}
+          </div>
+          <div>
+            <h6 className="text-3xl text-white font-bold">^</h6>
+          </div>
+          <div className="absolute bottom-30 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* ⬇️ Header at bottom */}
-      <div className="w-full z-10 relative">
+      {/* Optional Bottom Header */}
+      <div className="absolute bottom-0 w-full z-20">
         <Header />
       </div>
     </section>

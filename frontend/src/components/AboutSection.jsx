@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-[#121212] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-cyan-400 opacity-10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-48 h-48 bg-pink-500 opacity-10 rounded-full blur-3xl"></div>
@@ -16,15 +16,15 @@ const AboutSection = () => {
                 <span className="text-gray-800">ABOUT US</span>
                 <span className="text-cyan-400"> /</span>
               </h2>
-              <h3 className="text-3xl font-light text-gray-400 mb-8">
-                A CREATIVE
+              <h3 className="text-3xl font-light text-white mb-8">
+                Empowering Futures,
                 <br />
-                DESIGN STUDIO
+                Engineered Today
               </h3>
             </div>
 
             <div className="space-y-6 text-gray-600">
-              <p className="text-lg leading-relaxed">
+              {/* <p className="text-lg leading-relaxed">
                 <span className="text-cyan-400 font-medium">/</span> Suspendisse
                 interdum tortor augue, in tempus urna ultricies
               </p>
@@ -33,27 +33,32 @@ const AboutSection = () => {
                 Vivamus fringilla eu nisl non laoreet. Nunc nec faucibus arcu,
                 quis pretium odio. Nullam non turpis imperdiet, venenatis felis
                 id, fermentum urna.
-              </p>
+              </p> */}
 
               <p className="text-cyan-400 font-medium">
-                <span className="text-cyan-400">/</span> Praesent varius justo
-                ac rhoncus convallis. Aenean congue
+                <span className="text-cyan-400">/</span> To create a future
+                where technology is accessible, inclusive, and truly
+                transformative—empowering individuals, communities, and
+                institutions to thrive in a digitally connected world.
               </p>
 
               <p className="leading-relaxed">
-                Quisque ultrices elementum quam eget eleifend. Fusce ac est ut
-                nisl scelerisque imperdiet. Donec vel tristique neque, vel
-                viverra mi.
+                Instrek is a purpose-led technology company committed to solving
+                real-world problems through smart innovation. From AI-driven
+                career guidance systems to scalable smart city platforms, we
+                create solutions that matter. Our approach blends deep tech with
+                human insight—building tools that empower people, enable
+                transformation, and drive lasting impact.
               </p>
 
-              <p className="font-medium text-gray-800">
+              {/* <p className="font-medium text-gray-800">
                 Nulla hendrerit posuere nisl vitae sollicitudin.
               </p>
 
               <p className="leading-relaxed">
                 Duis diam urna, venenatis eu felis in, pulvinar consequat sem.
                 Proin accumsan
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -61,7 +66,7 @@ const AboutSection = () => {
           <div className="relative animate-fade-in delay-300">
             <div className="bg-white rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-500">
               <img
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="./images/aloudailab.jpg"
                 alt="Creative workspace"
                 className="w-full h-96 object-cover rounded-lg"
               />

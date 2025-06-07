@@ -1,165 +1,146 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const TeamSection = () => {
   const [selectedMember, setSelectedMember] = useState(null);
+  const [bgWhite, setBgWhite] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBgWhite(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const teamMembers = [
     {
       id: 1,
-      name: "ALEXANDRA DOE",
-      role: "Web designer",
+      name: "Vineet Sharma",
+      role: "Founder",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Ut in orci ac tortor sodales ultricies et vitae ante. Nulla condimentum nec libero vel luctus. Donec odio libero, ornare ac quam ac, rutrum ornare mi.",
-      social: {
-        twitter: "#",
-        facebook: "#",
-        skype: "#",
-      },
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      bio: "Vineet brings cutting-edge tech to India, big ideas to the table, and—if you let him—probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we’re pretty sure his brain runs on unlimited data!",
     },
     {
       id: 2,
-      name: "JASON DOE",
-      role: "Designer",
+      name: "Sanjana Wadhwa",
+      role: "CEO",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Creative designer with passion for modern web aesthetics and user experience design.",
-      social: {
-        twitter: "#",
-        facebook: "#",
-        skype: "#",
-      },
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let’s talk about FOOD now!",
     },
     {
       id: 3,
-      name: "ANDREA DOE",
-      role: "Manager",
+      name: "Tithika Mittal",
+      role: "TE Coordinator",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Project manager ensuring smooth workflow and client satisfaction across all projects.",
-      social: {
-        twitter: "#",
-        facebook: "#",
-        skype: "#",
-      },
+      bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, “I haven’t been everywhere. But it’s on the list”.",
     },
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-pink-400 opacity-10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-48 h-48 bg-cyan-400 opacity-10 rounded-full blur-3xl"></div>
+    <section
+      className={`transition-colors duration-700 font-[Fira_Code] text-[16px] ${
+        bgWhite ? "bg-white" : "bg-black"
+      } relative py-24 overflow-hidden`}
+    >
+      {/* Blurred background decorations */}
+      <div className="absolute top-16 left-10 w-64 h-64 bg-pink-400 opacity-10 rounded-full blur-3xl z-0"></div>
+      <div className="absolute bottom-16 right-10 w-48 h-48 bg-cyan-400 opacity-10 rounded-full blur-3xl z-0"></div>
 
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div className="space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Content */}
+          <div className="space-y-10">
             <div>
-              <h2 className="text-5xl font-black mb-4">
-                <span className="text-gray-800">OUR TEAM</span>
-                <span className="text-cyan-400"> /</span>
+              <h2 className="text-6xl font-bold tracking-tight text-gray-900">
+                OUR TEAM <span className="text-cyan-500">/</span>
               </h2>
-              <h3 className="text-3xl font-light text-gray-400 mb-8">
-                WE ARE THE BEST
+              <h3 className="text-2xl text-gray-500 mt-3 font-light">
+                We are the best
               </h3>
             </div>
 
-            <div className="space-y-6 text-gray-600">
-              <p className="text-lg leading-relaxed">
-                <span className="text-cyan-400 font-medium">/</span> Suspendisse
-                interdum tortor augue, in tempus urna ultricies
+            <div className="text-gray-700 space-y-5">
+              <p className="font-medium text-cyan-500">
+                / Founder’s Message – Instrek Technologies
               </p>
-
               <p className="leading-relaxed">
-                Vivamus fringilla eu nisl non laoreet. Maecenas ac velit
-                condimentum, condimentum ante at, sodales justo. Vivamus
-                suscipit nunc ut condimentum feugiat. Praesent imperdiet
-                sollicitudin pulvinar. Pellentesque interdum sem a ligula
-                scelerisque bibendum. Donec aliquam mattis neque quis pretium
-                pellentesque
+                At Instrek Technologies, our journey began with a simple yet
+                powerful vision — to build technology that creates meaningful
+                impact in society. From day one, we set out not just to write
+                code, but to engineer change. Over the months and years, we’ve
+                grown into a collective of passionate minds. Whether it’s smart
+                cities, digital ID, or AI — every milestone has been powered by
+                your dedication.
               </p>
             </div>
 
-            {/* Team member thumbnails */}
-            <div className="flex space-x-4">
+            {/* Member Thumbnails */}
+            <div className="flex gap-6 mt-8">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="relative cursor-pointer group"
+                  className="cursor-pointer text-center group"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-transparent group-hover:border-cyan-400 transition-all duration-300">
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-transparent group-hover:border-cyan-500 transition-all duration-300">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <div className="text-center mt-2">
-                    <p className="text-xs font-medium text-gray-800">
-                      {member.name}
-                    </p>
-                    <p className="text-xs text-cyan-400">{member.role}</p>
-                  </div>
+                  <p className="text-sm font-semibold mt-2 text-gray-800 group-hover:text-cyan-500">
+                    {member.name}
+                  </p>
+                  <p className="text-xs text-gray-400">{member.role}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Featured Team Member */}
+          {/* Right Featured Member */}
           <div className="relative">
-            {selectedMember ? (
-              <div className="bg-white rounded-full shadow-2xl p-8 text-center transform hover:scale-105 transition-all duration-500 animate-fade-in">
-                <div className="w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-8 border-gray-100">
-                  <img
-                    src={selectedMember.image}
-                    alt={selectedMember.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  {selectedMember.name}
-                </h3>
-                <p className="text-cyan-400 font-medium mb-4">
-                  {selectedMember.role}
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {selectedMember.bio}
-                </p>
-
-                {/* Social Links */}
-                <div className="flex justify-center space-x-4">
-                  <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-white hover:bg-pink-500 transition-colors duration-300 cursor-pointer">
-                    T
+            <div className="bg-white shadow-xl rounded-3xl p-10 text-center max-w-md mx-auto transition-all duration-500 hover:shadow-2xl">
+              {selectedMember ? (
+                <>
+                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-cyan-400 mb-6">
+                    <img
+                      src={selectedMember.image}
+                      alt={selectedMember.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-white hover:bg-pink-500 transition-colors duration-300 cursor-pointer">
-                    F
-                  </div>
-                  <div className="w-10 h-10 bg-cyan-400 rounded-full flex items-center justify-center text-white hover:bg-pink-500 transition-colors duration-300 cursor-pointer">
-                    S
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="bg-white rounded-full shadow-2xl p-8 text-center">
-                <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center mb-6">
-                  <p className="text-white text-lg font-medium">
-                    Click on a team member
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {selectedMember.name}
+                  </h3>
+                  <p className="text-cyan-500 font-medium">
+                    {selectedMember.role}
                   </p>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  Meet Our Team
-                </h3>
-                <p className="text-gray-600">
-                  Select a team member to learn more about them
-                </p>
-              </div>
-            )}
+                  <p className="text-gray-600 mt-4 text-sm leading-relaxed">
+                    {selectedMember.bio}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center mb-6">
+                    <p className="text-white text-sm font-medium px-4">
+                      Click a team member
+                    </p>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Meet Our Team
+                  </h3>
+                  <p className="text-gray-500 mt-2">
+                    Select a profile to learn more
+                  </p>
+                </>
+              )}
+            </div>
 
-            {/* Paint splash */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-cyan-500 opacity-20 rounded-full blur-xl"></div>
+            {/* Decorative splash */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-cyan-500 opacity-30 rounded-full blur-xl z-0"></div>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ import PortfolioSection from "./components/PortfolioSection";
 import BlogSection from "./components/BlogSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -20,8 +21,9 @@ const App = () => {
       <TeamSection />
       <PortfolioSection />
       <BlogSection />
-      <TestimonialsSection />
-      <ContactSection />
+      {/* <TestimonialsSection />
+      <ContactSection /> */}
+      <Footer />
     </div>
   );
 };

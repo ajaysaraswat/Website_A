@@ -56,7 +56,7 @@ const PortfolioSection = () => {
       : portfolioItems.filter((item) => item.category === filter);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#121212]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

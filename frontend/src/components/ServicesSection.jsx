@@ -43,7 +43,10 @@ const ServicesSection = () => {
   const loopedCards = [...services, ...services];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-black to-gray-900 overflow-hidden font-[Neue_Montreal]">
+    <section
+      className="py-20 bg-gradient-to-r from-black to-gray-900 overflow-hidden "
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       <div className="w-full overflow-hidden relative px-8">
         {/* Gradient effect on both ends */}
         <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>

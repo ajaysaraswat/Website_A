@@ -254,7 +254,10 @@ import Header from "./Header";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-black font-[Neue_Montreal] overflow-hidden">
+    <section
+      className="relative min-h-screen bg-black overflow-hidden font-heading"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -272,17 +275,17 @@ const HeroSection = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6 md:px-12">
         <div className="max-w-4xl text-white text-center space-y-8">
           {/* Company Name */}
-          <h1 className="text-white text-6xl font-semibold tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight text-white">
             Instrek Technologies
           </h1>
 
           {/* Tagline */}
-          <h2 className="text-4xl md:text-5xl font-medium leading-tight text-[#EA6220]">
+          <h2 className="text-3xl md:text-5xl font-semibold text-[#EA6220] leading-tight">
             Empowering Futures, Engineered Today
           </h2>
 
           {/* Description */}
-          <p className="text-[16px] leading-relaxed text-white/70">
+          <p className="font-body text-white/80 text-base md:text-lg leading-relaxed">
             Instrek Technologies – Empowering futures with next-gen,
             purpose-driven tech innovations. We design, build, and deliver
             solutions that integrate technology with societal impact — across
@@ -291,16 +294,13 @@ const HeroSection = () => {
 
           {/* Call to Action */}
           <div className="flex flex-wrap justify-center gap-4 pt-4">
-            <Button className="bg-white text-black px-6 py-3 text-[16px]">
+            <Button className="bg-white text-black px-6 py-3 text-base font-semibold">
               Get Started
             </Button>
           </div>
 
           {/* Scroll Indicator */}
-          <div>
-            <h6 className="text-3xl text-white font-bold">^</h6>
-          </div>
-          <div className="absolute bottom-30 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
               <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
             </div>

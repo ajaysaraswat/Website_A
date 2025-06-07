@@ -161,7 +161,7 @@ const BlogSection = () => {
       shortDescription:
         "Instrek is building smarter, cleaner, and more connected cities by integrating AI, IoT, clean energy, and citizen-first digital platforms. Here's how we make smart cities truly intelligent.",
       longDescription:
-        "When people hear the term /(some color chnage please)Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
+        "When people hear the term Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
       meta: "March 22, 2016 | Admin | 2 Comments | Audio",
       image: "./images/company-overview.jpg",
     },
@@ -196,7 +196,7 @@ const BlogSection = () => {
       shortDescription:
         "Instrek is building smarter, cleaner, and more connected cities by integrating AI, IoT, clean energy, and citizen-first digital platforms. Here's how we make smart cities truly intelligent.",
       longDescription:
-        "When people hear the term /(some color chnage please)Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
+        "When people hear the term Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
       meta: "March 22, 2016 | Admin | 2 Comments | Audio",
       image:
         "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -204,7 +204,10 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#121212] text-white font-[Neue_Montreal] text-[15px]">
+    <section
+      className="py-20 bg-[#121212] text-white  text-[15px]"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-16 text-left">
@@ -247,12 +250,7 @@ const BlogSection = () => {
                         {post.shortDescription}
                       </p>
                       <p className="text-gray-400 mb-4">
-                        {post.longDescription.includes("Smart City")
-                          ? post.longDescription.replace(
-                              "Smart City",
-                              `<span class="text-[#EA6220]">Smart City</span>`
-                            )
-                          : post.longDescription}
+                        {post.longDescription}
                       </p>
 
                       {/* Meta Info */}

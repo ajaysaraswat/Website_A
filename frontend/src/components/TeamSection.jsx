@@ -40,9 +40,10 @@ const TeamSection = () => {
 
   return (
     <section
-      className={`transition-colors duration-700 font-[Fira_Code] text-[16px] ${
+      className={`transition-colors duration-700  text-[16px] ${
         bgWhite ? "bg-white" : "bg-black"
-      } relative py-24 overflow-hidden font-[Neue_Montreal]`}
+      } relative py-24 overflow-hidden `}
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       {/* Blurred background decorations */}
       <div className="absolute top-16 left-10 w-64 h-64 bg-pink-400 opacity-10 rounded-full blur-3xl z-0"></div>

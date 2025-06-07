@@ -5,7 +5,10 @@ import { Checkbox } from "./Checkbox";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-white min-h-screen flex flex-col font-[Neue_Montreal] text-[15px]">
+    <footer
+      className="bg-[#121212] text-white min-h-screen flex flex-col  text-[15px]"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       {/* Main Footer Content */}
       <div className="flex-1 px-8 py-16">
         <div className="max-w-7xl mx-auto">

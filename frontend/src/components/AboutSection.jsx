@@ -2,7 +2,10 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-[#121212] relative overflow-hidden font-[Neue_Montreal]">
+    <section
+      className="py-20 bg-[#121212] relative overflow-hidden "
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-cyan-400 opacity-10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-48 h-48 bg-pink-500 opacity-10 rounded-full blur-3xl"></div>

@@ -64,11 +64,12 @@
 // export default Header;
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // ✅ Import Link
-import { Button } from "./Button"; // adjust this path if needed
+import { Menu, X } from "lucide-react"; // Icons
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
     { label: "Home", link: "#home" },
@@ -81,40 +82,67 @@ const Header = () => {
 
   return (
     <header
-      className="bottom-0 left-0 w-full z-50 bg-[#030404] backdrop-blur-sm "
+      className="w-full z-50 bg-[#030404] backdrop-blur-sm"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-2">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img
-              src="./Logo_White.png"
-              alt="Instrek Logo"
-              className="h-10 w-auto object-contain"
-            />
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.link}
-                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
-                  activeMenu === item.label ? "text-[#EA6220]" : "text-gray-700"
-                }`}
-                onClick={() => setActiveMenu(item.label)}
-              >
-                {item.label}
-                {activeMenu === item.label && (
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#EA6220] to-white animate-fade-in"></div>
-                )}
-              </a>
-            ))}
-          </nav>
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img
+            src="./Logo_White.png"
+            alt="Instrek Logo"
+            className="h-10 w-auto object-contain"
+          />
         </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-8">
+          {menuItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.link}
+              className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-400"
+              }`}
+              onClick={() => setActiveMenu(item.label)}
+            >
+              {item.label}
+              {activeMenu === item.label && (
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#EA6220] to-white animate-fade-in"></div>
+              )}
+            </a>
+          ))}
+        </nav>
+
+        {/* Mobile Toggle Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="md:hidden px-6 pb-4 space-y-4 bg-[#030404] text-white transition-all">
+          {menuItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.link}
+              className={`block text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-400"
+              }`}
+              onClick={() => {
+                setActiveMenu(item.label);
+                setMenuOpen(false); // Close menu on click
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      )}
     </header>
   );
 };

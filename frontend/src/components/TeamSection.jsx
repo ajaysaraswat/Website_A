@@ -42,19 +42,19 @@ const TeamSection = () => {
     <section
       className={`transition-colors duration-700 font-[Fira_Code] text-[16px] ${
         bgWhite ? "bg-white" : "bg-black"
-      } relative py-24 overflow-hidden`}
+      } relative py-24 overflow-hidden font-[Neue_Montreal]`}
     >
       {/* Blurred background decorations */}
       <div className="absolute top-16 left-10 w-64 h-64 bg-pink-400 opacity-10 rounded-full blur-3xl z-0"></div>
-      <div className="absolute bottom-16 right-10 w-48 h-48 bg-cyan-400 opacity-10 rounded-full blur-3xl z-0"></div>
+      <div className="absolute bottom-16 right-10 w-48 h-48 bg-[#EA6220] opacity-10 rounded-full blur-3xl z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-10">
             <div>
-              <h2 className="text-6xl font-bold tracking-tight text-gray-900">
-                OUR TEAM <span className="text-cyan-500">/</span>
+              <h2 className="text-6xl font-bold tracking-tight text-[#EA6220]">
+                OUR TEAM <span className="text-[#EA6220]">/</span>
               </h2>
               <h3 className="text-2xl text-gray-500 mt-3 font-light">
                 We are the best
@@ -62,7 +62,7 @@ const TeamSection = () => {
             </div>
 
             <div className="text-gray-700 space-y-5">
-              <p className="font-medium text-cyan-500">
+              <p className="font-medium text-[#EA6220]">
                 / Founder’s Message – Instrek Technologies
               </p>
               <p className="leading-relaxed">
@@ -84,14 +84,14 @@ const TeamSection = () => {
                   className="cursor-pointer text-center group"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-transparent group-hover:border-cyan-500 transition-all duration-300">
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-transparent group-hover:border-[#EA6220] transition-all duration-300">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <p className="text-sm font-semibold mt-2 text-gray-800 group-hover:text-cyan-500">
+                  <p className="text-sm font-semibold mt-2 text-gray-800 group-hover:text-[#EA6220]">
                     {member.name}
                   </p>
                   <p className="text-xs text-gray-400">{member.role}</p>
@@ -105,7 +105,7 @@ const TeamSection = () => {
             <div className="bg-white shadow-xl rounded-3xl p-10 text-center max-w-md mx-auto transition-all duration-500 hover:shadow-2xl">
               {selectedMember ? (
                 <>
-                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-cyan-400 mb-6">
+                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-[#EA6220] mb-6">
                     <img
                       src={selectedMember.image}
                       alt={selectedMember.name}
@@ -115,7 +115,7 @@ const TeamSection = () => {
                   <h3 className="text-xl font-bold text-gray-900">
                     {selectedMember.name}
                   </h3>
-                  <p className="text-cyan-500 font-medium">
+                  <p className="text-[#EA6220] font-medium">
                     {selectedMember.role}
                   </p>
                   <p className="text-gray-600 mt-4 text-sm leading-relaxed">
@@ -124,7 +124,7 @@ const TeamSection = () => {
                 </>
               ) : (
                 <>
-                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-cyan-400 to-pink-500 flex items-center justify-center mb-6">
+                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-[#EA6220] to-pink-500 flex items-center justify-center mb-6">
                     <p className="text-white text-sm font-medium px-4">
                       Click a team member
                     </p>
@@ -140,7 +140,7 @@ const TeamSection = () => {
             </div>
 
             {/* Decorative splash */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-cyan-500 opacity-30 rounded-full blur-xl z-0"></div>
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-[#EA6220] opacity-30 rounded-full blur-xl z-0"></div>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { Checkbox } from "./Checkbox";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-white min-h-screen flex flex-col font-['Fira_Code'] text-[15px]">
+    <footer className="bg-[#121212] text-white min-h-screen flex flex-col font-[Neue_Montreal] text-[15px]">
       {/* Main Footer Content */}
       <div className="flex-1 px-8 py-16">
         <div className="max-w-7xl mx-auto">
@@ -132,7 +132,7 @@ const Footer = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-light mb-8">
               Get Smart with{" "}
-              <span className="bg-gradient-to-r from-orange-400 via-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-400  to-white bg-clip-text text-transparent">
                 Instrek{" "}
               </span>
             </h2>

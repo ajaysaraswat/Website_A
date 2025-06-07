@@ -43,7 +43,7 @@ const ServicesSection = () => {
   const loopedCards = [...services, ...services];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-black to-gray-900 overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-black to-gray-900 overflow-hidden font-[Neue_Montreal]">
       <div className="w-full overflow-hidden relative px-8">
         {/* Gradient effect on both ends */}
         <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black to-transparent pointer-events-none"></div>
@@ -61,7 +61,7 @@ const ServicesSection = () => {
                 className="w-[330px] flex-shrink-0 bg-[#121212] text-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 relative group"
               >
                 {/* Arrow Icon */}
-                <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white text-black group-hover:bg-cyan-400 group-hover:text-white transition-colors duration-300 z-10">
+                <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white text-black group-hover:bg-[#EA6220] group-hover:text-white transition-colors duration-300 z-10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -86,13 +86,15 @@ const ServicesSection = () => {
                 />
 
                 {/* Title & Description */}
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <h3 className="text-[#EA6220] text-xl font-semibold mb-3">
+                  {service.title}
+                </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Tag */}
-                <div className="mt-6 text-sm font-semibold text-white flex items-center space-x-2 group-hover:text-cyan-400 transition-colors duration-300">
+                <div className="mt-6 text-sm font-semibold text-white flex items-center space-x-2 group-hover:text-[#EA6220] transition-colors duration-300">
                   <span>{service.tag}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

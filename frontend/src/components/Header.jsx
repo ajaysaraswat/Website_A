@@ -64,54 +64,52 @@
 // export default Header;
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // ✅ Import Link
 import { Button } from "./Button"; // adjust this path if needed
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
 
-  const menuItems = ["Home", "About", "Team", "Portfolio", "Blog", "Contact"];
-  // bg-[#0A0F10]
+  const menuItems = [
+    { label: "Home", link: "#home" },
+    { label: "About", link: "#about" },
+    { label: "Team", link: "#team" },
+    { label: "Services", link: "#services" },
+    { label: "Blog", link: "#blog" },
+    { label: "Contact", link: "#contact" },
+  ];
+
   return (
-    // <header className="bottom-0 left-0 w-full z-50 bg-[#343a40] backdrop-blur-sm border-t border-gray-100"></header>
-    <header
-      className="bottom-0 left-0 w-full z-50 bg-[#030404]
- backdrop-blur-sm "
-    >
+    <header className="bottom-0 left-0 w-full z-50 bg-[#030404] backdrop-blur-sm font-[Neue_Montreal]">
       <div className="max-w-7xl mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800">
-            <span className="text-transparent bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text">
-              Instrek
-            </span>
+          <div className="flex items-center space-x-2">
+            <img
+              src="./logo.png"
+              alt="Instrek Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => setActiveMenu(item)}
-                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-cyan-400 ${
-                  activeMenu === item ? "text-cyan-400" : "text-gray-700"
+              <a
+                key={item.label}
+                href={item.link}
+                className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                  activeMenu === item.label ? "text-[#EA6220]" : "text-gray-700"
                 }`}
+                onClick={() => setActiveMenu(item.label)}
               >
-                {item}
-                {activeMenu === item && (
-                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 animate-fade-in"></div>
+                {item.label}
+                {activeMenu === item.label && (
+                  <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-[#EA6220] to-white animate-fade-in"></div>
                 )}
-              </button>
+              </a>
             ))}
           </nav>
-
-          {/* Mobile Menu Button */}
-          {/* <Button variant="outline" className="md:hidden">
-            <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-              <div className="w-full h-0.5 bg-gray-600"></div>
-              <div className="w-full h-0.5 bg-gray-600"></div>
-              <div className="w-full h-0.5 bg-gray-600"></div>
-            </div>
-          </Button> */}
         </div>
       </div>
     </header>

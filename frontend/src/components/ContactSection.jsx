@@ -53,7 +53,7 @@ const ContactSection = () => {
                 <div className="text-4xl mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {info.icon}
                 </div>
-                <h3 className="font-bold text-gray-800 mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="font-bold text-[#EA6220] mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                   {info.title}
                 </h3>
                 <p className="text-gray-600">{info.details}</p>

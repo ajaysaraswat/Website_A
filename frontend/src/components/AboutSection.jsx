@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section className="py-20 bg-[#121212] relative overflow-hidden">
+    <section className="py-20 bg-[#121212] relative overflow-hidden font-[Neue_Montreal]">
       {/* Background Elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-cyan-400 opacity-10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-48 h-48 bg-pink-500 opacity-10 rounded-full blur-3xl"></div>
@@ -13,8 +13,8 @@ const AboutSection = () => {
           <div className="space-y-8 animate-fade-in">
             <div>
               <h2 className="text-5xl font-black mb-4">
-                <span className="text-gray-800">ABOUT US</span>
-                <span className="text-cyan-400"> /</span>
+                <span className="text-[#EA6220]">ABOUT US</span>
+                <span className="text-[#EA6220]"> /</span>
               </h2>
               <h3 className="text-3xl font-light text-white mb-8">
                 Empowering Futures,
@@ -35,8 +35,8 @@ const AboutSection = () => {
                 id, fermentum urna.
               </p> */}
 
-              <p className="text-cyan-400 font-medium">
-                <span className="text-cyan-400">/</span> To create a future
+              <p className="text-[#EA6220] font-medium">
+                <span className="text-[#EA6220]">/</span> To create a future
                 where technology is accessible, inclusive, and truly
                 transformative—empowering individuals, communities, and
                 institutions to thrive in a digitally connected world.

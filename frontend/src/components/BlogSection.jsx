@@ -204,13 +204,13 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#121212] text-white font-['Fira_Code'] text-[15px]">
+    <section className="py-20 bg-[#121212] text-white font-[Neue_Montreal] text-[15px]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-16 text-left">
           <h2 className="text-6xl font-black mb-4">
             <span>BLOG</span>
-            <span className="text-cyan-400"> /</span>
+            <span className="text-[#EA6220]"> /</span>
           </h2>
           <div className="text-4xl font-light text-gray-300">
             LATEST FROM
@@ -231,7 +231,7 @@ const BlogSection = () => {
                 >
                   <div className="flex items-start space-x-6">
                     {/* Date Circle */}
-                    <div className="bg-pink-500 text-white rounded-full w-20 h-20 flex flex-col items-center justify-center flex-shrink-0 group-hover:bg-cyan-400 transition-colors duration-300">
+                    <div className="bg-[#EA6220] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:text-black transition-colors duration-300">
                       <span className="text-2xl font-bold">
                         {post.date.day}
                       </span>
@@ -240,30 +240,30 @@ const BlogSection = () => {
 
                     {/* Text Info */}
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-[#EA6220] transition-colors duration-300">
                         {post.title}
                       </h3>
-                      <p className="text-cyan-300 mb-2">
+                      <p className="text-[#EA6220] b-2">
                         {post.shortDescription}
                       </p>
                       <p className="text-gray-400 mb-4">
                         {post.longDescription.includes("Smart City")
                           ? post.longDescription.replace(
                               "Smart City",
-                              `<span class="text-cyan-400">Smart City</span>`
+                              `<span class="text-[#EA6220]">Smart City</span>`
                             )
                           : post.longDescription}
                       </p>
 
                       {/* Meta Info */}
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-cyan-400">
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-[#EA6220]">
                         <span>📅 {post.meta.split(" | ")[0]}</span>
                         <span>👤 {post.meta.split(" | ")[1]}</span>
                         <span>💬 {post.meta.split(" | ")[2]}</span>
                         <span>🏷️ {post.meta.split(" | ")[3]}</span>
                       </div>
 
-                      <button className="mt-6 text-cyan-400 font-bold hover:text-pink-500 transition-colors duration-300">
+                      <button className="mt-6 text-[#EA6220] font-bold hover:text-pink-500 transition-colors duration-300">
                         / READ MORE
                       </button>
                     </div>
@@ -273,8 +273,8 @@ const BlogSection = () => {
                 {/* Media (image/video/audio) */}
                 <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   {post.isVideo ? (
-                    <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video group-hover:shadow-2xl transition-shadow duration-300">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-pink-500/20"></div>
+                    <div className="relative bg-[#EA6220] rounded-lg overflow-hidden aspect-video group-hover:shadow-2xl transition-shadow duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-br  to-pink-500/20"></div>
                       <div className="absolute inset-0 flex items-center justify-center">
                         <button className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:bg-red-700 transition-colors duration-300 hover:scale-110 transform">
                           ▶
@@ -298,7 +298,7 @@ const BlogSection = () => {
                           </button>
                           <div className="flex-1">
                             <div className="w-full bg-white/20 rounded-full h-2">
-                              <div className="bg-cyan-400 h-2 rounded-full w-1/3"></div>
+                              <div className="bg-[#EA6220] h-2 rounded-full w-1/3"></div>
                             </div>
                             <div className="text-xs mt-1">0:00 / 7:07</div>
                           </div>

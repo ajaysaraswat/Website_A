@@ -14,6 +14,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 const App = () => {
   return (
     <div className="font-[Neue_Montreal]">
+      <Header />
       <section id="home">
         <HeroSection />
       </section>

@@ -309,9 +309,6 @@ const HeroSection = () => {
       </div>
 
       {/* Optional Bottom Header */}
-      <div className="absolute bottom-0 w-full z-20">
-        <Header />
-      </div>
     </section>
   );
 };

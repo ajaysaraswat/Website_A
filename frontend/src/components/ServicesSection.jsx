@@ -27,7 +27,7 @@ const ServicesSection = () => {
       title: "Smart City Solutions",
       description:
         "We provide integrated tech for cleaner, smarter, connected cities—from traffic to pollution control.",
-      image: "./images/smartcity.avif",
+      image: "./images/smarcity1.jpg",
       tag: "SMART CITY",
     },
     {

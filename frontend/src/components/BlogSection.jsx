@@ -163,7 +163,7 @@ const BlogSection = () => {
       longDescription:
         "When people hear the term Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
       meta: "March 22, 2016 | Admin | 2 Comments | Audio",
-      image: "./images/company-overview.jpg",
+      image: "./images/smartcity2.jpg",
     },
     {
       id: 2,
@@ -175,6 +175,7 @@ const BlogSection = () => {
         "Terms like AI, IoT, and Blockchain often sound like the language of big tech companies. But at Instrek, we see them as practical tools—meant to solve real-world problems, not just look good on a presentation slide....",
       meta: "March 09, 2016 | Audio | 2 Comments | Design",
       isVideo: true,
+      video: "./pathDetector.mp4",
     },
     {
       id: 3,
@@ -185,9 +186,8 @@ const BlogSection = () => {
       longDescription:
         "Innovation isn't just for unicorn startups or MNCs. It should also serve grassroots changemakers—the ones improving lives in real, measurable ways. That’s why Instrek supports nonprofits, social enterprises, and mission-led teams through the Sociopreneur Foundation model.",
       meta: "February 28, 2016 | Audio | 2 Comments | Audio",
-      isAudio: true,
-      image:
-        "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+
+      image: "./images/robo.jpg",
     },
     {
       id: 4,
@@ -198,8 +198,7 @@ const BlogSection = () => {
       longDescription:
         "When people hear the term Smart City, they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact......",
       meta: "March 22, 2016 | Admin | 2 Comments | Audio",
-      image:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "./images/bulb.jpg",
     },
   ];
 
@@ -271,16 +270,18 @@ const BlogSection = () => {
                 {/* Media (image/video/audio) */}
                 <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
                   {post.isVideo ? (
-                    <div className="relative bg-[#EA6220] rounded-lg overflow-hidden aspect-video group-hover:shadow-2xl transition-shadow duration-300">
-                      <div className="absolute inset-0 bg-gradient-to-br  to-pink-500/20"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <button className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl hover:bg-red-700 transition-colors duration-300 hover:scale-110 transform">
-                          ▶
-                        </button>
-                      </div>
-                      <div className="absolute top-4 left-4 text-white text-sm bg-black/50 px-2 py-1 rounded">
-                        INK DROPS 4K (ULTRA HD)
-                      </div>
+                    <div className="relative rounded-lg overflow-hidden group-hover:shadow-2xl transition-shadow duration-300">
+                      <video
+                        controls
+                        className="w-full h-full object-cover aspect-video"
+                        poster={post.image}
+                        autoPlay
+                        muted
+                        loop
+                      >
+                        <source src={post.video} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
                     </div>
                   ) : post.isAudio ? (
                     <div className="relative bg-gray-800 rounded-lg overflow-hidden aspect-video group-hover:shadow-2xl transition-shadow duration-300">

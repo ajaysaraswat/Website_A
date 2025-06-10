@@ -17,7 +17,9 @@ const Footer = () => {
             {/* Logo and Company Info */}
             <div className="mb-12 lg:mb-0">
               <div className="mb-4">
-                <h1 className="text-4xl font-bold tracking-tight">Instrek</h1>
+                <h1 className="text-4xl text-[#EA6220] font-bold tracking-tight">
+                  Instrek
+                </h1>
                 <h1 className="text-4xl font-bold tracking-tight">
                   Technologies
                 </h1>

@@ -69,16 +69,16 @@ const AboutSection = () => {
           <div className="relative animate-fade-in delay-300">
             <div className="bg-white rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-500">
               <img
-                src="./images/aloudailab.jpg"
+                src="./images/About_main.jpg"
                 alt="Creative workspace"
                 className="w-full h-96 object-cover rounded-lg"
               />
               {/* Floating devices effect */}
               <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4 transform rotate-12 hover:rotate-0 transition-transform duration-300">
-                <div className="w-16 h-12 bg-gray-800 rounded"></div>
+                <div className="w-16 h-12 bg-[#EA6220] rounded"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
-                <div className="w-12 h-8 bg-cyan-400 rounded"></div>
+                <div className="w-12 h-8 bg-black rounded"></div>
               </div>
             </div>
 

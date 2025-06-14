@@ -33,7 +33,7 @@ const teamMembers = [
     role: " Non-Executive Strategic Advisor",
     image:
       "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    bio: "Ajay mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
+    bio: "Gaurab mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
   },
 ];
 

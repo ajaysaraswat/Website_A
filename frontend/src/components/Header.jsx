@@ -77,12 +77,14 @@ const Header = () => {
     { label: "Team", link: "#team" },
     { label: "Services", link: "#services" },
     { label: "Blog", link: "#blog" },
+    //{ label: "Why", link: "#why" },
     { label: "Contact", link: "#contact" },
   ];
 
   return (
     <header
-      className="w-full z-50 bg-[#030404] backdrop-blur-sm"
+      // className=" w-full z-50 bg-[#030404] backdrop-blur-sm"
+      className=" w-full z-50 bg-transparent absolute"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -91,7 +93,7 @@ const Header = () => {
           <img
             src="./Logo_White.png"
             alt="Instrek Logo"
-            className="h-10 w-auto object-contain"
+            className="h-15 w-auto object-contain"
           />
         </div>
 
@@ -101,8 +103,8 @@ const Header = () => {
             <a
               key={item.label}
               href={item.link}
-              className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
-                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-400"
+              className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-white"
               }`}
               onClick={() => setActiveMenu(item.label)}
             >

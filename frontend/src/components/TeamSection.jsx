@@ -1,152 +1,92 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import TeamCard from "./TeamCard";
+import { useNavigate } from "react-router-dom";
 
-const TeamSection = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
-  const [bgWhite, setBgWhite] = useState(false);
+const teamMembers = [
+  {
+    id: 1,
+    name: "Vineet Sharma",
+    role: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    bio: "Vineet brings cutting-edge tech to India, big ideas to the table, and—if you let him—probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we’re pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 2,
+    name: "Sanjana Wadhwa",
+    role: "CEO",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let’s talk about FOOD now!",
+  },
+  {
+    id: 3,
+    name: "Tithika Mittal",
+    role: "Technology Ecosystem Coordinator",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, “I haven’t been everywhere. But it’s on the list”.",
+  },
+  {
+    id: 4,
+    name: "Gaurab Ganguly",
+    role: " Non-Executive Strategic Advisor",
+    image:
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    bio: "Ajay mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
+  },
+];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setBgWhite(true);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Vineet Sharma",
-      role: "Founder",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Vineet brings cutting-edge tech to India, big ideas to the table, and—if you let him—probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we’re pretty sure his brain runs on unlimited data!",
-    },
-    {
-      id: 2,
-      name: "Sanjana Wadhwa",
-      role: "CEO",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let’s talk about FOOD now!",
-    },
-    {
-      id: 3,
-      name: "Tithika Mittal",
-      role: "TE Coordinator",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, “I haven’t been everywhere. But it’s on the list”.",
-    },
-  ];
-
+const Team = () => {
+  const navigate = useNavigate();
   return (
-    <section
-      className={`transition-colors duration-700  text-[16px] ${
-        bgWhite ? "bg-white" : "bg-black"
-      } relative py-24 overflow-hidden `}
-      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
-    >
-      {/* Blurred background decorations */}
-      <div className="absolute top-16 left-10 w-64 h-64 bg-pink-400 opacity-10 rounded-full blur-3xl z-0"></div>
-      <div className="absolute bottom-16 right-10 w-48 h-48 bg-[#EA6220] opacity-10 rounded-full blur-3xl z-0"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Content */}
-          <div className="space-y-10">
-            <div>
-              <h2 className="text-6xl font-bold tracking-tight text-[#EA6220]">
-                OUR TEAM <span className="text-[#EA6220]">/</span>
-              </h2>
-              <h3 className="text-2xl text-gray-500 mt-3 font-light">
-                We are the best
-              </h3>
-            </div>
-
-            <div className="text-gray-700 space-y-5">
-              <p className="font-medium text-[#EA6220]">
-                / Founder’s Message – Instrek Technologies
-              </p>
-              <p className="leading-relaxed">
-                At Instrek Technologies, our journey began with a simple yet
-                powerful vision — to build technology that creates meaningful
-                impact in society. From day one, we set out not just to write
-                code, but to engineer change. Over the months and years, we’ve
-                grown into a collective of passionate minds. Whether it’s smart
-                cities, digital ID, or AI — every milestone has been powered by
-                your dedication.
-              </p>
-            </div>
-
-            {/* Member Thumbnails */}
-            <div className="flex gap-6 mt-8">
-              {teamMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="cursor-pointer text-center group"
-                  onClick={() => setSelectedMember(member)}
-                >
-                  <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-transparent group-hover:border-[#EA6220] transition-all duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <p className="text-sm font-semibold mt-2 text-gray-800 group-hover:text-[#EA6220]">
-                    {member.name}
-                  </p>
-                  <p className="text-xs text-gray-400">{member.role}</p>
-                </div>
-              ))}
-            </div>
+    <div className="w-full px-8 py-10 bg-[#2A2342] ">
+      <div>
+        <div className="space-y-10">
+          <div>
+            <h2 className="text-6xl font-bold tracking-tight text-[#EA6220] text-center">
+              OUR TEAM
+            </h2>
+            <h3 className="text-2xl text-center text-white mt-3 font-light">
+              Driven by Purpose, Powered by Innovation
+            </h3>
           </div>
 
-          {/* Right Featured Member */}
-          <div className="relative">
-            <div className="bg-white shadow-xl rounded-3xl p-10 text-center max-w-md mx-auto transition-all duration-500 hover:shadow-2xl">
-              {selectedMember ? (
-                <>
-                  <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-[#EA6220] mb-6">
-                    <img
-                      src={selectedMember.image}
-                      alt={selectedMember.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {selectedMember.name}
-                  </h3>
-                  <p className="text-[#EA6220] font-medium">
-                    {selectedMember.role}
-                  </p>
-                  <p className="text-gray-600 mt-4 text-sm leading-relaxed">
-                    {selectedMember.bio}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-[#EA6220] to-pink-500 flex items-center justify-center mb-6">
-                    <p className="text-white text-sm font-medium px-4">
-                      Click a team member
-                    </p>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    Meet Our Team
-                  </h3>
-                  <p className="text-gray-500 mt-2">
-                    Select a profile to learn more
-                  </p>
-                </>
-              )}
+          <div className="text-gray-700 space-y-5">
+            <div className="overflow-hidden whitespace-nowrap w-full relative h-10">
+              <style>
+                {`
+      @keyframes marquee {
+        0%   { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+      }
+    `}
+              </style>
             </div>
-
-            {/* Decorative splash */}
-            <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-pink-400 to-[#EA6220] opacity-30 rounded-full blur-xl z-0"></div>
           </div>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+          {teamMembers.map((member) => (
+            <TeamCard
+              key={member.id}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+            />
+          ))}
+        </div>
       </div>
-    </section>
+      <div className="flex justify-center mt-4">
+        <button
+          className="items-center mt-12 border border-[#EA6220] px-6 py-2 rounded text-white hover:bg-[#EA6220]"
+          onClick={() => navigate("/team")}
+        >
+          Know More
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default TeamSection;
+export default Team;

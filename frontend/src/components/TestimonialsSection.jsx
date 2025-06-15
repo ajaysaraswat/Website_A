@@ -89,6 +89,7 @@
 
 import React from "react";
 import { Card } from "./Card";
+import InlineScrollImages from "./InlineScroll";
 
 const testimonials = [
   {
@@ -122,63 +123,68 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <div
-      className="py-16 px-4 bg-gradient-to-b from-[#121212] to-[#2A2342]"
-      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
-    >
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl text-[#EA6220] font-bold text-foreground mb-4 relative inline-block">
-            TESTIMONIALS
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-600 "></div>
-          </h2>
-          <p className="text-muted-foreground text-white text-lg mt-6">
-            Subscribe Easy Tutorials YouTube channel to watch more videos.
-          </p>
-        </div>
+    <div className=" bg-gradient-to-b from-[#121212] to-[#2A2342]">
+      <div
+        className="py-16 px-4 "
+        style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+      >
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl text-[#EA6220] font-bold text-foreground mb-4 relative inline-block">
+              TESTIMONIALS
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-orange-400 to-orange-600 "></div>
+            </h2>
+            <p className="text-muted-foreground text-white text-lg mt-6">
+              Subscribe Easy Tutorials YouTube channel to watch more videos.
+            </p>
+          </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="relative bg-white">
-              {/* Profile Image */}
-              <div className="absolute -top-10  left-1/2 transform -translate-x-1/2 z-10">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-20 h-20 rounded-full object-cover border-4 border-[#EA6220] shadow-lg"
-                />
-              </div>
+          {/* Testimonial Cards */}
+          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="relative bg-white">
+                {/* Profile Image */}
+                <div className="absolute -top-10  left-1/2 transform -translate-x-1/2 z-10">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-20 h-20 rounded-full object-cover border-4 border-[#EA6220] shadow-lg"
+                  />
+                </div>
 
-              {/* Card */}
-              <Card className="pt-16 pb-8 px-8  text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border-border">
-                <div className="mb-8 ">
-                  <div className="relative">
-                    <span className="text-[#EA6220] text-4xl font-bold absolute -top-2 -left-4">
-                      "
-                    </span>
-                    <p className="text-muted-foreground text-xl leading-relaxed px-6">
-                      {testimonial.quote}
-                    </p>
-                    <span className="text-[#EA6220] text-4xl font-bold absolute -bottom-6 -right-4">
-                      "
-                    </span>
+                {/* Card */}
+                <Card className="pt-16 pb-8 px-8  text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card border-border">
+                  <div className="mb-8 ">
+                    <div className="relative">
+                      <span className="text-[#EA6220] text-4xl font-bold absolute -top-2 -left-4">
+                        "
+                      </span>
+                      <p className="text-muted-foreground text-xl leading-relaxed px-6">
+                        {testimonial.quote}
+                      </p>
+                      <span className="text-[#EA6220] text-4xl font-bold absolute -bottom-6 -right-4">
+                        "
+                      </span>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mt-8">
-                  <h4 className="text-orange-600 font-semibold text-lg mb-1">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonial.position}
-                  </p>
-                </div>
-              </Card>
-            </div>
-          ))}
+                  <div className="mt-8">
+                    <h4 className="text-orange-600 font-semibold text-lg mb-1">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-muted-foreground text-sm">
+                      {testimonial.position}
+                    </p>
+                  </div>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
+      <div>
+        <InlineScrollImages />
       </div>
     </div>
   );

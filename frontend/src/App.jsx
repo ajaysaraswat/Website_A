@@ -21,6 +21,7 @@ import TeamCard from "./components/TeamCard";
 import ServiceDetail from "./components/ServiceDetail";
 import Services from "./components/Services";
 import WholeTeam from "./components/WholeTeam";
+import InlineScrollImages from "./components/InlineScroll";
 
 const App = () => {
   return (
@@ -61,6 +62,7 @@ const App = () => {
                 {/* <section id="blog">
                   <BlogSection />
                 </section> */}
+
                 <section id="contact">
                   <Footer />
                 </section>

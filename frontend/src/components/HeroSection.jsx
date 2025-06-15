@@ -715,7 +715,7 @@ const HeroSection = () => {
         </p>
 
         {/* Weather Cards */}
-        <div className="mt-8 flex flex-col md:flex-row items-center font-['Fira_Code'] gap-6">
+        {/* <div className="mt-8 flex flex-col md:flex-row items-center font-['Fira_Code'] gap-6">
           <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
             <h2 className="text-xl font-semibold">Temperature</h2>
             <p className="text-4xl mt-2 font-bold">{current.temperature}</p>
@@ -725,7 +725,7 @@ const HeroSection = () => {
             <h2 className="text-xl font-semibold">Weather</h2>
             <p className="text-3xl mt-2 font-medium">{current.weather}</p>
           </div>
-        </div>
+        </div> */}
 
         {/* Buttons */}
         <div className="mt-8 flex flex-wrap gap-4">

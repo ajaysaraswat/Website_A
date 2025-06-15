@@ -565,185 +565,62 @@
 
 // export default HeroSection;
 
-// import React from "react";
-// import { Button } from "./Button"; // Make sure Button is properly imported
-
-// const HeroSection = () => {
-//   return (
-//     <section
-//       className="relative w-full h-screen font-heading flex items-center overflow-hidden text-start"
-//       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
-//     >
-//       {/* Background Video */}
-//       <div className="absolute inset-0 z-0">
-//         {/* <video
-//           className="w-full h-full object-cover object-[80%]" // Shift video to right
-//           src="./video.mp4"
-//           autoPlay
-//           muted
-//           loop
-//           playsInline
-//         ></video> */}
-//         <img
-//           src="./back1.avif"
-//           alt="Background"
-//           className="w-full h-full object-cover"
-//         />
-//         {/* <div className="absolute inset-0 bg-black/80"></div>{" "} */}
-//         {/* Optional overlay */}
-//       </div>
-
-//       {/* Content */}
-//       <div className="z-10 w-full px-6 md:px-12 flex flex-col items-start text-start text-white max-w-4xl">
-//         {/* Company Name */}
-//         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-//           Instrek
-//         </h1>
-//         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-//           Technologies
-//         </h1>
-
-//         {/* Tagline */}
-//         <h2 className="text-3xl md:text-5xl font-semibold text-[#EA6220] mt-4">
-//           Empowering Futures, Engineered Today
-//         </h2>
-
-//         {/* Description */}
-//         <p className="mt-6 text-white/100 text-2xl md:text-lg leading-relaxed">
-//           Instrek Technologies – Empowering futures with next-gen,
-//           purpose-driven tech innovations. We design, build, and deliver
-//           solutions that integrate technology with societal impact — across
-//           education, smart cities, digital identity, and automation.
-//         </p>
-
-//         {/* Call to Action */}
-//         <div className="mt-8 flex flex-wrap gap-4">
-//           <Button className="bg-white text-black px-6 py-3 text-base font-semibold">
-//             Get Started
-//           </Button>
-//         </div>
-
-//         {/* Scroll Indicator */}
-//         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-//           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center items-center">
-//             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default HeroSection;
-
-import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
+import React from "react";
+import { Button } from "./Button"; // Make sure Button is properly imported
 
 const HeroSection = () => {
-  // Array of slides with image and text
-  const slides = [
-    {
-      image: "./back1.avif",
-      title1: "Instrek",
-      title2: "Technologies",
-      subtitle: "Empowering Futures, Engineered Today",
-      //  description:
-      //   "We build transformative tech for smart cities, education, and digital systems with social impact.",
-      temperature: "28°C",
-      weather: "Cloudy",
-    },
-    {
-      image: "./back2.avif",
-      // title1: "Smart Infrastructure",
-      // title2: "Revolution",
-      subtitle: "AI-Driven Cities, Built for People",
-      description:
-        "We build transformative tech for smart cities, education, and digital systems with social impact.",
-      temperature: "32°C",
-      weather: "Sunny",
-    },
-    {
-      image: "./back3.webp",
-      title1: "Digital Identity",
-      title2: "Solutions",
-      subtitle: "Secure Access for Every Citizen",
-      description:
-        "We enable secure, scalable identity platforms that drive inclusion and innovation.",
-      temperature: "25°C",
-      weather: "Rainy",
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const current = slides[currentIndex];
-
   return (
     <section
       className="relative w-full h-screen font-heading flex items-center overflow-hidden text-start"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0 transition-opacity duration-500">
-        <img
-          src={current.image}
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          className="w-full h-full object-cover object-[80%]" // Shift video to right
+          src="./video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        ></video>
+        {/* <img
+          src="./back1.avif"
           alt="Background"
-          className="w-full h-full object-cover transition-opacity duration-500"
-        />
+          className="w-full h-full object-cover"
+        /> */}
+        {/* <div className="absolute inset-0 bg-black/80"></div>{" "} */}
+        {/* Optional overlay */}
       </div>
 
       {/* Content */}
       <div className="z-10 w-full px-6 md:px-12 flex flex-col items-start text-start text-white max-w-4xl">
+        {/* Company Name */}
         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-          {current.title1}
+          Instrek
         </h1>
         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-          {current.title2}
+          Technologies
         </h1>
+
+        {/* Tagline */}
         <h2 className="text-3xl md:text-5xl font-semibold text-[#EA6220] mt-4">
-          {current.subtitle}
+          Empowering Futures, Engineered Today
         </h2>
+
+        {/* Description */}
         <p className="mt-6 text-white/100 text-2xl md:text-lg leading-relaxed">
-          {current.description}
+          Instrek Technologies – Empowering futures with next-gen,
+          purpose-driven tech innovations. We design, build, and deliver
+          solutions that integrate technology with societal impact — across
+          education, smart cities, digital identity, and automation.
         </p>
 
-        {/* Weather Cards */}
-        {/* <div className="mt-8 flex flex-col md:flex-row items-center font-['Fira_Code'] gap-6">
-          <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
-            <h2 className="text-xl font-semibold">Temperature</h2>
-            <p className="text-4xl mt-2 font-bold">{current.temperature}</p>
-          </div>
-
-          <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
-            <h2 className="text-xl font-semibold">Weather</h2>
-            <p className="text-3xl mt-2 font-medium">{current.weather}</p>
-          </div>
-        </div> */}
-
-        {/* Buttons */}
+        {/* Call to Action */}
         <div className="mt-8 flex flex-wrap gap-4">
           <Button className="bg-white text-black px-6 py-3 text-base font-semibold">
             Get Started
           </Button>
-        </div>
-
-        {/* Dot Indicators */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {slides.map((_, index) => (
-            <span
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? "bg-white" : "bg-white/40"
-              } transition-all duration-300`}
-            ></span>
-          ))}
         </div>
 
         {/* Scroll Indicator */}
@@ -758,3 +635,126 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+// import React, { useState, useEffect } from "react";
+// import { Button } from "./Button";
+
+// const HeroSection = () => {
+//   // Array of slides with image and text
+//   const slides = [
+//     {
+//       image: "./back1.avif",
+//       title1: "Instrek",
+//       title2: "Technologies",
+//       subtitle: "Empowering Futures, Engineered Today",
+//       //  description:
+//       //   "We build transformative tech for smart cities, education, and digital systems with social impact.",
+//       temperature: "28°C",
+//       weather: "Cloudy",
+//     },
+//     {
+//       image: "./back2.avif",
+//       // title1: "Smart Infrastructure",
+//       // title2: "Revolution",
+//       subtitle: "AI-Driven Cities, Built for People",
+//       description:
+//         "We build transformative tech for smart cities, education, and digital systems with social impact.",
+//       temperature: "32°C",
+//       weather: "Sunny",
+//     },
+//     {
+//       image: "./back3.webp",
+//       title1: "Digital Identity",
+//       title2: "Solutions",
+//       subtitle: "Secure Access for Every Citizen",
+//       description:
+//         "We enable secure, scalable identity platforms that drive inclusion and innovation.",
+//       temperature: "25°C",
+//       weather: "Rainy",
+//     },
+//   ];
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prev) => (prev + 1) % slides.length);
+//     }, 5000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const current = slides[currentIndex];
+
+//   return (
+//     <section
+//       className="relative w-full h-screen font-heading flex items-center overflow-hidden text-start"
+//       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+//     >
+//       {/* Background Image */}
+//       <div className="absolute inset-0 z-0 transition-opacity duration-500">
+//         <img
+//           src={current.image}
+//           alt="Background"
+//           className="w-full h-full object-cover transition-opacity duration-500"
+//         />
+//       </div>
+
+//       {/* Content */}
+//       <div className="z-10 w-full px-6 md:px-12 flex flex-col items-start text-start text-white max-w-4xl">
+//         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
+//           {current.title1}
+//         </h1>
+//         <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
+//           {current.title2}
+//         </h1>
+//         <h2 className="text-3xl md:text-5xl font-semibold text-[#EA6220] mt-4">
+//           {current.subtitle}
+//         </h2>
+//         <p className="mt-6 text-white/100 text-2xl md:text-lg leading-relaxed">
+//           {current.description}
+//         </p>
+
+//         {/* Weather Cards */}
+//         {/* <div className="mt-8 flex flex-col md:flex-row items-center font-['Fira_Code'] gap-6">
+//           <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
+//             <h2 className="text-xl font-semibold">Temperature</h2>
+//             <p className="text-4xl mt-2 font-bold">{current.temperature}</p>
+//           </div>
+
+//           <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
+//             <h2 className="text-xl font-semibold">Weather</h2>
+//             <p className="text-3xl mt-2 font-medium">{current.weather}</p>
+//           </div>
+//         </div> */}
+
+//         {/* Buttons */}
+//         <div className="mt-8 flex flex-wrap gap-4">
+//           <Button className="bg-white text-black px-6 py-3 text-base font-semibold">
+//             Get Started
+//           </Button>
+//         </div>
+
+//         {/* Dot Indicators */}
+//         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
+//           {slides.map((_, index) => (
+//             <span
+//               key={index}
+//               className={`w-3 h-3 rounded-full ${
+//                 currentIndex === index ? "bg-white" : "bg-white/40"
+//               } transition-all duration-300`}
+//             ></span>
+//           ))}
+//         </div>
+
+//         {/* Scroll Indicator */}
+//         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+//           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center items-center">
+//             <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default HeroSection;

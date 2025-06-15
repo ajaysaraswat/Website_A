@@ -60,7 +60,10 @@ const Services = () => {
   ];
 
   return (
-    <div className=" bg-gradient-to-b from-[#121212] to-[#2A2342] font-['Fira_Code'] overflow-visible">
+    <div
+      className=" bg-gradient-to-b from-[#121212] to-[#2A2342]  overflow-visible"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Left Panel */}

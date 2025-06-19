@@ -39,9 +39,23 @@ const teamMembers = [
 
 const Team = () => {
   const navigate = useNavigate();
+
   return (
-    <div className="w-full px-8 py-10 bg-[#2A2342] ">
-      <div>
+    <div className="relative w-full px-8 py-10 bg-[#2A2342] overflow-hidden text-white">
+      {/* Background image with gradient overlay */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('./ourteam.jpeg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+
+      {/* Content Layer */}
+      <div className="relative z-10">
         <div className="space-y-10">
           <div>
             <h2 className="text-6xl font-bold tracking-tight text-[#EA6220] text-center">
@@ -56,16 +70,17 @@ const Team = () => {
             <div className="overflow-hidden whitespace-nowrap w-full relative h-10">
               <style>
                 {`
-      @keyframes marquee {
-        0%   { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-    `}
+                  @keyframes marquee {
+                    0%   { transform: translateX(100%); }
+                    100% { transform: translateX(-100%); }
+                  }
+                `}
               </style>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center mt-8">
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}
@@ -76,14 +91,15 @@ const Team = () => {
             />
           ))}
         </div>
-      </div>
-      <div className="flex justify-center mt-4">
-        <button
-          className="items-center mt-12 border border-[#EA6220] px-6 py-2 rounded text-white hover:bg-[#EA6220]"
-          onClick={() => navigate("/team")}
-        >
-          Know More
-        </button>
+
+        <div className="flex justify-center mt-4">
+          <button
+            className="items-center mt-12 border border-[#EA6220] px-6 py-2 rounded text-white hover:bg-[#EA6220]"
+            onClick={() => navigate("/team")}
+          >
+            Know More
+          </button>
+        </div>
       </div>
     </div>
   );

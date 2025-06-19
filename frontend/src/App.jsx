@@ -22,6 +22,7 @@ import ServiceDetail from "./components/ServiceDetail";
 import Services from "./components/Services";
 import WholeTeam from "./components/WholeTeam";
 import InlineScrollImages from "./components/InlineScroll";
+import TiltedImage from "./components/Imagesec";
 
 const App = () => {
   return (
@@ -41,7 +42,9 @@ const App = () => {
               <>
                 <section id="home">
                   <HeroSection />
+                  {/* <TiltedImage /> */}
                 </section>
+
                 <section id="about">
                   <AboutSection />
                 </section>
@@ -65,6 +68,7 @@ const App = () => {
 
                 <section id="contact">
                   <Footer />
+                  <ServiceDetail />
                 </section>
               </>
             }

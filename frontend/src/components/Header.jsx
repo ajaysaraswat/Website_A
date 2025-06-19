@@ -83,17 +83,16 @@ const Header = () => {
 
   return (
     <header
-      // className=" w-full z-50 bg-[#030404] backdrop-blur-sm"
-      className=" w-full z-50 bg-transparent absolute"
+      className="absolute z-50 bg-[#181344] rounded-3xl top-[20px] left-[4%] right-[4%]"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between h-[60px]">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex-shrink-0">
           <img
             src="./Logo_White.png"
             alt="Instrek Logo"
-            className="h-15 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </div>
 
@@ -127,17 +126,17 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-4 bg-[#030404] text-white transition-all">
+        <div className="md:hidden px-6 pb-4 space-y-4 bg-[#181344] text-white transition-all rounded-b-4xl">
           {menuItems.map((item) => (
             <a
               key={item.label}
               href={item.link}
-              className={`block text-sm font-medium transition-all duration-300 hover:text-[#EA6220] ${
-                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-400"
+              className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
               }`}
               onClick={() => {
                 setActiveMenu(item.label);
-                setMenuOpen(false); // Close menu on click
+                setMenuOpen(false);
               }}
             >
               {item.label}

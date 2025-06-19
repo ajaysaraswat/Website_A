@@ -637,102 +637,81 @@
 // export default HeroSection;
 
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
+
+const slides = [
+  {
+    image: "./images/heroImage.png",
+    title1: "Empowering Futures,",
+    title2: "Engineered Today",
+    description: "We build transformative tech for smart cities",
+    temperature: "28°C",
+    weather: "Cloudy",
+  },
+  {
+    image: "./smart.jpg",
+    title1: "Smart Infrastructure",
+    title2: "Revolution",
+    description: "build education, and digital systems with social impact.",
+    temperature: "32°C",
+    weather: "Sunny",
+  },
+  {
+    image: "./skill.jpg",
+    title1: "Digital Identity",
+    title2: "Solutions",
+    description:
+      "We enable secure, scalable identity platforms that drive inclusion and innovation.",
+    temperature: "25°C",
+    weather: "Rainy",
+  },
+];
 
 const HeroSection = () => {
-  // Array of slides with image and text
-  const slides = [
-    {
-      image: "./back1.avif",
-      title1: "Instrek",
-      title2: "Technologies",
-      subtitle: "Empowering Futures, Engineered Today",
-      //  description:
-      //   "We build transformative tech for smart cities, education, and digital systems with social impact.",
-      temperature: "28°C",
-      weather: "Cloudy",
-    },
-    {
-      image: "./back2.avif",
-      // title1: "Smart Infrastructure",
-      // title2: "Revolution",
-      subtitle: "AI-Driven Cities, Built for People",
-      description:
-        "We build transformative tech for smart cities, education, and digital systems with social impact.",
-      temperature: "32°C",
-      weather: "Sunny",
-    },
-    {
-      image: "./back3.webp",
-      title1: "Digital Identity",
-      title2: "Solutions",
-      subtitle: "Secure Access for Every Citizen",
-      description:
-        "We enable secure, scalable identity platforms that drive inclusion and innovation.",
-      temperature: "25°C",
-      weather: "Rainy",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
+      setCurrentIndex((prevIndex) =>
+        prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      );
     }, 5000);
+
     return () => clearInterval(interval);
   }, []);
-
-  const current = slides[currentIndex];
 
   return (
     <section
       className="relative w-full h-screen font-heading flex items-center overflow-hidden text-start"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0 transition-opacity duration-500">
-        <img
-          src={current.image}
-          alt="Background"
-          className="w-full h-full object-cover transition-opacity duration-500"
-        />
+      {/* Background Images - fading one at a time */}
+      <div className="absolute inset-0 z-0">
+        {slides.map((slide, index) => (
+          <img
+            key={index}
+            src={slide.image}
+            alt={`Slide ${index}`}
+            className={`absolute w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
 
-      {/* Content */}
-      <div className="z-10 w-full px-6 md:px-12 flex flex-col items-start text-start text-white max-w-4xl">
-        <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-          {current.title1}
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black via-black/80 to-transparent opacity-90"></div>
+
+      {/* Text Content (Fixed Position) */}
+      <div className="z-20 w-full px-6 md:px-12 flex flex-col items-start text-start text-white max-w-4xl">
+        <h1 className="text-5xl md:text-6xl mt-2 font-extrabold tracking-tight">
+          {slides[currentIndex].title1}
         </h1>
-        <h1 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tight">
-          {current.title2}
+        <h1 className="text-5xl md:text-6xl font-extrabold mt-4 tracking-tight">
+          {slides[currentIndex].title2}
         </h1>
-        <h2 className="text-3xl md:text-5xl font-semibold text-[#EA6220] mt-4">
-          {current.subtitle}
-        </h2>
-        <p className="mt-6 text-white/100 text-2xl md:text-lg leading-relaxed">
-          {current.description}
+        <p className="mt-6 text-[#ea4820] text-4xl md:text-lg leading-relaxed">
+          {slides[currentIndex].description}
         </p>
-
-        {/* Weather Cards */}
-        {/* <div className="mt-8 flex flex-col md:flex-row items-center font-['Fira_Code'] gap-6">
-          <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
-            <h2 className="text-xl font-semibold">Temperature</h2>
-            <p className="text-4xl mt-2 font-bold">{current.temperature}</p>
-          </div>
-
-          <div className="w-50 h-20 rounded-2xl backdrop-blur-md bg-white/10 text-white shadow-lg flex flex-col justify-center items-center p-4">
-            <h2 className="text-xl font-semibold">Weather</h2>
-            <p className="text-3xl mt-2 font-medium">{current.weather}</p>
-          </div>
-        </div> */}
-
-        {/* Buttons */}
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Button className="bg-white text-black px-6 py-3 text-base font-semibold">
-            Get Started
-          </Button>
-        </div>
 
         {/* Dot Indicators */}
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2">
@@ -742,14 +721,14 @@ const HeroSection = () => {
               className={`w-3 h-3 rounded-full ${
                 currentIndex === index ? "bg-white" : "bg-white/40"
               } transition-all duration-300`}
-            ></span>
+            />
           ))}
         </div>
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center items-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping"></div>
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-ping" />
           </div>
         </div>
       </div>
@@ -758,3 +737,538 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+// first website
+// import { useEffect, useRef, useState } from "react";
+// import { ArrowRight, Play } from "lucide-react";
+
+// const HeroSection = () => {
+//   const heroRef = useRef(null);
+//   const [textVisible, setTextVisible] = useState(false);
+//   const text = "Empowering Futures, Engineered Today";
+
+//   // Trigger text animation on component mount
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setTextVisible(true);
+//     }, 500);
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   // Animate hero elements on scroll
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       (entries) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             const textElements =
+//               entry.target.querySelectorAll(".hero-text-reveal");
+//             textElements.forEach((el, index) => {
+//               el.style.setProperty("--delay", `${index * 0.3}s`);
+//               el.classList.add("animate-fade-in");
+//             });
+//           }
+//         });
+//       },
+//       { threshold: 0.1 }
+//     );
+
+//     if (heroRef.current) {
+//       observer.observe(heroRef.current);
+//     }
+
+//     return () => observer.disconnect();
+//   }, []);
+
+//   return (
+//     <div>
+//       <section
+//         ref={heroRef}
+//         className="bg-[#2A2342] min-h-screen flex items-center justify-start relative overflow-hidden px-6"
+//         style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+//       >
+//         {/* Grid Overlay */}
+
+//         {/* Hero Content */}
+//         <div className="container mx-auto text-left relative z-10">
+//           <div className="max-w-4xl space-y-8">
+//             {/* Sliding Text Headline */}
+//             <div className="relative overflow-hidden">
+//               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-cyan-400 relative">
+//                 {/* Background Slider */}
+//                 <div
+//                   className={`absolute inset-0 transform transition-transform duration-2000 ease-out ${
+//                     textVisible ? "translate-x-0" : "translate-x-full"
+//                   }`}
+//                 ></div>
+
+//                 {/* Text with right-to-left animation */}
+//                 <span
+//                   className={`relative z-10 inline-block transform transition-all duration-1500 ease-out ${
+//                     textVisible
+//                       ? "translate-x-0 opacity-100"
+//                       : "translate-x-full opacity-0"
+//                   }`}
+//                   style={{ transitionDelay: "0.7s" }}
+//                 >
+//                   {text}
+//                 </span>
+//               </h1>
+//             </div>
+
+//             {/* Subheading with staggered animation */}
+//             <p className="hero-text-reveal text-white mt-4 text-2xl leading-relaxed opacity-0 transform translate-x transition-all duration-1000 ease-out delay-1000">
+//               Empowering futures with next gen, purpose driven tech innovations.
+//               We design, build, and deliver solutions that integrate technology
+//               with societal impact across education, smart cities, digital
+//               identity, and automation.
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* Floating Particles */}
+//         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+//           {[...Array(20)].map((_, i) => (
+//             <div
+//               key={i}
+//               className="absolute w-1 h-1 bg-white/20 rounded-full animate-float"
+//               style={{
+//                 left: `${Math.random() * 100}%`,
+//                 top: `${Math.random() * 100}%`,
+//                 animationDelay: `${Math.random() * 5}s`,
+//                 animationDuration: `${5 + Math.random() * 10}s`,
+//               }}
+//             />
+//           ))}
+//         </div>
+
+//         {/* Enhanced Animations */}
+//         <style jsx>{`
+//           @keyframes float {
+//             0% {
+//               transform: translateY(100vh) rotate(0deg);
+//               opacity: 0;
+//             }
+//             10%,
+//             90% {
+//               opacity: 1;
+//             }
+//             100% {
+//               transform: translateY(-100vh) rotate(360deg);
+//               opacity: 0;
+//             }
+//           }
+
+//           .animate-float {
+//             animation: float linear infinite;
+//           }
+
+//           .hero-text-reveal {
+//             animation: slideInFromRight 1s ease-out forwards;
+//           }
+
+//           @keyframes slideInFromRight {
+//             from {
+//               opacity: 0;
+//               transform: translateX(50px);
+//             }
+//             to {
+//               opacity: 1;
+//               transform: translateX(0);
+//             }
+//           }
+
+//           /* Smooth text reveal effect */
+//           .hero-text-reveal.animate-fade-in {
+//             opacity: 1 !important;
+//             transform: translateX(0) !important;
+//           }
+//         `}</style>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HeroSection;
+
+//second
+// import { useEffect, useRef, useState } from "react";
+// import { ArrowRight, Play } from "lucide-react";
+
+// const HeroSection = () => {
+//   const heroRef = useRef(null);
+//   const [isLoaded, setIsLoaded] = useState(false);
+//   const text = "Empowering Futures, Engineered Today";
+
+//   // Trigger animations on component mount
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setIsLoaded(true);
+//     }, 300);
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <div>
+//       <section
+//         ref={heroRef}
+//         className="bg-[#2A2342] min-h-screen flex items-center justify-start relative overflow-hidden"
+//         style={{
+//           fontFamily: "'PP Neue Montreal', sans-serif",
+//           backgroundImage: "url('./herobg.png')",
+//           backgroundRepeat: "no-repeat",
+//           backgroundSize: "100% 100%",
+//           backgroundPosition: "bottom",
+//         }}
+//       >
+//         <div className="absolute inset-0 bg-black/40 z-0"></div>
+//         {/* Animated Grid Overlay */}
+//         {/* Animated Grid Overlay */}
+//         <div className="absolute inset-0 opacity-5 pointer-events-none z-0">
+//           <div
+//             className="absolute inset-0"
+//             style={{
+//               backgroundImage: `
+//         linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+//         linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px)
+//       `,
+//               backgroundSize: "50px 50px",
+//             }}
+//           />
+//         </div>
+
+//         {/* Glowing Orbs */}
+//         <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse" />
+//         <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+
+//         {/* Hero Content */}
+//         <div className="container mx-auto px-6 lg:px-12 text-left relative z-20">
+//           <div className="max-w-5xl space-y-10">
+//             {/* Main Headline with Sliding Effect */}
+//             <div className="relative overflow-hidden rounded-xl p-2">
+//               {/* Background Slider with Gradient */}
+//               <div
+//                 className={`absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/25 to-purple-500/20 transform transition-all duration-2000 ease-out shadow-2xl ${
+//                   isLoaded
+//                     ? "translate-x-0 scale-100"
+//                     : "translate-x-full scale-95"
+//                 }`}
+//                 style={{
+//                   background:
+//                     "linear-gradient(135deg, rgba(34, 211, 238, 0.15) 0%, rgba(59, 130, 246, 0.2) 50%, rgba(147, 51, 234, 0.15) 100%)",
+//                   backdropFilter: "blur(10px)",
+//                   borderRadius: "12px",
+//                 }}
+//               />
+
+//               {/* Main Text */}
+//               <h1
+//                 className={`relative z-10 text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight tracking-tight bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent transform transition-all duration-1800 ease-out ${
+//                   isLoaded
+//                     ? "translate-x-0 opacity-100"
+//                     : "translate-x-full opacity-0"
+//                 }`}
+//                 style={{
+//                   transitionDelay: "0.5s",
+//                   textShadow: "0 0 30px rgba(34, 211, 238, 0.3)",
+//                 }}
+//               >
+//                 {text}
+//               </h1>
+//             </div>
+
+//             {/* Subtitle with enhanced animation */}
+//             <div className="relative">
+//               <p
+//                 className={`text-cyan-600 font-bold text-2xl md:text-2xl lg:text-3xl leading-relaxed  max-w-4xl transform transition-all duration-1200 ease-out ${
+//                   isLoaded
+//                     ? "translate-x-0 opacity-100"
+//                     : "translate-x-12 opacity-0"
+//                 }`}
+//                 style={{
+//                   transitionDelay: "1.2s",
+//                   textShadow: "0 2px 10px rgba(0,0,0,0.3)",
+//                 }}
+//               >
+//                 Empowering futures with{" "}
+//                 <span className="text-cyan-300 font-semibold">next-gen</span>,
+//                 purpose-driven tech innovations. We design, build, and deliver
+//                 solutions that integrate
+//                 <span className="text-blue-300 font-semibold">
+//                   {" "}
+//                   technology
+//                 </span>{" "}
+//                 with
+//                 <span className="text-purple-300 font-semibold">
+//                   {" "}
+//                   societal impact
+//                 </span>{" "}
+//                 across education, smart cities, digital identity, and
+//                 automation.
+//               </p>
+//             </div>
+
+//             {/* Enhanced CTA Buttons */}
+//           </div>
+//         </div>
+
+//         {/* Enhanced Floating Particles */}
+//         <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+//           {[...Array(25)].map((_, i) => (
+//             <div
+//               key={i}
+//               className="absolute rounded-full animate-float opacity-60"
+//               style={{
+//                 left: `${Math.random() * 100}%`,
+//                 top: `${Math.random() * 100}%`,
+//                 width: `${2 + Math.random() * 4}px`,
+//                 height: `${2 + Math.random() * 4}px`,
+//                 backgroundColor:
+//                   i % 3 === 0
+//                     ? "rgba(34, 211, 238, 0.4)"
+//                     : i % 3 === 1
+//                     ? "rgba(59, 130, 246, 0.4)"
+//                     : "rgba(147, 51, 234, 0.4)",
+//                 animationDelay: `${Math.random() * 5}s`,
+//                 animationDuration: `${8 + Math.random() * 12}s`,
+//                 boxShadow: "0 0 10px currentColor",
+//               }}
+//             />
+//           ))}
+//         </div>
+
+//         {/* Custom Styles */}
+//         <style>{`
+//           @keyframes float {
+//             0% {
+//               transform: translateY(100vh) rotate(0deg) scale(0);
+//               opacity: 0;
+//             }
+//             10% {
+//               opacity: 1;
+//               transform: translateY(90vh) rotate(36deg) scale(1);
+//             }
+//             90% {
+//               opacity: 1;
+//               transform: translateY(-10vh) rotate(324deg) scale(1);
+//             }
+//             100% {
+//               transform: translateY(-20vh) rotate(360deg) scale(0);
+//               opacity: 0;
+//             }
+//           }
+
+//           .animate-float {
+//             animation: float linear infinite;
+//           }
+
+//           /* Custom scrollbar for webkit browsers */
+//           ::-webkit-scrollbar {
+//             width: 8px;
+//           }
+
+//           ::-webkit-scrollbar-track {
+//             background: #2A2342;
+//           }
+
+//           ::-webkit-scrollbar-thumb {
+//             background: linear-gradient(to bottom, #22d3ee, #3b82f6);
+//             border-radius: 10px;
+//           }
+//         `}</style>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HeroSection;
+
+//third
+// import { useEffect, useRef, useState } from "react";
+// import { ArrowRight, Play } from "lucide-react";
+
+// const HeroSection = () => {
+//   const heroRef = useRef(null);
+//   const [isLoaded, setIsLoaded] = useState(false);
+//   const text = "Empowering Futures, Engineered Today";
+
+//   // Trigger animations on component mount
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setIsLoaded(true);
+//     }, 300);
+//     return () => clearTimeout(timer);
+//   }, []);
+
+//   return (
+//     <div>
+//       <section
+//         ref={heroRef}
+//         className="bg-[#121212] min-h-screen flex items-center justify-start relative overflow-hidden"
+//         style={{
+//           fontFamily: "'PP Neue Montreal', sans-serif",
+//           backgroundImage: "url('./robo.png')",
+//           backgroundRepeat: "no-repeat",
+//           backgroundSize: "100% 100%",
+//           backgroundPosition: "bottom",
+//         }}
+//       >
+//         {/* Animated Grid Overlay */}
+//         <div className="absolute inset-0 opacity-10 pointer-events-none">
+//           <div
+//             className="absolute inset-0 animate-pulse"
+//             style={{
+//               backgroundImage: `
+//                 linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+//                 linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px)
+//               `,
+//               backgroundSize: "50px 50px",
+//             }}
+//           />
+//         </div>
+
+//         {/* Glowing Orbs */}
+//         <div className="absolute top-20 left-20 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse" />
+//         <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+
+//         {/* Hero Content */}
+//         <div className="container mx-auto px-6 lg:px-12 text-left relative z-20">
+//           <div className="max-w-5xl space-y-10">
+//             {/* Main Headline with Sliding Effect */}
+//             <div className="relative overflow-hidden rounded-xl p-2">
+//               {/* Background Slider with Gradient */}
+//               <div
+//                 className={`absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/25 to-purple-500/20 transform transition-all duration-2000 ease-out shadow-2xl ${
+//                   isLoaded
+//                     ? "translate-x-0 scale-100"
+//                     : "translate-x-full scale-95"
+//                 }`}
+//                 style={{
+//                   background:
+//                     "linear-gradient(135deg, rgba(34, 211, 238, 0.15) 0%, rgba(59, 130, 246, 0.2) 50%, rgba(147, 51, 234, 0.15) 100%)",
+//                   backdropFilter: "blur(10px)",
+//                   borderRadius: "12px",
+//                 }}
+//               />
+
+//               {/* Main Text */}
+//               <h1
+//                 className={`relative z-10 text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-tight tracking-tight bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent transform transition-all duration-1800 ease-out ${
+//                   isLoaded
+//                     ? "translate-x-0 opacity-100"
+//                     : "translate-x-full opacity-0"
+//                 }`}
+//                 style={{
+//                   transitionDelay: "0.5s",
+//                   textShadow: "0 0 30px rgba(34, 211, 238, 0.3)",
+//                 }}
+//               >
+//                 {text}
+//               </h1>
+//             </div>
+
+//             {/* Subtitle with enhanced animation */}
+//             <div className="relative">
+//               <p
+//                 className={`text-cyan-600 font-bold text-2xl md:text-2xl lg:text-3xl leading-relaxed  max-w-4xl transform transition-all duration-1200 ease-out ${
+//                   isLoaded
+//                     ? "translate-x-0 opacity-100"
+//                     : "translate-x-12 opacity-0"
+//                 }`}
+//                 style={{
+//                   transitionDelay: "1.2s",
+//                   textShadow: "0 2px 10px rgba(0,0,0,0.3)",
+//                 }}
+//               >
+//                 Empowering futures with{" "}
+//                 <span className="text-cyan-300 font-semibold">next-gen</span>,
+//                 purpose-driven tech innovations. We design, build, and deliver
+//                 solutions that integrate
+//                 <span className="text-blue-300 font-semibold">
+//                   {" "}
+//                   technology
+//                 </span>{" "}
+//                 with
+//                 <span className="text-purple-300 font-semibold">
+//                   {" "}
+//                   societal impact
+//                 </span>{" "}
+//                 across education, smart cities, digital identity, and
+//                 automation.
+//               </p>
+//             </div>
+
+//             {/* Enhanced CTA Buttons */}
+//           </div>
+//         </div>
+
+//         {/* Enhanced Floating Particles */}
+//         <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+//           {[...Array(25)].map((_, i) => (
+//             <div
+//               key={i}
+//               className="absolute rounded-full animate-float opacity-60"
+//               style={{
+//                 left: `${Math.random() * 100}%`,
+//                 top: `${Math.random() * 100}%`,
+//                 width: `${2 + Math.random() * 4}px`,
+//                 height: `${2 + Math.random() * 4}px`,
+//                 backgroundColor:
+//                   i % 3 === 0
+//                     ? "rgba(34, 211, 238, 0.4)"
+//                     : i % 3 === 1
+//                     ? "rgba(59, 130, 246, 0.4)"
+//                     : "rgba(147, 51, 234, 0.4)",
+//                 animationDelay: `${Math.random() * 5}s`,
+//                 animationDuration: `${8 + Math.random() * 12}s`,
+//                 boxShadow: "0 0 10px currentColor",
+//               }}
+//             />
+//           ))}
+//         </div>
+
+//         {/* Custom Styles */}
+//         <style>{`
+//           @keyframes float {
+//             0% {
+//               transform: translateY(100vh) rotate(0deg) scale(0);
+//               opacity: 0;
+//             }
+//             10% {
+//               opacity: 1;
+//               transform: translateY(90vh) rotate(36deg) scale(1);
+//             }
+//             90% {
+//               opacity: 1;
+//               transform: translateY(-10vh) rotate(324deg) scale(1);
+//             }
+//             100% {
+//               transform: translateY(-20vh) rotate(360deg) scale(0);
+//               opacity: 0;
+//             }
+//           }
+
+//           .animate-float {
+//             animation: float linear infinite;
+//           }
+
+//           /* Custom scrollbar for webkit browsers */
+//           ::-webkit-scrollbar {
+//             width: 8px;
+//           }
+
+//           ::-webkit-scrollbar-track {
+//             background: #2A2342;
+//           }
+
+//           ::-webkit-scrollbar-thumb {
+//             background: linear-gradient(to bottom, #22d3ee, #3b82f6);
+//             border-radius: 10px;
+//           }
+//         `}</style>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default HeroSection;

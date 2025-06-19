@@ -28,7 +28,7 @@
 //           <p className="text-gray-300 text-[15px] mt-2 leading-relaxed">
 //             Vineet brings cutting-edge tech to India, big ideas to the table—
 //             and if you let him, probably some Chinese proverbs too. He
-//             strategizes like a chess master and thinks so much, we’re pretty
+//             strategizes like a chess master and thinks so much, we're pretty
 //             sure his brain runs on unlimited data!
 //           </p>
 
@@ -49,12 +49,12 @@ import React from "react";
 const TeamCard = ({ name, role, image, bio }) => {
   return (
     <div
-      className="max-w-sm h-[500px] bg-[#2A2342] text-white rounded-t-xl  overflow-hidden group transition-all duration-300"
+      className="max-w-sm h-[400px] md:h-[500px] bg-[#2A2342] text-white rounded-t-xl overflow-hidden group transition-all duration-300"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="mx-auto bg-gradient-to-b from-[#1A1A1A] to-[#2A2342]">
         {/* Image section */}
-        <div className="h-[300px] group-hover:h-[200px] transition-all duration-300 overflow-hidden">
+        <div className="h-[240px] md:h-[300px] group-hover:h-[160px] md:group-hover:h-[200px] transition-all duration-300 overflow-hidden">
           <img
             src={image}
             alt={name}
@@ -63,18 +63,18 @@ const TeamCard = ({ name, role, image, bio }) => {
         </div>
 
         {/* Text content */}
-        <div className="h-[212px] group-hover:h-[300px] transition-all duration-700 p-6 flex flex-col justify-start">
-          <h2 className="text-2xl font-semibold">{name}</h2>
+        <div className="h-[160px] md:h-[212px] group-hover:h-[240px] md:group-hover:h-[300px] transition-all duration-700 p-4 md:p-6 flex flex-col justify-start">
+          <h2 className="text-xl md:text-2xl font-semibold">{name}</h2>
 
-          <p className="text-[#EA6220] font-medium text-base opacity-0 group-hover:opacity-100 transition-opacity duration-700 uppercase">
+          <p className="text-[#EA6220] font-medium text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-700 uppercase">
             {role}
           </p>
 
-          <p className="text-gray-300 text-[15px] mt-2 leading-relaxed">
+          <p className="text-gray-300 text-xs md:text-[15px] mt-2 leading-relaxed">
             {bio}
           </p>
 
-          <p className="text-[#EA6220] text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          <p className="text-[#EA6220] text-xs md:text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
             Bengaluru, IND
           </p>
         </div>

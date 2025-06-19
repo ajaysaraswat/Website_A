@@ -89,35 +89,35 @@ const droneCardData = [
     titleLine2: "UAVs",
     description:
       "From agriculture to crowd control – our drones take smart automation to the skies",
-    image: "./drone.png",
+    image: "./drone.jpg",
   },
   {
     titleLine1: "AI-Powered",
     titleLine2: "Surveillance",
     description:
       "Intelligent surveillance systems for public safety and infrastructure.",
-    image: "./surveillance.jpg",
+    image: "./images/bulb.jpg",
   },
   {
     titleLine1: "Smart",
     titleLine2: "Delivery Drones",
     description:
       "Fast and reliable last-mile logistics using autonomous aerial drones.",
-    image: "./delivery.jpg",
+    image: "./city.jpg",
   },
   {
     titleLine1: "Agricultural",
     titleLine2: "Drones",
     description:
       "Optimize crop yield with precision farming technologies in the sky.",
-    image: "./agriculture.jpg",
+    image: "./agricul.jpg",
   },
   {
     titleLine1: "Aerial",
     titleLine2: "Mapping",
     description:
       "High-resolution mapping solutions for engineering and urban planning.",
-    image: "./mapping.jpg",
+    image: "./skill.jpg",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function DroneServices() {
 
   return (
     <div
-      className="relative min-h-screen py-20 text-white overflow-hidden"
+      className="relative min-h-screen py-12 md:py-20 text-white overflow-hidden"
       style={{
         fontFamily: "'PP Neue Montreal', sans-serif",
       }}
@@ -145,21 +145,24 @@ export default function DroneServices() {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/80" />
 
       {/* Content Layer */}
-      <div className="relative z-10 px-6 text-center mb-12">
-        <h2 className="text-5xl font-semibold text-[#ea4820]">
+      <div className="relative z-10 px-4 md:px-6 text-center mb-8 md:mb-12">
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#ea4820]">
           Future Mind <span className="text-white">Services</span>
         </h2>
-        <p className="text-xl font-medium text-white mt-4 max-w-3xl mx-auto text-left sm:text-center sm:mx-auto">
+        <p className="text-base md:text-xl font-medium text-white mt-4 max-w-3xl mx-auto text-left sm:text-center sm:mx-auto px-4 md:px-0">
           As a one-stop Advisory & Delivery company, we help clients achieve
           ambitious goals in the digital economy.
         </p>
       </div>
 
       {/* Infinite Scrolling Cards */}
-      <div className="relative z-10 w-full p-8 overflow-hidden">
-        <div className="animate-scroll py-15 flex w-max gap-16 px-8">
+      <div className="relative z-10 w-full p-4 md:p-8 overflow-hidden">
+        <div className="animate-scroll py-8 md:py-15 flex w-max gap-8 md:gap-16 px-4 md:px-8">
           {fullList.map((card, index) => (
-            <div key={index} className="min-w-[300px] w-[300px]">
+            <div
+              key={index}
+              className="min-w-[280px] md:min-w-[300px] w-[280px] md:w-[300px]"
+            >
               <DroneCard
                 titleLine1={card.titleLine1}
                 titleLine2={card.titleLine2}

@@ -1,101 +1,197 @@
-import React, { useEffect, useRef, useState } from "react";
+// import DroneCard from "./ServiceDetail";
 
-const tagline = [
-  "5+ years in public and enterprise digital transformation",
-  "30,000+ lives impacted through tech and training",
-  "100% India-built, scalable platforms",
-  "Transparent, ethical, and future-ready solutions",
-  "“We don’t build software—we build ecosystems.”",
-];
+// const droneCardData = [
+//   {
+//     titleLine1: "Drones &",
+//     titleLine2: "UAVs",
+//     description:
+//       "From agriculture to crowd control – our drones take smart automation to the skies",
+//     image: "./drone.png",
+//   },
+//   {
+//     titleLine1: "AI-Powered",
+//     titleLine2: "Surveillance",
+//     description:
+//       "Intelligent surveillance systems for public safety and infrastructure.",
+//     image: "./surveillance.jpg",
+//   },
+//   {
+//     titleLine1: "Smart",
+//     titleLine2: "Delivery Drones",
+//     description:
+//       "Fast and reliable last-mile logistics using autonomous aerial drones.",
+//     image: "./delivery.jpg",
+//   },
+//   {
+//     titleLine1: "Agricultural",
+//     titleLine2: "Drones",
+//     description:
+//       "Optimize crop yield with precision farming technologies in the sky.",
+//     image: "./agriculture.jpg",
+//   },
+//   {
+//     titleLine1: "Aerial",
+//     titleLine2: "Mapping",
+//     description:
+//       "High-resolution mapping solutions for engineering and urban planning.",
+//     image: "./mapping.jpg",
+//   },
+// ];
 
-const heading = "Trusted, Innovative, Impact-Driven";
+// export default function DroneServices() {
+//   const fullList = [...droneCardData, ...droneCardData]; // duplicate for seamless scroll
 
-const shortDescription =
-  "At Instrek, our mission is to bridge the gap between cutting-edge technology and everyday impact. We design and deliver purpose-driven digital solutions in education, automation, broadcasting, and smart cities—making innovation work for everyone, everywhere.";
+//   return (
+//     <div
+//       className="min-h-screen bg-gradient-to-b from-[#121212] to-[#2A2342] py-15 text-white overflow-hidden"
+//       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+//     >
+//       {/* Heading */}
+//       <div className="mt-10 px-6">
+//         <div className="flex justify-center mb-4">
+//           <h2 className="text-5xl font-semibold text-[#ea4820] text-center">
+//             Future Mind <span className="text-white">Services</span>
+//           </h2>
+//         </div>
 
-const keyPoints = [
-  "Timely delivery",
-  "Scalable solutions",
-  "Skilled team",
-  "Purpose-led",
-  "Trusted by institutions",
-  "Hands-on expertise",
-];
+//         <div className="max-w-5xl mx-auto mt-10 ">
+//           <p className="text-xl font-semibold text-left">
+//             As a one-stop Advisory & Delivery company, we help clients achieve
+//             ambitious goals in the digital economy.
+//           </p>
+//         </div>
+//       </div>
 
-const Why = () => {
-  const sectionRef = useRef(null);
-  const boxRef = useRef(null);
-  const [scale, setScale] = useState(0.8); // start small
-  const [bgOpacity, setBgOpacity] = useState(0); // start transparent
+//       {/* Infinite Scrolling Cards */}
+//       <div className="relative w-full p-8 overflow-hidden">
+//         <div className="animate-scroll py-15 flex w-max gap-16 px-8">
+//           {fullList.map((card, index) => (
+//             <div key={index} className="min-w-[300px] w-[300px]">
+//               <DroneCard
+//                 titleLine1={card.titleLine1}
+//                 titleLine2={card.titleLine2}
+//                 description={card.description}
+//                 image={card.image}
+//               />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current || !boxRef.current) return;
+// import DroneCard from "./ServiceDetail";
 
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+// const droneCardData = [
+//   {
+//     titleLine1: "Drones &",
+//     titleLine2: "UAVs",
+//     description:
+//       "From agriculture to crowd control – our drones take smart automation to the skies",
+//     image: "./drone.png",
+//   },
+//   {
+//     titleLine1: "AI-Powered",
+//     titleLine2: "Surveillance",
+//     description:
+//       "Intelligent surveillance systems for public safety and infrastructure.",
+//     image: "./surveillance.jpg",
+//   },
+//   {
+//     titleLine1: "Smart",
+//     titleLine2: "Delivery Drones",
+//     description:
+//       "Fast and reliable last-mile logistics using autonomous aerial drones.",
+//     image: "./delivery.jpg",
+//   },
+//   {
+//     titleLine1: "Agricultural",
+//     titleLine2: "Drones",
+//     description:
+//       "Optimize crop yield with precision farming technologies in the sky.",
+//     image: "./agriculture.jpg",
+//   },
+//   {
+//     titleLine1: "Aerial",
+//     titleLine2: "Mapping",
+//     description:
+//       "High-resolution mapping solutions for engineering and urban planning.",
+//     image: "./mapping.jpg",
+//   },
+// ];
 
-      const visible = Math.max(
-        0,
-        Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0)
-      );
-      const percentVisible = visible / rect.height;
+// export default function DroneServices() {
+//   const fullList = [...droneCardData, ...droneCardData]; // duplicate for seamless scroll
 
-      const newScale = 0.8 + 0.2 * percentVisible; // scale from 0.8 to 1
-      const newOpacity = Math.min(1, percentVisible); // fade in bg
+//   return (
+//     <div
+//       className="relative min-h-screen py-20 text-white overflow-hidden"
+//       style={{
+//         fontFamily: "'PP Neue Montreal', sans-serif",
+//       }}
+//     >
+//       {/* Gradient + Background image as absolute layer */}
+//       <div
+//         className="absolute inset-0 z-0"
+//         style={{
+//           backgroundImage:
+//             "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0)), url('./why.jpg')",
+//           backgroundSize: "cover",
+//           backgroundPosition: "center",
+//           backgroundRepeat: "no-repeat",
+//         }}
+//       />
+//       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/80" />
 
-      setScale(newScale);
-      setBgOpacity(newOpacity);
-    };
+//       {/* Content Layer */}
+//       <div className="relative z-10 px-6 text-center mb-12">
+//         <h2 className="text-5xl font-semibold text-white">
+//           WHY CHOOSE <span className="text-[#ea4820]">US</span> ?
+//         </h2>
+//       </div>
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+//       {/* Infinite Scrolling Cards */}
+//       <div className="relative z-10 w-full p-8 overflow-hidden">
+//         <div className="animate-scroll py-15 flex w-max gap-16 px-8">
+//           {fullList.map((card, index) => (
+//             <div key={index} className="min-w-[300px] w-[300px]">
+//               <DroneCard
+//                 titleLine1={card.titleLine1}
+//                 titleLine2={card.titleLine2}
+//                 description={card.description}
+//                 image={card.image}
+//               />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function ExperienceCard({ title, value, subtext }) {
   return (
-    <section
-      ref={sectionRef}
-      className="bg-gradient-to-b from-[#2A2342] to-[#121212] relative min-h-screen py-12 px-4 flex flex-col items-center justify-center transition-colors duration-700 ease-in-out"
-      style={{
-        backgroundColor: `#2A2342`,
-        fontFamily: "'PP Neue Montreal', sans-serif",
-      }}
+    <div
+      className="w-full h-auto rounded-lg bg-transparent text-white flex flex-col justify-center items-center text-center p-4 md:p-6 py-8 md:py-10"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <div
-        ref={boxRef}
-        className="font-['Fira_Code'] max-w-7xl border-2 border-white w-full bg-[#2a2342] rounded-2xl shadow-xl p-8  transition-transform duration-500 ease-in-out"
-        style={{ transform: `scale(${scale})` }}
-      >
-        <h2 className="text-3xl font-extrabold text-[#EA6220] mb-2 text-center">
-          Why Choose Us
-        </h2>
-        <div className="mb-6">
-          <ul className="list-disc pl-6 text-white space-y-1 ">
-            {tagline.map((line, idx) => (
-              <li key={idx}>{line}</li>
-            ))}
-          </ul>
-        </div>
-        <h3 className="text-xl font-semibold text-purple-700 mb-2">
-          {heading}
-        </h3>
-        <p className="text-gray-800 mb-6 leading-relaxed">{shortDescription}</p>
-        <div>
-          <h4 className="text-lg font-bold text-[#EA6220] mb-2">Key Points</h4>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-cyan-600">
-            {keyPoints.map((point, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-[#EA6220] rounded-full"></span>
-                {point}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </section>
-  );
-};
+      {/* Top white line */}
+      <div className="w-full h-[2px] md:h-[3px] bg-white mb-4 md:mb-6" />
 
-export default Why;
+      {/* Title */}
+      <h3 className="text-xl md:text-3xl font-medium mb-4 md:mb-6">{title}</h3>
+
+      {/* Bottom white line */}
+      <div className="w-full h-[2px] md:h-[3px] bg-white mb-4 md:mb-6" />
+
+      {/* Gradient Number */}
+      <div className="text-[60px] md:text-[100px] font-bold bg-gradient-to-r from-[#F871A0] to-[#ea4820] text-transparent bg-clip-text mb-2">
+        {value}
+      </div>
+
+      {/* Subtitle */}
+      <p className="text-sm md:text-xl text-white leading-relaxed">{subtext}</p>
+    </div>
+  );
+}

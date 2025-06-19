@@ -9,7 +9,7 @@ const teamMembers = [
     role: "Founder",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    bio: "Vineet brings cutting-edge tech to India, big ideas to the table, and—if you let him—probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we’re pretty sure his brain runs on unlimited data!",
+    bio: "Vineet brings cutting-edge tech to India, big ideas to the table, and—if you let him—probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const teamMembers = [
     role: "CEO",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let’s talk about FOOD now!",
+    bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let's talk about FOOD now!",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const teamMembers = [
     role: "Technology Ecosystem Coordinator",
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, “I haven’t been everywhere. But it’s on the list”.",
+    bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, I haven't been everywhere. But it's on the list",
   },
   {
     id: 4,
@@ -41,7 +41,10 @@ const Team = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full px-8 py-10 bg-[#2A2342] overflow-hidden text-white">
+    <div
+      className="relative w-full px-4 md:px-8 py-8 md:py-10 bg-[#2A2342] overflow-hidden text-white"
+      style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+    >
       {/* Background image with gradient overlay */}
       <div
         className="absolute inset-0 z-0"
@@ -56,12 +59,12 @@ const Team = () => {
 
       {/* Content Layer */}
       <div className="relative z-10">
-        <div className="space-y-10">
+        <div className="space-y-6 md:space-y-10">
           <div>
-            <h2 className="text-6xl font-bold tracking-tight text-[#EA6220] text-center">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#EA6220] text-center">
               OUR TEAM
             </h2>
-            <h3 className="text-2xl text-center text-white mt-3 font-light">
+            <h3 className="text-lg md:text-2xl text-center text-white mt-2 md:mt-3 font-light px-4">
               Driven by Purpose, Powered by Innovation
             </h3>
           </div>
@@ -80,7 +83,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-items-center mt-6 md:mt-8">
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}
@@ -94,7 +97,7 @@ const Team = () => {
 
         <div className="flex justify-center mt-4">
           <button
-            className="items-center mt-12 border border-[#EA6220] px-6 py-2 rounded text-white hover:bg-[#EA6220]"
+            className="items-center mt-8 md:mt-12 border border-[#EA6220] px-4 md:px-6 py-2 rounded text-white hover:bg-[#EA6220] text-sm md:text-base"
             onClick={() => navigate("/team")}
           >
             Know More

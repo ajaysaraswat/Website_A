@@ -12,6 +12,7 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Why from "./components/Why";
+import WhyCard from "./components/WhyCard";
 import FlotingIndex from "./components/FlotingIndex";
 import Technology from "./components/Technology";
 import Nature from "./components/Nature";
@@ -59,7 +60,7 @@ const App = () => {
                   <TeamSection />
                 </section>
                 <section id="why">
-                  <Why />
+                  <WhyCard />
                 </section>
                 <TestimonialsSection />
                 {/* <section id="blog">
@@ -68,7 +69,6 @@ const App = () => {
 
                 <section id="contact">
                   <Footer />
-                  <ServiceDetail />
                 </section>
               </>
             }

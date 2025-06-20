@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, lazy } from "react";
-//import ExperienceCard from "./Why";
-const ExperienceCard = lazy(() => import("./Why"));
+import ExperienceCard from "./Why";
+//const ExperienceCard = lazy(() => import("./Why"));
 
 const trustData = [
   {

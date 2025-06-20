@@ -81,9 +81,9 @@
 //   );
 // }
 
-//import DroneCard from "./ServiceDetail";
+import DroneCard from "./ServiceDetail";
 import React, { lazy } from "react";
-const DroneCard = lazy(() => import("./ServiceDetail"));
+//const DroneCard = lazy(() => import("./ServiceDetail"));
 const droneCardData = [
   {
     titleLine1: "Drones &",

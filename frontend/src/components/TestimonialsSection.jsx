@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
-//import TestimonialCard from "../components/TestimonialCard";
-const TestimonialCard = lazy(() => import("./TestimonialCard"));
+import TestimonialCard from "../components/TestimonialCard";
+//const TestimonialCard = lazy(() => import("./TestimonialCard"));
 import { Quote } from "lucide-react";
 
 const Index = () => {

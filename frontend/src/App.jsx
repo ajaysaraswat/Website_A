@@ -1,26 +1,26 @@
 import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-//import Header from "./components/Header";
-const Header = lazy(() => import("./components/Header"));
-//import HeroSection from "./components/HeroSection";
-const HeroSection = lazy(() => import("./components/HeroSection"));
-const AboutSection = lazy(() => import("./components/AboutSection"));
-//import AboutSection from "./components/AboutSection";
-//import ServicesSection from "./components/Services";
-//import TeamSection from "./components/TeamSection";
-const TeamSection = lazy(() => import("./components/TeamSection"));
+import Header from "./components/Header";
+//const Header = lazy(() => import("./components/Header"));
+import HeroSection from "./components/HeroSection";
+// const HeroSection = lazy(() => import("./components/HeroSection"));
+// const AboutSection = lazy(() => import("./components/AboutSection"));
+import AboutSection from "./components/AboutSection";
+import ServicesSection from "./components/Services";
+import TeamSection from "./components/TeamSection";
+// const TeamSection = lazy(() => import("./components/TeamSection"));
 import PortfolioSection from "./components/PortfolioSection";
 import BlogSection from "./components/BlogSection";
-//import TestimonialsSection from "./components/TestimonialsSection";
-const TestimonialsSection = lazy(() =>
-  import("./components/TestimonialsSection")
-);
+import TestimonialsSection from "./components/TestimonialsSection";
+//const TestimonialsSection = lazy(() =>
+// import("./components/TestimonialsSection")
+//);
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Why from "./components/Why";
-//import WhyCard from "./components/WhyCard";
-const WhyCard = lazy(() => import("./components/WhyCard"));
+import WhyCard from "./components/WhyCard";
+//const WhyCard = lazy(() => import("./components/WhyCard"));
 import FlotingIndex from "./components/FlotingIndex";
 import Technology from "./components/Technology";
 import Nature from "./components/Nature";

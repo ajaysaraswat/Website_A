@@ -76,6 +76,7 @@ const App = () => {
 
                 <section id="contact">
                   <Footer />
+                  <InlineScrollImages />
                 </section>
               </>
             }

@@ -282,6 +282,21 @@ const trustData = [
     value: "100+",
     subtext: "happy public & private sector collaborations",
   },
+  {
+    title: "Trusted",
+    value: "98%",
+    subtext: "years in public and enterprise digital transformation",
+  },
+  {
+    title: "Global Reach",
+    value: "12+",
+    subtext: "countries served with digital excellence",
+  },
+  {
+    title: "Innovators",
+    value: "30+",
+    subtext: "solutions deployed across industries",
+  },
 ];
 
 export default function HorizontalScrollSection() {
@@ -363,7 +378,10 @@ export default function HorizontalScrollSection() {
     <section
       ref={sectionRef}
       className="scroll-infographic-ui-23 relative w-full bg-black text-white"
-      style={{ height: sectionHeight }}
+      style={{
+        height: sectionHeight,
+        fontFamily: "'PP Neue Montreal', sans-serif",
+      }}
     >
       {/* Background Image + Overlay */}
       <div

@@ -5,24 +5,26 @@ const slides = [
     image: "./heroImageR.jpg",
     title1: "Empowering Futures,",
     title2: "Engineered Today",
-    description: "We build transformative tech for smart cities",
+    description:
+      "Harnessing breakthrough technologies to build what the world needs next",
     temperature: "28°C",
     weather: "Cloudy",
   },
   {
     image: "./smartR.jpg",
-    title1: "Smart Infrastructure",
-    title2: "Revolution",
-    description: "build education, and digital systems with social impact.",
+    title1: "Smarter Cities,",
+    title2: "Stronger Infrastructure",
+    description:
+      "Building sustainable, data-driven urban ecosystems through cutting-edge digital infrastructure.",
     temperature: "32°C",
     weather: "Sunny",
   },
   {
     image: "./skillR.jpg",
-    title1: "Digital Identity",
-    title2: "Solutions",
+    title1: "Skilling for the Next",
+    title2: "Tech Frontier",
     description:
-      "We enable secure, scalable identity platforms that drive inclusion and innovation.",
+      " Bridging the gap between talent and technology through hands-on, industry-aligned training.",
     temperature: "25°C",
     weather: "Rainy",
   },

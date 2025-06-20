@@ -62,7 +62,7 @@ const Team = () => {
       <div className="relative z-10">
         <div className="space-y-6 md:space-y-10">
           <div>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#EA6220] text-center">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#ea4820] text-center">
               OUR TEAM
             </h2>
             <h3 className="text-lg md:text-2xl text-center text-white mt-2 md:mt-3 font-light px-4">
@@ -84,7 +84,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-items-center mt-6 md:mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 justify-items-center mt-6 md:mt-8">
           {teamMembers.map((member) => (
             <TeamCard
               key={member.id}

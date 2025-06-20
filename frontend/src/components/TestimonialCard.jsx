@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 const TestimonialCard = ({ testimonial }) => {
   return (
     <div
-      className="bg-blue-700/30 backdrop-blur-sm border-2 border-white rounded-2xl p-8 hover:[#ea4820] transition-all duration-300 hover:transform hover:scale-105 group"
+      className="bg-purple-950/10 backdrop-blur-sm border-2 border-white rounded-2xl p-8 hover:[#ea4820] transition-all duration-300 hover:transform hover:scale-105 group"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       {/* Quote Icon */}

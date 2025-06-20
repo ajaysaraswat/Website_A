@@ -12,6 +12,11 @@
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+body {
+  overflow-x: hidden;
+}
+
 .dark-blue-gradient {
   background: linear-gradient(135deg, #2a2342 0%, #0f2027 50%, #000000 100%);
 }

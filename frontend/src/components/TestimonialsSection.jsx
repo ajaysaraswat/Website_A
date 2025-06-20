@@ -49,12 +49,12 @@ const Index = () => {
       }}
     >
       {/* Optional overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/70 z-0" />
+      <div className="absolute inset-0 bg-black/90 z-0" />
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold mb-6 tracking-wider">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white text-center">
             TESTIMONIALS
           </h1>
           <p className="text-xl text-gray-300 font-medium">Lorem Epsum</p>

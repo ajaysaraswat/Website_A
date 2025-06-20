@@ -69,6 +69,7 @@ const App = () => {
                   <WhyCard />
                 </section>
                 <TestimonialsSection />
+
                 {/* <section id="blog">
                   <BlogSection />
                 </section> */}

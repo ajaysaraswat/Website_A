@@ -166,3 +166,40 @@ html {
     height: auto;
   }
 }
+/* In your global CSS or Tailwind config */
+.scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #ea6220;
+  border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-infographic-ui-23 {
+  margin-right: calc(50vw - 55.2rem);
+}
+
+@media screen and (max-width: 1170px) {
+  .scroll-infographic-ui-23 {
+    margin-right: 3.2rem;
+  }
+}
+
+.scroll-infographic-ui-23__scrollable-section {
+  display: flex;
+  padding: 0 3.2rem;
+  transition: 0.05s transform;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

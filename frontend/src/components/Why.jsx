@@ -173,25 +173,29 @@
 export default function ExperienceCard({ title, value, subtext }) {
   return (
     <div
-      className="w-full h-auto rounded-lg bg-transparent text-white flex flex-col justify-center items-center text-center p-4 md:p-6 py-8 md:py-10"
+      className="w-full max-w-[360px] md:max-w-[420px] h-auto rounded-2xl bg-transparent text-white flex flex-col justify-center items-center text-center px-6 py-10 md:py-14 shadow-lg"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       {/* Top white line */}
-      <div className="w-full h-[2px] md:h-[3px] bg-white mb-4 md:mb-6" />
+      <div className="w-full h-[3px] md:h-[4px] bg-white mb-6 md:mb-8" />
 
       {/* Title */}
-      <h3 className="text-xl md:text-3xl font-medium mb-4 md:mb-6">{title}</h3>
+      <h3 className="text-2xl md:text-4xl font-semibold mb-6 md:mb-8">
+        {title}
+      </h3>
 
       {/* Bottom white line */}
-      <div className="w-full h-[2px] md:h-[3px] bg-white mb-4 md:mb-6" />
+      <div className="w-full h-[3px] md:h-[4px] bg-white mb-6 md:mb-8" />
 
       {/* Gradient Number */}
-      <div className="text-[60px] md:text-[100px] font-bold bg-gradient-to-r from-[#F871A0] to-[#ea4820] text-transparent bg-clip-text mb-2">
+      <div className="text-5xl md:text-6xl lg:text-8xl font-extralight bg-gradient-to-r from-[#ea4820] to-white bg-clip-text text-transparent mb-4 md:mb-6">
         {value}
       </div>
 
       {/* Subtitle */}
-      <p className="text-sm md:text-xl text-white leading-relaxed">{subtext}</p>
+      <p className="text-base md:text-xl text-white leading-relaxed">
+        {subtext}
+      </p>
     </div>
   );
 }

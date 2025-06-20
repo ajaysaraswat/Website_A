@@ -49,12 +49,12 @@ import React from "react";
 const TeamCard = ({ name, role, image, bio }) => {
   return (
     <div
-      className="max-w-sm h-[400px] md:h-[500px] bg-[#2A2342] text-white rounded-t-xl overflow-hidden group transition-all duration-300"
+      className="max-w-sm h-[430px] md:h-[500px] bg-[#2A2342] text-white rounded-t-xl overflow-hidden group transition-all duration-300"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="mx-auto bg-gradient-to-b from-[#1A1A1A] to-[#2A2342]">
         {/* Image section */}
-        <div className="h-[240px] md:h-[300px] group-hover:h-[160px] md:group-hover:h-[200px] transition-all duration-300 overflow-hidden">
+        <div className="h-[230px] md:h-[300px] group-hover:h-[160px] md:group-hover:h-[200px] transition-all duration-300 overflow-hidden">
           <img
             src={image}
             alt={name}

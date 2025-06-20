@@ -34,7 +34,7 @@ const AboutSection = () => {
             solutions that matter.
           </p>
         </div>
-        <div className="max-w-2xl text-center mx-auto mt-20 md:mt-30">
+        <div className="max-w-2xl text-center mx-auto mt-10 md:mt-10">
           <p className="text-lg md:text-2xl text-[#ea4820] leading-relaxed">
             Our approach blends deep tech with human insight building tools that
             empower people, enable transformation, and drive lasting impact.

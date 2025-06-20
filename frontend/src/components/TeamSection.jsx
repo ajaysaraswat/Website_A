@@ -1,5 +1,6 @@
-import React from "react";
-import TeamCard from "./TeamCard";
+import React, { lazy } from "react";
+//import TeamCard from "./TeamCard";
+const TeamCard = lazy(() => import("./TeamCard"));
 import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
@@ -50,7 +51,7 @@ const Team = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('./ourteam.jpeg')",
+            "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('./ourteamR.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

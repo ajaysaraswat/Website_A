@@ -81,15 +81,16 @@
 //   );
 // }
 
-import DroneCard from "./ServiceDetail";
-
+//import DroneCard from "./ServiceDetail";
+import React, { lazy } from "react";
+const DroneCard = lazy(() => import("./ServiceDetail"));
 const droneCardData = [
   {
     titleLine1: "Drones &",
     titleLine2: "UAVs",
     description:
       "From agriculture to crowd control – our drones take smart automation to the skies",
-    image: "./drone.jpg",
+    image: "./droneR.jpg",
   },
   {
     titleLine1: "AI-Powered",
@@ -103,21 +104,21 @@ const droneCardData = [
     titleLine2: "Delivery Drones",
     description:
       "Fast and reliable last-mile logistics using autonomous aerial drones.",
-    image: "./city.jpg",
+    image: "./cityR.jpg",
   },
   {
     titleLine1: "Agricultural",
     titleLine2: "Drones",
     description:
       "Optimize crop yield with precision farming technologies in the sky.",
-    image: "./agricul.jpg",
+    image: "./agriculR.jpg",
   },
   {
     titleLine1: "Aerial",
     titleLine2: "Mapping",
     description:
       "High-resolution mapping solutions for engineering and urban planning.",
-    image: "./skill.jpg",
+    image: "./skillR.jpg",
   },
 ];
 
@@ -136,7 +137,7 @@ export default function DroneServices() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0)), url('./services2.jpg')",
+            "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0)), url('./services1R.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

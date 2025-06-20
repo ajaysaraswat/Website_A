@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "./images/heroImage.png",
+    image: "./heroImageR.jpg",
     title1: "Empowering Futures,",
     title2: "Engineered Today",
     description: "We build transformative tech for smart cities",
@@ -10,7 +10,7 @@ const slides = [
     weather: "Cloudy",
   },
   {
-    image: "./smart.jpg",
+    image: "./smartR.jpg",
     title1: "Smart Infrastructure",
     title2: "Revolution",
     description: "build education, and digital systems with social impact.",
@@ -18,7 +18,7 @@ const slides = [
     weather: "Sunny",
   },
   {
-    image: "./skill.jpg",
+    image: "./skillR.jpg",
     title1: "Digital Identity",
     title2: "Solutions",
     description:

@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+//import Header from "./components/Header";
+const Header = lazy(() => import("./components/Header"));
 //import HeroSection from "./components/HeroSection";
 const HeroSection = lazy(() => import("./components/HeroSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));

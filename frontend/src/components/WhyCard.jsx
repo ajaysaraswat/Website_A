@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import ExperienceCard from "./Why";
+import { useEffect, useRef, useState, lazy } from "react";
+//import ExperienceCard from "./Why";
+const ExperienceCard = lazy(() => import("./Why"));
 
 const trustData = [
   {
@@ -136,7 +137,7 @@ export default function Why() {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0)), url('./why.jpg')",
+              "linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0)), url('./whyR.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

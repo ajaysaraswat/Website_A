@@ -62,6 +62,10 @@ const App = () => {
                 <section id="services">
                   <Services />
                 </section>
+                <section id="inline">
+                  <InlineScrollImages />
+                </section>
+
                 <section id="team">
                   <TeamSection />
                 </section>
@@ -76,7 +80,6 @@ const App = () => {
 
                 <section id="contact">
                   <Footer />
-                  <InlineScrollImages />
                 </section>
               </>
             }

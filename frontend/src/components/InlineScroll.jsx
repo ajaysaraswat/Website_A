@@ -2,17 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const InlineScrollImages = () => {
-  const images = ["./tata.png", "./lnT.png", "./yes.png", "./forth.png"];
+  const images = [
+    "./second.png",
+    "./tata.png",
+    "./first.png",
+    "./yes.png",
+    "./forth.png",
+  ];
 
   // Create multiple copies to ensure seamless infinite loop
   const loopedImages = [...images, ...images, ...images, ...images];
 
   return (
     <div
-      className="w-full overflow-hidden bg-gradient-to-t from-black via-black/80 to-black opacity-90 py-4"
+      className="w-full overflow-hidden bg-gradient-to-t from-black via-black to-black  py-4"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <h2 className="text-4xl md:text-6xl mb-12 font-bold tracking-tight text-[#ea4820] text-center">
+      <h2 className="text-3xl md:text-5xl mb-12 font-bold tracking-tight text-[#ea4820] text-center">
         OUR <span className="text-white"> CUSTOMERS</span>
       </h2>
       <motion.div
@@ -30,7 +36,7 @@ const InlineScrollImages = () => {
             <img
               src={src}
               alt={`logo-${idx}`}
-              className="h-20 w-auto object-contain bg-transparent p-3 rounded-lg "
+              className="h-20 w-auto object-contain bg-transparent p-3 rounded-lg mb-10 "
             />
           </div>
         ))}

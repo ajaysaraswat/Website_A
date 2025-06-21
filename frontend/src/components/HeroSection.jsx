@@ -21,8 +21,8 @@ const slides = [
   },
   {
     image: "./skillR.jpg",
-    title1: "Skilling for the Next",
-    title2: "Tech Frontier",
+    title1: "Digital Identity",
+    title2: "Solutions",
     description:
       " Bridging the gap between talent and technology through hands-on, industry-aligned training.",
     temperature: "25°C",

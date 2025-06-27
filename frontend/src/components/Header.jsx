@@ -76,7 +76,7 @@ const Header = () => {
     { label: "About", link: "#about" },
     { label: "Team", link: "#team" },
     { label: "Services", link: "#services" },
-    { label: "Blog", link: "#blog" },
+    { label: "Blog", link: "/blog" },
     //{ label: "Why", link: "#why" },
     { label: "Contact", link: "#contact" },
   ];

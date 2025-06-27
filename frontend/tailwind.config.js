@@ -20,6 +20,9 @@ export default {
           "100%": { transform: "translateX(0)" },
         },
       },
+      fontFamily: {
+        sans: ["PP Neue Montreal", "sans-serif"],
+      },
     },
   },
   plugins: [],

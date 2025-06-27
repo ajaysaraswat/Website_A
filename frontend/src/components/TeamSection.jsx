@@ -43,6 +43,7 @@ const Team = () => {
 
   return (
     <div
+      id="team"
       className="relative w-full px-4 md:px-8 py-8 md:py-10 bg-[#2A2342] overflow-hidden text-white"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
@@ -99,7 +100,11 @@ const Team = () => {
         <div className="flex justify-center mt-4">
           <button
             className="items-center mt-8 md:mt-12 border border-[#EA6220] px-4 md:px-6 py-2 rounded text-white hover:bg-[#EA6220] text-sm md:text-base"
-            onClick={() => navigate("/team")}
+            onClick={() => {
+              navigate("/team");
+              // Ensure we scroll to top after navigation
+              window.scrollTo(0, 0);
+            }}
           >
             Know More
           </button>

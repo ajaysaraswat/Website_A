@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-//const Header = lazy(() => import("./components/Header"));
+//import Header from "./components/Header";
+const Header = lazy(() => import("./components/Header"));
 //import HeroSection from "./components/HeroSection";
 const HeroSection = lazy(() => import("./components/HeroSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
@@ -33,23 +33,24 @@ import Services from "./components/Services";
 import WholeTeam from "./components/WholeTeam";
 import InlineScrollImages from "./components/InlineScroll";
 import { LogoCarousel } from "./components/LogoCoraousel";
+import BlogIndex from "./components/BlogIndex";
+import BlogPost from "./components/BlogPost";
+import StatsGrid from "./components/StatsGrid.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="font-[Neue_Montreal] overflow-x-hidden">
-        <Header />
-
         <Routes>
-          {/* <Route path="/index" element={<FlotingIndex />} />
-          <Route path="/technology" element={<Technology />} /> */}
-          <Route path="/services-page" element={<ServiceDes />} />
-          {/* <Route path="/architecture" element={<Architecture />} /> */}
           <Route path="/team" element={<WholeTeam />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/services-page" element={<ServiceDes />} />
           <Route
             path="/"
             element={
               <>
+                <Header />
                 <section id="home">
                   <HeroSection />
                   {/* <TiltedImage /> */}
@@ -73,11 +74,11 @@ const App = () => {
                   <LogoCarousel />
                 </section>
 
-                <section id="team">
+                {/* <section id="team" className="scroll-mt-20">
                   <TeamSection />
-                </section>
+                </section> */}
                 <section id="why">
-                  <WhyCard />
+                  <StatsGrid />
                 </section>
                 <TestimonialsSection />
 
@@ -92,7 +93,7 @@ const App = () => {
               </>
             }
           />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </BrowserRouter>

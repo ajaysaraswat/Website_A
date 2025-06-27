@@ -1,4 +1,23 @@
 @import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Apply PP Neue Montreal font globally */
+@layer base {
+  html {
+    font-family: "PP Neue Montreal", sans-serif;
+  }
+
+  body {
+    font-family: "PP Neue Montreal", sans-serif;
+  }
+
+  * {
+    font-family: "PP Neue Montreal", sans-serif;
+  }
+}
+
 body {
   overflow-x: hidden;
 }
@@ -263,4 +282,15 @@ html {
 
 .read-the-docs {
   color: #888;
+}
+/* If not using Tailwind's scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -89,45 +89,95 @@ const droneCardData = [
     titleLine1: "Drones &",
     titleLine2: "UAVs",
     description:
-      "From agriculture to crowd control – our drones take smart automation to the skies",
+      "From agriculture to crowd control—our drones take smart automation to the skies.",
     image: "./droneR.jpg",
   },
   {
-    titleLine1: "AI-Powered",
-    titleLine2: "Surveillance",
+    titleLine1: "Solar &",
+    titleLine2: "Energy",
     description:
-      "Intelligent surveillance systems for public safety and infrastructure.",
+      "Scalable solar solutions and smart grids for clean, connected cities.",
     image: "./images/bulb.jpg",
   },
   {
-    titleLine1: "Smart",
-    titleLine2: "Delivery Drones",
+    titleLine1: "Electric Vehicles",
+    titleLine2: "(EVs)",
     description:
-      "Fast and reliable last-mile logistics using autonomous aerial drones.",
+      "Building the EV ecosystem—2W, 3W, batteries & beyond.",
     image: "./cityR.jpg",
   },
   {
-    titleLine1: "Agricultural",
-    titleLine2: "Drones",
+    titleLine1: "Artificial",
+    titleLine2: "Intelligence",
     description:
-      "Optimize crop yield with precision farming technologies in the sky.",
+      "From traffic systems to medical diagnosis—AI that understands and acts.",
     image: "./agriculR.jpg",
   },
   {
-    titleLine1: "Aerial",
-    titleLine2: "Mapping",
+    titleLine1: "Internet of",
+    titleLine2: "Things (IoT)",
     description:
-      "High-resolution mapping solutions for engineering and urban planning.",
+      "Turning infrastructure into insight with real-time, automated control.",
     image: "./skillR.jpg",
   },
+  {
+    titleLine1: "Blockchain &",
+    titleLine2: "Identity",
+    description:
+      "Digital identity, zero-trust systems, and secure transactions powered by blockchain.",
+    image: "./droneR.jpg",
+  },
+  {
+    titleLine1: "Robotics",
+    titleLine2: "Systems",
+    description:
+      "Smart automation across industries—from robotics to utilities.",
+    image: "./images/bulb.jpg",
+  },
+  {
+    titleLine1: "Data &",
+    titleLine2: "Analytics",
+    description:
+      "Transform data into decisions with AI-powered analytics and dashboards.",
+    image: "./cityR.jpg",
+  },
+  {
+    titleLine1: "Cloud &",
+    titleLine2: "DevOps",
+    description:
+      "Accelerate digital delivery with DevOps automation and cloud-native tools.",
+    image: "./agriculR.jpg",
+  },
+  {
+    titleLine1: "AR/VR &",
+    titleLine2: "Microapps",
+    description:
+      "Augmented campaigns, 3D demos & remote learning—no downloads required.",
+    image: "./skillR.jpg",
+  },
+  {
+    titleLine1: "Tech",
+    titleLine2: "Skilling",
+    description:
+      "Hands-on training in AI, Drones, EVs & more. Learn today, earn tomorrow.",
+    image: "./droneR.jpg",
+  },
+  {
+    titleLine1: "Smart",
+    titleLine2: "Cities",
+    description:
+      "Connected infrastructure, AI-powered public services, and clean air tech.",
+    image: "./images/bulb.jpg",
+  },
 ];
+
 
 export default function DroneServices() {
   const fullList = [...droneCardData, ...droneCardData]; // duplicate for seamless scroll
 
   return (
     <div
-      className="relative min-h-screen py-12 md:py-20 text-white overflow-hidden"
+      className="relative py-8 md:py-12 text-white overflow-hidden"
       style={{
         fontFamily: "'PP Neue Montreal', sans-serif",
       }}
@@ -146,7 +196,7 @@ export default function DroneServices() {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/80" />
 
       {/* Content Layer */}
-      <div className="relative z-10 px-4 md:px-6 text-center mb-8 md:mb-12">
+      <div className="relative z-10 px-4 md:px-6 text-center mb-6 md:mb-8">
         <h2 className="text-3xl md:text-5xl font-semibold text-[#ea4820]">
           Future Mind <span className="text-white">Services</span>
         </h2>
@@ -157,8 +207,8 @@ export default function DroneServices() {
       </div>
 
       {/* Infinite Scrolling Cards */}
-      <div className="relative z-10 w-full p-4 md:p-8 overflow-hidden">
-        <div className="animate-scroll py-8 md:py-15 flex w-max gap-8 md:gap-16 px-4 md:px-8">
+      <div className="relative z-10 w-full p-4 md:p-6 overflow-hidden">
+        <div className="animate-scroll py-4 md:py-8 flex w-max gap-6 md:gap-12 px-4 md:px-6">
           {fullList.map((card, index) => (
             <div
               key={index}

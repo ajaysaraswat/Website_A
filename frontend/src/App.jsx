@@ -2,21 +2,22 @@ import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 //const Header = lazy(() => import("./components/Header"));
-import HeroSection from "./components/HeroSection";
-// const HeroSection = lazy(() => import("./components/HeroSection"));
-// const AboutSection = lazy(() => import("./components/AboutSection"));
-import AboutSection from "./components/AboutSection";
+//import HeroSection from "./components/HeroSection";
+const HeroSection = lazy(() => import("./components/HeroSection"));
+const AboutSection = lazy(() => import("./components/AboutSection"));
+//import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/Services";
 import TeamSection from "./components/TeamSection";
 // const TeamSection = lazy(() => import("./components/TeamSection"));
 import PortfolioSection from "./components/PortfolioSection";
 import BlogSection from "./components/BlogSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-//const TestimonialsSection = lazy(() =>
-// import("./components/TestimonialsSection")
-//);
+//import TestimonialsSection from "./components/TestimonialsSection";
+const TestimonialsSection = lazy(() =>
+  import("./components/TestimonialsSection")
+);
 import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+//import Footer from "./components/Footer";
+const Footer = lazy(() => import("./components/Footer"));
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Why from "./components/Why";
 import WhyCard from "./components/WhyCard";
@@ -26,22 +27,24 @@ import Technology from "./components/Technology";
 import Nature from "./components/Nature";
 import Architecture from "./components/Architecture";
 import NotFound from "./components/NotFound";
+import ServiceDes from "./components/ServiceDes";
 
 import Services from "./components/Services";
 import WholeTeam from "./components/WholeTeam";
 import InlineScrollImages from "./components/InlineScroll";
+import { LogoCarousel } from "./components/LogoCoraousel";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="font-[Neue_Montreal]">
+      <div className="font-[Neue_Montreal] overflow-x-hidden">
         <Header />
 
         <Routes>
-          <Route path="/index" element={<FlotingIndex />} />
-          <Route path="/technology" element={<Technology />} />
-          <Route path="/nature" element={<Nature />} />
-          <Route path="/architecture" element={<Architecture />} />
+          {/* <Route path="/index" element={<FlotingIndex />} />
+          <Route path="/technology" element={<Technology />} /> */}
+          <Route path="/services-page" element={<ServiceDes />} />
+          {/* <Route path="/architecture" element={<Architecture />} /> */}
           <Route path="/team" element={<WholeTeam />} />
           <Route
             path="/"
@@ -61,9 +64,13 @@ const App = () => {
                  */}
                 <section id="services">
                   <Services />
+                  {/* <InlineScrollImages /> */}
                 </section>
-                <section id="inline">
+                {/* <section id="inline">
                   <InlineScrollImages />
+                </section> */}
+                <section id="inline">
+                  <LogoCarousel />
                 </section>
 
                 <section id="team">
@@ -80,14 +87,13 @@ const App = () => {
 
                 <section id="contact">
                   <Footer />
+                  <ScrollToTopButton />
                 </section>
               </>
             }
           />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
-
-        <ScrollToTopButton />
       </div>
     </BrowserRouter>
   );

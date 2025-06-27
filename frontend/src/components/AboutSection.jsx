@@ -3,7 +3,7 @@ import React from "react";
 const AboutSection = () => {
   return (
     <section
-      className="min-h-screen bg-[#121212] relative overflow-hidden"
+      className=" bg-[#121212] relative overflow-hidden"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       {/* Background Video */}

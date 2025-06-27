@@ -262,41 +262,7 @@ const trustData = [
     value: "100+",
     subtext: "happy public & private sector collaborations",
   },
-  {
-    title: "Trusted",
-    value: "98%",
-    subtext: "years in public and enterprise digital transformation",
-  },
-  {
-    title: "Global Reach",
-    value: "12+",
-    subtext: "countries served with digital excellence",
-  },
-  {
-    title: "Innovators",
-    value: "30+",
-    subtext: "solutions deployed across industries",
-  },
-  {
-    title: "Clients",
-    value: "100+",
-    subtext: "happy public & private sector collaborations",
-  },
-  {
-    title: "Trusted",
-    value: "98%",
-    subtext: "years in public and enterprise digital transformation",
-  },
-  {
-    title: "Global Reach",
-    value: "12+",
-    subtext: "countries served with digital excellence",
-  },
-  {
-    title: "Innovators",
-    value: "30+",
-    subtext: "solutions deployed across industries",
-  },
+  
 ];
 
 export default function HorizontalScrollSection() {
@@ -344,7 +310,7 @@ export default function HorizontalScrollSection() {
 
   const sectionHeight = scrollLength
     ? `${scrollLength - window.innerWidth + window.innerHeight}px`
-    : "100vh";
+    : "50vh";
 
   return (
     // <section
@@ -416,7 +382,7 @@ export default function HorizontalScrollSection() {
         {trustData.map((card, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[280px] md:w-[300px] mr-6"
+            className="flex-shrink-0 w-[380px] md:w-[400px] mr-6"
           >
             <ExperienceCard
               title={card.title}

@@ -92,7 +92,7 @@ const Header = () => {
           <img
             src="./Logo_White.png"
             alt="Instrek Logo"
-            className="h-10 w-auto object-contain"
+            className="h-12 w-15 object-contain"
           />
         </div>
 
@@ -117,7 +117,7 @@ const Header = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden ml-auto text-red-600 pr-2"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}

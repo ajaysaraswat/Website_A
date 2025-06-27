@@ -19,7 +19,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .black-gradient {
   background: #000000; /* fallback for old browsers */

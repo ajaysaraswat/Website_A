@@ -57,7 +57,6 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white text-center">
             TESTIMONIALS
           </h1>
-          <p className="text-xl text-gray-300 font-medium">Lorem Epsum</p>
         </div>
 
         {/* Testimonials Grid */}

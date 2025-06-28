@@ -43,6 +43,7 @@ const StatsGrid = () => {
 
     if (!container || !el || stats.length <= 3) return;
 
+    // Desktop wheel event handler with better performance
     const handleWheel = (e) => {
       const maxScrollLeft = el.scrollWidth - el.clientWidth;
       const currentScroll = el.scrollLeft;
@@ -58,7 +59,8 @@ const StatsGrid = () => {
       }
 
       e.preventDefault();
-      el.scrollLeft += e.deltaY;
+      // Fast and smooth scrolling - increased multiplier
+      el.scrollLeft += e.deltaY * 3;
     };
 
     container.addEventListener("wheel", handleWheel, { passive: false });
@@ -87,9 +89,15 @@ const StatsGrid = () => {
           <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto no-scrollbar"
+            style={{
+              WebkitOverflowScrolling: "touch",
+            }}
           >
             {stats.map((stat, index) => (
-              <div key={index} className="min-w-[400px] flex-shrink-0">
+              <div
+                key={index}
+                className="min-w-[400px] flex-shrink-0 md:min-w-[400px] sm:min-w-[300px]"
+              >
                 <StatCard
                   title={stat.title}
                   value={stat.value}
@@ -97,6 +105,15 @@ const StatsGrid = () => {
                 />
               </div>
             ))}
+          </div>
+
+          {/* Optional: Touch scroll indicators for mobile */}
+          <div className="flex justify-center mt-4 md:hidden">
+            <div className="flex space-x-2">
+              {stats.map((_, index) => (
+                <div key={index} className="w-2 h-2 rounded-full bg-gray-600" />
+              ))}
+            </div>
           </div>
         </div>
       </div>

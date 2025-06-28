@@ -18,7 +18,7 @@ const BlogIndex = () => {
       <section
         className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url('./droneR.jpg')",
+          backgroundImage: "url('/optimized/droneR.webp')",
         }}
       >
         <div className="absolute inset-0 bg-black/50 z-0" />

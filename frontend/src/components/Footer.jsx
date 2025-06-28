@@ -40,7 +40,11 @@ const Footer = () => {
           {/* Newsletter Section */}
           <div className="space-y-8">
             <div className="bg-transparent w-fit px-4 py-2 rounded">
-              <img src={image} alt="Instrek Logo" className="h-20 w-auto" />
+              <img
+                src="/optimized/Logo_White.webp"
+                alt="Instrek Logo"
+                className="h-20 w-auto"
+              />
             </div>
 
             <div>

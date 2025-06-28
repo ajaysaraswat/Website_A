@@ -18,8 +18,8 @@ const engagementLogos = [
   { name: "", image: NDMALogo },
   { name: "", image: TRAILogo },
   { name: "", image: NITILogo },
-  { name: "", image: "./second.png" },
-  { name: "", image: "./third.png" },
+  { name: "", image: "/optimized/second.webp" },
+  { name: "", image: "/optimized/third.webp" },
 ];
 
 const clientLogos = [

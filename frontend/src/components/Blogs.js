@@ -13,7 +13,7 @@ export const blogs = [
     - 40% improvement in emergency response times
 
     These advancements are just the beginning of a transformation that will reshape how we live and work in urban spaces.`,
-    image: "/cityR.jpg",
+    image: "/optimized/cityR.webp",
     authorImage: "/images/Team.jpg",
     author: "Dr. Sarah Chen",
     date: "March 15, 2024",
@@ -34,8 +34,8 @@ export const blogs = [
     - Improved irrigation management
 
     This technology is not just improving efficiency; it's making farming more sustainable and environmentally friendly.`,
-    image: "/droneR.jpg",
-    authorImage: "/images/Team.jpg",
+    image: "/optimized/droneR.webp",
+    authorImage: "/optimized/images/Team.webp",
     author: "Michael Rodriguez",
     date: "March 18, 2024",
     readTime: "4 min read",
@@ -55,8 +55,8 @@ export const blogs = [
     - Automated skill matching
 
     These innovations are helping both employers and employees adapt to the rapidly changing job market.`,
-    image: "/workforceTrain.jpeg",
-    authorImage: "/images/Team.jpg",
+    image: "/optimized/images/workforceTrain.webp",
+    authorImage: "/optimized/images/Team.webp",
     author: "Emma Thompson",
     date: "March 20, 2024",
     readTime: "6 min read",
@@ -76,8 +76,8 @@ export const blogs = [
     - Efficient resource allocation
 
     These implementations are creating more trust between citizens and government institutions.`,
-    image: "/images/blockchainlern.jpg",
-    authorImage: "/images/Team.jpg",
+    image: "/optimized/images/blockchainlern.webp",
+    authorImage: "/optimized/images/Team.webp",
     author: "James Wilson",
     date: "March 22, 2024",
     readTime: "5 min read",
@@ -97,8 +97,8 @@ export const blogs = [
     - Adaptive learning technologies
 
     These advancements are creating more engaging and effective learning experiences for students of all ages.`,
-    image: "/childedu.jpg",
-    authorImage: "/images/Team.jpg",
+    image: "/optimized/childedu.webp",
+    authorImage: "/optimized/images/Team.webp",
     author: "Dr. Lisa Park",
     date: "March 25, 2024",
     readTime: "7 min read",
@@ -118,8 +118,8 @@ export const blogs = [
     - Climate change data collection
 
     This technology is providing valuable data for environmental conservation efforts.`,
-    image: "/images/env1.jpg",
-    authorImage: "/images/Team.jpg",
+    image: "/optimized/images/env1.webp",
+    authorImage: "/optimized/images/Team.webp",
     author: "David Brown",
     date: "March 28, 2024",
     readTime: "5 min read",

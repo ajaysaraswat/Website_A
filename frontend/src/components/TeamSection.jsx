@@ -1,6 +1,5 @@
-import React, { lazy } from "react";
+import React from "react";
 import TeamCard from "./TeamCard";
-//const TeamCard = lazy(() => import("./TeamCard"));
 import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
@@ -40,10 +39,10 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-[#2A2342] overflow-hidden text-white"
+      className="relative w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-white overflow-hidden"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      {/* Background image with gradient overlay */}
+      {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -57,37 +56,33 @@ const Team = () => {
 
       {/* Content Layer */}
       <div className="relative z-10 max-w-[1440px] mx-auto">
-        <div className="space-y-8 sm:space-y-12">
-          <div className="text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#ea4820]">
-              OUR TEAM
-            </h2>
-            <h3 className="text-lg sm:text-xl lg:text-2xl text-white mt-3 sm:mt-4 font-light max-w-3xl mx-auto">
-              Driven by Purpose, Powered by Innovation
-            </h3>
-          </div>
+        <div className="text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#ea4820]">
+            OUR TEAM
+          </h2>
+          <h3 className="text-lg sm:text-xl lg:text-2xl mt-4 font-light max-w-3xl mx-auto text-white">
+            Driven by Purpose, Powered by Innovation
+          </h3>
         </div>
 
         {/* Team Cards Grid */}
-        <div className="mt-12 sm:mt-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-10 justify-items-center">
-            {teamMembers.map((member) => (
-              <TeamCard
-                key={member.id}
-                name={member.name}
-                role={member.role}
-                image={member.image}
-                bio={member.bio}
-              />
-            ))}
-          </div>
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+          {teamMembers.map((member) => (
+            <TeamCard
+              key={member.id}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              bio={member.bio}
+            />
+          ))}
         </div>
 
         {/* Know More Button */}
-        <div className="mt-12 sm:mt-16 text-center">
+        <div className="mt-12 text-center">
           <button
             onClick={() => navigate("/team")}
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#ea4820] hover:bg-[#ea4820]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ea4820] transition-all duration-300"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#ea4820] hover:bg-[#ea4820]/90 transition-all duration-300"
           >
             Know More About Our Team
           </button>

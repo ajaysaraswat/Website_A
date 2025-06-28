@@ -90,83 +90,83 @@ const droneCardData = [
     titleLine2: "UAVs",
     description:
       "From agriculture to crowd control—our drones take smart automation to the skies.",
-    image: "./droneR.jpg",
+    image: "./optimized/droneR.webp",
   },
   {
     titleLine1: "Solar &",
     titleLine2: "Energy",
     description:
       "Scalable solar solutions and smart grids for clean, connected cities.",
-    image: "./images/bulb.jpg",
+    image: "./optimized/images/bulb.webp",
   },
   {
     titleLine1: "Electric Vehicles",
     titleLine2: "(EVs)",
     description: "Building the EV ecosystem—2W, 3W, batteries & beyond.",
-    image: "./cityR.jpg",
+    image: "./optimized/cityR.webp",
   },
   {
     titleLine1: "Artificial",
     titleLine2: "Intelligence",
     description:
       "From traffic systems to medical diagnosis—AI that understands and acts.",
-    image: "./agriculR.jpg",
+    image: "./optimized/agriculR.webp",
   },
   {
     titleLine1: "Internet of",
     titleLine2: "Things (IoT)",
     description:
       "Turning infrastructure into insight with real-time, automated control.",
-    image: "./skillR.jpg",
+    image: "./optimized/skillR.webp",
   },
   {
     titleLine1: "Blockchain &",
     titleLine2: "Identity",
     description:
       "Digital identity, zero-trust systems, and secure transactions powered by blockchain.",
-    image: "./droneR.jpg",
+    image: "./optimized/droneR.webp",
   },
   {
     titleLine1: "Robotics",
     titleLine2: "Systems",
     description:
       "Smart automation across industries—from robotics to utilities.",
-    image: "./images/bulb.jpg",
+    image: "./optimized/images/bulb.webp",
   },
   {
     titleLine1: "Data &",
     titleLine2: "Analytics",
     description:
       "Transform data into decisions with AI-powered analytics and dashboards.",
-    image: "./cityR.jpg",
+    image: "./optimized/cityR.webp",
   },
   {
     titleLine1: "Cloud &",
     titleLine2: "DevOps",
     description:
       "Accelerate digital delivery with DevOps automation and cloud-native tools.",
-    image: "./agriculR.jpg",
+    image: "./optimized/agriculR.webp",
   },
   {
     titleLine1: "AR/VR &",
     titleLine2: "Microapps",
     description:
       "Augmented campaigns, 3D demos & remote learning—no downloads required.",
-    image: "./skillR.jpg",
+    image: "./optimized/skillR.webp",
   },
   {
     titleLine1: "Tech",
     titleLine2: "Skilling",
     description:
       "Hands-on training in AI, Drones, EVs & more. Learn today, earn tomorrow.",
-    image: "./droneR.jpg",
+    image: "./optimized/droneR.webp",
   },
   {
     titleLine1: "Smart",
     titleLine2: "Cities",
     description:
       "Connected infrastructure, AI-powered public services, and clean air tech.",
-    image: "./images/bulb.jpg",
+    image: "./optimized/images/bulb.webp",
   },
 ];
 

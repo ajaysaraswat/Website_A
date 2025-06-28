@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 const InlineScrollImages = () => {
   const images = [
-    "./second.png",
-    "./tata.png",
-    "./first.png",
-    "./yes.png",
-    "./forth.png",
+    "./optimized/second.webp",
+    "./optimized/tata.webp",
+    "./optimized/first.webp",
+    "./optimized/yes.webp",
+    "./optimized/forth.webp",
   ];
 
   // Create multiple copies to ensure seamless infinite loop

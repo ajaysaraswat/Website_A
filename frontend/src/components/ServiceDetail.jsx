@@ -10,7 +10,7 @@ export default function DroneCard({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/servicedes", {
+    navigate("/services-page", {
       state: {
         service: {
           titleLine1,
@@ -20,6 +20,8 @@ export default function DroneCard({
         },
       },
     });
+    // Scroll to top after navigation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (

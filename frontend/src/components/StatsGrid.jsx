@@ -36,6 +36,8 @@ const stats = [
 const StatsGrid = () => {
   const containerRef = useRef(null);
   const scrollRef = useRef(null);
+  const touchStartXRef = useRef(0);
+  const touchStartYRef = useRef(0);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -43,7 +45,7 @@ const StatsGrid = () => {
 
     if (!container || !el || stats.length <= 3) return;
 
-    // Desktop wheel event handler with better performance
+    // Desktop wheel event handler
     const handleWheel = (e) => {
       const maxScrollLeft = el.scrollWidth - el.clientWidth;
       const currentScroll = el.scrollLeft;
@@ -55,18 +57,54 @@ const StatsGrid = () => {
       const atEnd = currentScroll >= maxScrollLeft - 1;
 
       if ((scrollingRight && atEnd) || (scrollingLeft && atStart)) {
-        return; // Let page scroll normally
+        return;
       }
 
       e.preventDefault();
-      // Fast and smooth scrolling - increased multiplier
       el.scrollLeft += e.deltaY * 3;
     };
 
+    // Touch event handlers
+    const handleTouchStart = (e) => {
+      touchStartXRef.current = e.touches[0].clientX;
+      touchStartYRef.current = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!touchStartXRef.current || !touchStartYRef.current) return;
+
+      const touchEndX = e.touches[0].clientX;
+      const touchEndY = e.touches[0].clientY;
+
+      const deltaX = touchStartXRef.current - touchEndX;
+      const deltaY = touchStartYRef.current - touchEndY;
+
+      // If horizontal scrolling is more prominent than vertical
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        e.preventDefault();
+        el.scrollLeft += deltaX;
+      }
+
+      touchStartXRef.current = touchEndX;
+      touchStartYRef.current = touchEndY;
+    };
+
+    const handleTouchEnd = () => {
+      touchStartXRef.current = 0;
+      touchStartYRef.current = 0;
+    };
+
+    // Add event listeners
     container.addEventListener("wheel", handleWheel, { passive: false });
+    container.addEventListener("touchstart", handleTouchStart, { passive: true });
+    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+    container.addEventListener("touchend", handleTouchEnd, { passive: true });
 
     return () => {
       container.removeEventListener("wheel", handleWheel);
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
 
@@ -85,10 +123,10 @@ const StatsGrid = () => {
         </div>
 
         {/* Scrollable stats */}
-        <div ref={containerRef} className="relative max-w-6xl mx-auto">
+        <div ref={containerRef} className="relative max-w-6xl mx-auto touch-pan-x">
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar  touch-auto"
+            className="flex gap-6 overflow-x-auto no-scrollbar"
             style={{
               WebkitOverflowScrolling: "touch",
             }}
@@ -96,7 +134,7 @@ const StatsGrid = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] lg:min-w-[400px] flex-shrink-0"
+                className="min-w-[400px] flex-shrink-0 md:min-w-[400px] sm:min-w-[300px]"
               >
                 <StatCard
                   title={stat.title}

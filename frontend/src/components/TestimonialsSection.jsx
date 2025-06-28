@@ -41,7 +41,7 @@ const Index = () => {
     <div
       className="text-white relative"
       style={{
-        backgroundImage: `url('./testimonial.png')`,
+        backgroundImage: `url('./optimized/testimonial.webp')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

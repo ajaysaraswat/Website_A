@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import Footer from "./Footer";
 import CapabilityCard from "./CapabilityCard";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -6,20 +6,18 @@ import { useLocation, useNavigate } from "react-router-dom";
 const ServiceDes = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const serviceData = location.state?.service || {
     titleLine1: "Our",
     titleLine2: "Services",
     description: "Explore our comprehensive range of services.",
-    image: "./services1R.jpg",
+    image: "./optimized/services1R.webp",
   };
-
-  useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo({
-      top: 0,
-      behavior: "instant",
-    });
-  }, []);
 
   const getCapabilities = () => {
     const defaultCapabilities = [
@@ -30,19 +28,19 @@ const ServiceDes = () => {
       },
       {
         title: "Implementation & Integration",
-        image: "./images/digitaltrans.jpg",
+        image: "./optimized/images/digitaltrans.webp",
         description:
           "End-to-end implementation and seamless integration with existing systems",
       },
       {
         title: "Consulting & Strategy",
-        image: "./images/strategic.webp",
+        image: "./optimized/images/strategic.webp",
         description:
           "Expert consultation and strategic planning for optimal deployment",
       },
       {
         title: "Training & Support",
-        image: "./images/workforceTrain.jpeg",
+        image: "./optimized/images/workforceTrain.webp",
         description:
           "Comprehensive training programs and ongoing technical support",
       },
@@ -54,16 +52,6 @@ const ServiceDes = () => {
 
   return (
     <div className="relative bg-black text-white min-h-screen">
-      {/* Back Button */}
-      <div className="fixed top-4 left-4 z-50">
-        <button
-          onClick={() => navigate("/")}
-          className="flex items-center gap-2 px-4 py-2 bg-[#ea4820] hover:bg-[#d43d1b] text-white rounded-lg transition-all duration-300"
-        >
-          <span>←</span> Back
-        </button>
-      </div>
-
       <main
         className="relative"
         style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}

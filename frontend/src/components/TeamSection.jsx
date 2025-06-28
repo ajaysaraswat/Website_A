@@ -8,32 +8,28 @@ const teamMembers = [
     id: 1,
     name: "Vineet Sharma",
     role: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/Vineet.jpg",
     bio: "Vineet brings cutting edge tech to India, big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
   },
   {
     id: 2,
     name: "Sanjana Wadhwa",
     role: "CEO",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/sanjana.jpg",
     bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah… let's talk about FOOD now!",
   },
   {
     id: 3,
     name: "Tithika Mittal",
     role: "Technology Ecosystem Coordinator",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/tithika.jpg",
     bio: "Tithika oversees product development and ensures alignment with market needs. One line for her, I haven't been everywhere. But it's on the list",
   },
   {
     id: 4,
     name: "Gaurab Ganguly",
     role: " Non-Executive Strategic Advisor",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/gaurab.jpg",
     bio: "Gaurab mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
   },
 ];

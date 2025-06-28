@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function DroneCard({
   titleLine1,
@@ -6,8 +7,26 @@ export default function DroneCard({
   description,
   image,
 }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/services-page", {
+      state: {
+        service: {
+          titleLine1,
+          titleLine2,
+          description,
+          image,
+        },
+      },
+    });
+  };
+
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg text-white">
+    <div
+      className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg text-white cursor-pointer transform transition-transform duration-300 hover:scale-105"
+      onClick={handleClick}
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
@@ -35,10 +54,10 @@ export default function DroneCard({
           <p className="text-sm md:text-xl leading-relaxed text-white">
             {description}
           </p>
-          <div className="flex items-center text-lg md:text-2xl font-semibold cursor-pointer hover:underline">
+          <div className="flex items-center text-lg md:text-2xl font-semibold hover:text-[#ea4820] transition-colors duration-300">
             Learn more
-            <span className="ml-2 w-6 h-6 md:w-8 md:h-8 bg-white rounded-full flex items-center justify-center">
-              <ArrowRight className="w-3 h-3 md:w-4 md:h-4 text-black" />
+            <span className="ml-2 w-6 h-6 md:w-8 md:h-8 bg-[#ea4820] rounded-full flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4 text-white group-hover:text-[#ea4820]" />
             </span>
           </div>
         </div>

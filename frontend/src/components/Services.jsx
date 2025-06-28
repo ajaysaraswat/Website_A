@@ -82,8 +82,8 @@
 // }
 
 import DroneCard from "./ServiceDetail";
-import React, { lazy } from "react";
-//const DroneCard = lazy(() => import("./ServiceDetail"));
+import React from "react";
+
 const droneCardData = [
   {
     titleLine1: "Drones &",
@@ -102,8 +102,7 @@ const droneCardData = [
   {
     titleLine1: "Electric Vehicles",
     titleLine2: "(EVs)",
-    description:
-      "Building the EV ecosystem—2W, 3W, batteries & beyond.",
+    description: "Building the EV ecosystem—2W, 3W, batteries & beyond.",
     image: "./cityR.jpg",
   },
   {
@@ -171,9 +170,8 @@ const droneCardData = [
   },
 ];
 
-
 export default function DroneServices() {
-  const fullList = [...droneCardData, ...droneCardData]; // duplicate for seamless scroll
+  const fullList = [...droneCardData, ...droneCardData];
 
   return (
     <div
@@ -200,7 +198,7 @@ export default function DroneServices() {
         <h2 className="text-3xl md:text-5xl font-semibold text-[#ea4820]">
           Future Mind <span className="text-white">Services</span>
         </h2>
-        <p className="text-base md:text-xl font-medium text-white mt-4 max-w-3xl mx-auto text-left sm:text-center sm:mx-auto px-4 md:px-0">
+        <p className="text-lg md:text-2xl leading-relaxed text-white mt-4 max-w-3xl mx-auto text-left sm:text-center sm:mx-auto px-4 md:px-0">
           As a one-stop Advisory & Delivery company, we help clients achieve
           ambitious goals in the digital economy.
         </p>
@@ -208,7 +206,13 @@ export default function DroneServices() {
 
       {/* Infinite Scrolling Cards */}
       <div className="relative z-10 w-full p-4 md:p-6 overflow-hidden">
-        <div className="animate-scroll py-4 md:py-8 flex w-max gap-6 md:gap-12 px-4 md:px-6">
+        <div
+          className="py-4 md:py-8 flex w-max gap-6 md:gap-12 px-4 md:px-6 animate-scroll hover:[animation-play-state:paused]"
+          style={{
+            willChange: "transform",
+            animationFillMode: "backwards",
+          }}
+        >
           {fullList.map((card, index) => (
             <div
               key={index}

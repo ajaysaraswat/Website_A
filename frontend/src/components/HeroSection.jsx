@@ -11,7 +11,7 @@ const slides = [
     weather: "Cloudy",
   },
   {
-    image: "./smartR.jpg",
+    image: "/smartR.webp",
     title1: "Smarter Cities,",
     title2: "Stronger Infrastructure",
     description:

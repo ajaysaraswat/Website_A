@@ -7,8 +7,9 @@ export default {
         xs: "475px",
       },
       animation: {
-        "scroll-left": "scroll-left 30s linear infinite",
-        "scroll-right": "scroll-right 30s linear infinite",
+        "scroll-left": "scroll-left 40s linear infinite",
+        "scroll-right": "scroll-right 40s linear infinite",
+        scroll: "scroll 30s linear infinite",
       },
       keyframes: {
         "scroll-left": {
@@ -18,6 +19,10 @@ export default {
         "scroll-right": {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
+        },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       fontFamily: {

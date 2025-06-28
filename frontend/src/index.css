@@ -135,6 +135,18 @@ body {
   animation: scroll 30s linear infinite;
 }
 
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll-container {
+  transition: all 0.3s ease;
+}
+
+.animate-scroll-container:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
 /* Responsive utilities */
 @media (max-width: 640px) {
   .animate-scroll {

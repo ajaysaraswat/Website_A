@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Linkedin, Twitter, Facebook } from "lucide-react";
-
+import image from "../assets/logos/Logo_White.svg"; // Adjust the path as necessary
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
@@ -40,11 +40,7 @@ const Footer = () => {
           {/* Newsletter Section */}
           <div className="space-y-8">
             <div className="bg-transparent w-fit px-4 py-2 rounded">
-              <img
-                src="./images/Logo_White_new.png"
-                alt="Instrek Logo"
-                className="h-20 w-auto"
-              />
+              <img src={image} alt="Instrek Logo" className="h-20 w-auto" />
             </div>
 
             <div>

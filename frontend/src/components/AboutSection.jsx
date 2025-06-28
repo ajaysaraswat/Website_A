@@ -12,9 +12,12 @@ const AboutSection = () => {
         muted
         loop
         playsInline
+        preload="metadata"
+        poster="/images/about-preview.jpg"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-20 z-0"
       >
         <source src="/about.mp4" type="video/mp4" />
+        <source src="/about.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 

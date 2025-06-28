@@ -259,6 +259,10 @@ html {
 }
 
 /* inline scroll */
+/* If you're using Tailwind with custom styles */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+}
 
 .logo {
   height: 6em;

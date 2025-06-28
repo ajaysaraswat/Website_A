@@ -88,7 +88,7 @@ const StatsGrid = () => {
         <div ref={containerRef} className="relative max-w-6xl mx-auto">
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar"
+            className="flex gap-6 overflow-x-auto no-scrollbar  touch-auto"
             style={{
               WebkitOverflowScrolling: "touch",
             }}
@@ -96,7 +96,7 @@ const StatsGrid = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="min-w-[400px] flex-shrink-0 md:min-w-[400px] sm:min-w-[300px]"
+                className="min-w-[250px] sm:min-w-[300px] md:min-w-[350px] lg:min-w-[400px] flex-shrink-0"
               >
                 <StatCard
                   title={stat.title}

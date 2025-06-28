@@ -1,31 +1,41 @@
 import { LogoSection } from "./LogoSection";
-import image1 from "../assets/logos/ARTIA_Engagement.svg";
+
+// Import all SVG logos
+import ARTIALogo from "/Rimages/ARTIA_Engagement.svg";
+import NDMALogo from "/Rimages/National Disaster Management Authority Engagement.svg";
+import TRAILogo from "/Rimages/TRAI_Engagement.svg";
+import NITILogo from "/Rimages/NITI Aayog_Engagement.svg";
+import LTLogo from "/Rimages/L&T_Client.svg";
+import MazdaLogo from "/Rimages/Mazda_Client.svg";
+import NagarroLogo from "/Rimages/Nagarro_Client.svg";
+import ICICILogo from "/Rimages/ICICI Bank_Client.svg";
+import TataLogo from "/Rimages/Tata Steel_Client.svg";
+import YesBankLogo from "/Rimages/Yes Bank_Client.svg";
+import UCBerkeleyLogo from "/Rimages/UC Berkeley_Client.svg";
 
 const engagementLogos = [
-  { name: "", image: "./Rimages/ARTIA_Engagement.webp" },
-  {
-    name: "",
-    image: "./Rimages/National Disaster Management Authority Engagement.webp",
-  },
-  { name: "", image: "./Rimages/TRAI_Engagement.webp" },
-  { name: "", image: "./Rimages/NITI Aayog_Engagement.webp" },
+  { name: "", image: ARTIALogo },
+  { name: "", image: NDMALogo },
+  { name: "", image: TRAILogo },
+  { name: "", image: NITILogo },
   { name: "", image: "./second.png" },
   { name: "", image: "./third.png" },
 ];
 
 const clientLogos = [
-  { name: "", image: "/Rimages/L&T_Client.webp" },
-  { name: "", image: "./Rimages/Mazda_Client.webp" },
-  { name: "", image: "./Rimages/Nagarro_Client.webp" },
-  { name: "", image: "./Rimages/ICICI Bank_Client.webp" },
-  { name: "", image: "./Rimages/Tata Steel_Client.webp" },
-  { name: "", image: "./Rimages/Yes Bank_Client.webp" },
+  { name: "", image: LTLogo },
+  { name: "", image: MazdaLogo },
+  { name: "", image: NagarroLogo },
+  { name: "", image: ICICILogo },
+  { name: "", image: TataLogo },
+  { name: "", image: YesBankLogo },
+  { name: "", image: UCBerkeleyLogo },
 ];
 
 export const LogoCarousel = () => {
   return (
     <div
-      className="min-h-screen bg-black flex flex-col justify-center py-20 px-4"
+      className="bg-black flex flex-col justify-center py-20 px-4"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="max-w-6xl mx-auto w-full space-y-24">

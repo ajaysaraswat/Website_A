@@ -10,7 +10,7 @@ export default function DroneCard({
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/services-page", {
+    navigate("/servicedes", {
       state: {
         service: {
           titleLine1,

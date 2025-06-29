@@ -11,11 +11,11 @@ const TeamCard = ({ name, role, image, bio }) => {
       onClick={() => setIsExpanded(!isExpanded)}
     >
       {/* Image Container with Hover Zoom */}
-      <div className="aspect-[4/3] w-full overflow-hidden">
+      <div className="relative pt-[100%] w-full">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
+          className="absolute inset-0 w-full h-full object-cover object-top transform transition-transform duration-500 group-hover:scale-110"
         />
       </div>
 
@@ -40,9 +40,7 @@ const TeamCard = ({ name, role, image, bio }) => {
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
             {bio}
           </p>
-          <p className="text-[#ea4820] text-sm sm:text-base mt-4">
-            Bengaluru, IND
-          </p>
+          <p className="text-[#ea4820] text-sm sm:text-base mt-4">Delhi, IND</p>
         </div>
       </div>
 

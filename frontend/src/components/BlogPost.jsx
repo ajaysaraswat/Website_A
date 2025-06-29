@@ -12,21 +12,6 @@ const BlogPost = () => {
   useEffect(() => {
     // Force scroll to top immediately when component mounts
     window.scrollTo(0, 0);
-
-    // Prevent default touch move behavior
-    const preventScroll = (e) => {
-      if (window.scrollY === 0) {
-        e.preventDefault();
-      }
-    };
-
-    // Add touch event listener
-    document.addEventListener("touchmove", preventScroll, { passive: false });
-
-    // Cleanup
-    return () => {
-      document.removeEventListener("touchmove", preventScroll);
-    };
   }, []);
 
   const blog = blogs.find((b) => b.id === parseInt(id));

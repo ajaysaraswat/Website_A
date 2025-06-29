@@ -17,8 +17,9 @@ const Header = () => {
   const menuItems = [
     { label: "Home", link: "#home", isHashLink: true },
     { label: "About", link: "#about", isHashLink: true },
-    { label: "Team", link: "#team", isHashLink: true },
+
     { label: "Services", link: "#services", isHashLink: true },
+    { label: "Team", link: "#team", isHashLink: true },
     { label: "Blog", link: "/blog", isHashLink: false },
     { label: "Contact", link: "#contact", isHashLink: true },
   ];
@@ -52,8 +53,9 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.link}
-                className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${activeMenu === item.label ? "text-[#EA6220]" : "text-white"
-                  }`}
+                className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                  activeMenu === item.label ? "text-[#EA6220]" : "text-white"
+                }`}
                 onClick={() => setActiveMenu(item.label)}
               >
                 {item.label}
@@ -65,8 +67,9 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.link}
-                className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${activeMenu === item.label ? "text-[#EA6220]" : "text-white"
-                  }`}
+                className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                  activeMenu === item.label ? "text-[#EA6220]" : "text-white"
+                }`}
                 onClick={() => setActiveMenu(item.label)}
               >
                 {item.label}
@@ -90,16 +93,20 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu with transition */}
       <div
-        className={`md:hidden px-6 pb-4 space-y-4 bg-[#181344] text-white transition-all duration-300 ease-in-out ${menuOpen ? 'opacity-100 max-h-96' : 'opacity-0 max-h-0 overflow-hidden'
-          }`}
+        className={`md:hidden px-6 pb-4 space-y-4 bg-[#181344] text-white transition-all duration-300 ease-in-out ${
+          menuOpen
+            ? "opacity-100 max-h-96"
+            : "opacity-0 max-h-0 overflow-hidden"
+        }`}
       >
         {menuItems.map((item) =>
           item.isHashLink ? (
             <a
               key={item.label}
               href={item.link}
-              className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
-                }`}
+              className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
+              }`}
               onClick={() => {
                 setActiveMenu(item.label);
                 setMenuOpen(false);
@@ -111,8 +118,9 @@ const Header = () => {
             <Link
               key={item.label}
               to={item.link}
-              className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
-                }`}
+              className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${
+                activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
+              }`}
               onClick={() => {
                 setActiveMenu(item.label);
                 setMenuOpen(false);

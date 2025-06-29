@@ -17,12 +17,15 @@ const Header = () => {
   const menuItems = [
     { label: "Home", link: "#home", isHashLink: true },
     { label: "About", link: "#about", isHashLink: true },
-
     { label: "Services", link: "#services", isHashLink: true },
     { label: "Team", link: "#team", isHashLink: true },
     { label: "Blog", link: "/blog", isHashLink: false },
     { label: "Contact", link: "#contact", isHashLink: true },
   ];
+
+  const handleLogoClick = () => {
+    window.location.href = "/"; // This will force a page reload and navigate to home
+  };
 
   return (
     <header
@@ -31,7 +34,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between h-[60px]">
         {/* Logo with loading state */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
           {isLoaded ? (
             <img
               src="./optimized/Logo_White.webp"

@@ -1,6 +1,14 @@
 import { useState } from "react";
-import { ArrowRight, Linkedin, Twitter, Facebook } from "lucide-react";
-import image from "../assets/logos/Logo_White.svg"; // Adjust the path as necessary
+import {
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
@@ -16,19 +24,26 @@ const Footer = () => {
 
   const footerLinks = {
     company: [
-      { name: "About Us", href: "/about" },
-      { name: "AI-driven IT Services", href: "#" },
-      { name: "Smart City Solutions", href: "#" },
-      { name: "Accessibility", href: "#" },
+      //{ name: "About Us", href: "#about" },
+      { name: "AI-driven IT Services", href: "/blog/3" },
+      { name: "Smart City Solutions", href: "/blog/1" },
+      { name: "Our Team", href: "/team" },
     ],
     services: [
-      { name: "Training & Skilling", href: "#" },
-      { name: "Solutions", href: "#" },
-      { name: "Insights", href: "#" },
-      { name: "Contact", href: "#" },
-      { name: "Press Office", href: "#" },
+      // { name: "Training & Skilling", href: "/services/training" },
+      { name: "Solutions", href: "/services-page" },
+      { name: "Blog", href: "/blog" },
+      { name: "Connect", href: "https://www.linkedin.com/company/instrek" },
     ],
   };
+
+  const socialLinks = [
+    {
+      name: "LinkedIn",
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/company/instrek",
+    },
+  ];
 
   return (
     <footer
@@ -39,13 +54,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Newsletter Section */}
           <div className="space-y-8">
-            <div className="bg-transparent w-fit px-4 py-2 rounded">
+            <Link
+              to="/"
+              className="block bg-transparent w-fit px-4 py-2 rounded hover:opacity-80 transition-opacity"
+            >
               <img
                 src="/optimized/Logo_White.webp"
                 alt="Instrek Logo"
                 className="h-20 w-auto"
               />
-            </div>
+            </Link>
 
             <div>
               <h3 className="text-xl font-semibold mb-4">
@@ -76,29 +94,53 @@ const Footer = () => {
           {/* Links Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
+              <h4 className="text-xl font-semibold text-[#ea4820] mb-6">
+                Company
+              </h4>
               <ul className="space-y-4">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors text-lg"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        to={link.href}
+                        className="text-gray-300 hover:text-white transition-colors text-lg"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors text-lg"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
             <div>
+              <h4 className="text-xl font-semibold text-[#ea4820] mb-6">
+                Services
+              </h4>
               <ul className="space-y-4">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors text-lg"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        to={link.href}
+                        className="text-gray-300 hover:text-white transition-colors text-lg"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors text-lg"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -114,12 +156,18 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <span className="text-gray-400">All Rights Reserved 2025</span>
               <div className="flex space-x-3">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors"
-                >
-                  <Linkedin size={20} />
-                </a>
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center hover:bg-[#ea4820] transition-colors"
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

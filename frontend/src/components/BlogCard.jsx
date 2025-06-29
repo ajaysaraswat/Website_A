@@ -7,9 +7,10 @@ const BlogCard = ({ blog, featured = false }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    // First scroll to top
+    window.scrollTo(0, 0);
+    // Then navigate
     navigate(`/blog/${blog.id}`);
-    // Scroll to top after navigation
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Simple mapping of blog IDs to placeholder images

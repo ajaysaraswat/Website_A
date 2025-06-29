@@ -22,7 +22,7 @@ import WhyCard from "./components/WhyCard";
 //const WhyCard = lazy(() => import("./components/WhyCard"));
 
 import Technology from "./components/Technology";
-import Nature from "./components/Nature";
+
 import Architecture from "./components/Architecture";
 import NotFound from "./components/NotFound";
 import ServiceDes from "./components/ServiceDes";
@@ -86,6 +86,7 @@ const App = () => {
                   <section id="why">
                     <StatsGrid />
                   </section>
+
                   <TestimonialsSection />
 
                   {/* <section id="blog">

@@ -53,9 +53,10 @@ const BlogSection = () => {
   const navigate = useNavigate();
 
   const handleReadMore = (postId) => {
+    // First scroll to top
+    window.scrollTo(0, 0);
+    // Then navigate
     navigate(`/blog/${postId}`);
-    // Scroll to top after navigation
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

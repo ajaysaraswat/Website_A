@@ -102,7 +102,7 @@ const WholeTeam = () => {
 
   return (
     <>
-      <div className="w-full px-8 py-10 bg-[#2A2342]">
+      <div className="w-full px-8 py-10 bg-[#121212]">
         <div>
           <div className="space-y-10">
             <div>

@@ -13,7 +13,7 @@ const Index = () => {
       name: "Olivia Wilson",
       title: "Founder of Borcelle",
       avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face",
     },
     {
       id: 2,

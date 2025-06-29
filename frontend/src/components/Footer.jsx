@@ -7,11 +7,12 @@ import {
   Instagram,
   Youtube,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [agreed, setAgreed] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +21,36 @@ const Footer = () => {
       setEmail("");
       setAgreed(false);
     }
+  };
+
+  const handleLinkClick = (href) => {
+    // For hash links (internal page sections)
+    if (href.startsWith("#")) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
+    }
+
+    // For regular routes, navigate first then scroll
+    navigate(href);
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }, 0);
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }, 0);
   };
 
   const footerLinks = {
@@ -33,7 +64,10 @@ const Footer = () => {
       // { name: "Training & Skilling", href: "/services/training" },
       { name: "Solutions", href: "/services-page" },
       { name: "Blog", href: "/blog" },
-      { name: "Connect", href: "https://www.linkedin.com/company/instrek" },
+      {
+        name: "Connect",
+        href: "https://www.linkedin.com/company/instrek-technologies/posts/",
+      },
     ],
   };
 
@@ -41,7 +75,7 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      href: "https://www.linkedin.com/company/instrek",
+      href: "https://www.linkedin.com/company/instrek-technologies/posts/",
     },
   ];
 
@@ -54,16 +88,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Newsletter Section */}
           <div className="space-y-8">
-            <Link
-              to="/"
-              className="block bg-transparent w-fit px-4 py-2 rounded hover:opacity-80 transition-opacity"
+            <div
+              onClick={handleLogoClick}
+              className="block bg-transparent w-fit px-4 py-2 rounded hover:opacity-80 transition-opacity cursor-pointer"
             >
               <img
                 src="/optimized/Logo_White.webp"
                 alt="Instrek Logo"
                 className="h-20 w-auto"
               />
-            </Link>
+            </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-4">
@@ -100,20 +134,22 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.company.map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith("/") ? (
-                      <Link
-                        to={link.href}
-                        className="text-gray-300 hover:text-white transition-colors text-lg"
-                      >
-                        {link.name}
-                      </Link>
-                    ) : (
+                    {link.href.startsWith("http") ? (
                       <a
                         href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-300 hover:text-white transition-colors text-lg"
                       >
                         {link.name}
                       </a>
+                    ) : (
+                      <button
+                        onClick={() => handleLinkClick(link.href)}
+                        className="text-gray-300 hover:text-white transition-colors text-lg text-left"
+                      >
+                        {link.name}
+                      </button>
                     )}
                   </li>
                 ))}
@@ -126,20 +162,22 @@ const Footer = () => {
               <ul className="space-y-4">
                 {footerLinks.services.map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith("/") ? (
-                      <Link
-                        to={link.href}
-                        className="text-gray-300 hover:text-white transition-colors text-lg"
-                      >
-                        {link.name}
-                      </Link>
-                    ) : (
+                    {link.href.startsWith("http") ? (
                       <a
                         href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-300 hover:text-white transition-colors text-lg"
                       >
                         {link.name}
                       </a>
+                    ) : (
+                      <button
+                        onClick={() => handleLinkClick(link.href)}
+                        className="text-gray-300 hover:text-white transition-colors text-lg text-left"
+                      >
+                        {link.name}
+                      </button>
                     )}
                   </li>
                 ))}

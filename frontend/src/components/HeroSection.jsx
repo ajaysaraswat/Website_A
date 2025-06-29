@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "./optimized/heroImageR.webp",
+    image: "./optimized/heroImageRL.webp",
     title1: "Empowering Futures,",
     title2: "Engineered Today",
     description:

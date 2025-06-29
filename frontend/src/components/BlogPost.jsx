@@ -153,13 +153,7 @@ const BlogPost = () => {
             <h4 className="text-white font-medium">Share this article</h4>
             <div className="flex gap-4">
               <button className="text-gray-400 hover:text-[#ea4820] transition-colors">
-                Twitter
-              </button>
-              <button className="text-gray-400 hover:text-[#ea4820] transition-colors">
                 LinkedIn
-              </button>
-              <button className="text-gray-400 hover:text-[#ea4820] transition-colors">
-                Facebook
               </button>
             </div>
           </div>

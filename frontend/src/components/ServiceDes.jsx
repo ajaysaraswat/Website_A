@@ -7,9 +7,9 @@ const ServiceDes = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Scroll to top when component mounts
+  // Scroll to top when component mounts - changed to instant behavior
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   const serviceData = location.state?.service || {
@@ -132,7 +132,15 @@ const ServiceDes = () => {
         <section className="pb-8 sm:pb-12 md:pb-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <button
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "instant",
+                  });
+                }, 0);
+              }}
               className="w-full sm:w-auto bg-[#ea4820] hover:bg-[#d43d1b] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-xl font-semibold transition-all duration-300 hover:scale-105 transform"
             >
               Back to Home

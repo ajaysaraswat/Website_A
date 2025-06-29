@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { blogs } from "./Blogs";
 import { ArrowLeft, Clock, Share2 } from "lucide-react";
@@ -8,7 +8,18 @@ const BlogPost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const blog = blogs.find((b) => b.id === parseInt(id));
+
+  const handleBackClick = () => {
+    navigate("/blog");
+    // Scroll to top after navigation
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   if (!blog) {
     return (
@@ -16,7 +27,7 @@ const BlogPost = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
           <button
-            onClick={() => navigate("/blog")}
+            onClick={handleBackClick}
             className="text-[#ea4820] hover:text-[#ea4820]/80 transition-colors"
           >
             Return to Blog List
@@ -33,7 +44,7 @@ const BlogPost = () => {
         {/* Left - Title & Description */}
         <div className="relative z-10 flex flex-col justify-center px-8 md:px-12 bg-gradient-to-r from-black via-black/80 to-black/50">
           <button
-            onClick={() => navigate("/blog")}
+            onClick={handleBackClick}
             className="mb-4 flex items-center gap-2 text-white bg-[#ea4820] hover:bg-[#ea4820]/90 px-4 py-2 rounded-lg w-max"
           >
             <ArrowLeft size={20} />

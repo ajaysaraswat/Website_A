@@ -8,6 +8,8 @@ const BlogCard = ({ blog, featured = false }) => {
 
   const handleClick = () => {
     navigate(`/blog/${blog.id}`);
+    // Scroll to top after navigation
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Simple mapping of blog IDs to placeholder images

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Youtube, Shield, CheckCircle, Rocket } from "lucide-react";
 import StatCard from "./StatCard";
 import HeroSection from "./HeroSection";
@@ -36,14 +36,26 @@ const stats = [
 const StatsGrid = () => {
   const containerRef = useRef(null);
   const scrollRef = useRef(null);
-  const touchStartXRef = useRef(0);
   const touchStartYRef = useRef(0);
+  const lastScrollLeftRef = useRef(0);
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
 
   useEffect(() => {
     const container = containerRef.current;
     const el = scrollRef.current;
 
     if (!container || !el || stats.length <= 3) return;
+
+    // Function to update active card index
+    const updateActiveCard = () => {
+      const cardWidth = el.offsetWidth;
+      const scrollPosition = el.scrollLeft;
+      const newIndex = Math.round(scrollPosition / cardWidth);
+      setActiveCardIndex(Math.min(Math.max(0, newIndex), stats.length - 1));
+    };
+
+    // Add scroll event listener for updating active card
+    el.addEventListener("scroll", updateActiveCard);
 
     // Desktop wheel event handler
     const handleWheel = (e) => {
@@ -56,6 +68,7 @@ const StatsGrid = () => {
       const atStart = currentScroll <= 0;
       const atEnd = currentScroll >= maxScrollLeft - 1;
 
+      // Allow page scrolling if we're at the ends
       if ((scrollingRight && atEnd) || (scrollingLeft && atStart)) {
         return;
       }
@@ -66,45 +79,66 @@ const StatsGrid = () => {
 
     // Touch event handlers
     const handleTouchStart = (e) => {
-      touchStartXRef.current = e.touches[0].clientX;
       touchStartYRef.current = e.touches[0].clientY;
+      lastScrollLeftRef.current = el.scrollLeft;
     };
 
     const handleTouchMove = (e) => {
-      if (!touchStartXRef.current || !touchStartYRef.current) return;
+      if (!touchStartYRef.current) return;
 
-      const touchEndX = e.touches[0].clientX;
       const touchEndY = e.touches[0].clientY;
-
-      const deltaX = touchStartXRef.current - touchEndX;
       const deltaY = touchStartYRef.current - touchEndY;
 
-      // If horizontal scrolling is more prominent than vertical
-      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      const maxScrollLeft = el.scrollWidth - el.clientWidth;
+      const currentScroll = el.scrollLeft;
+      const nextScroll = currentScroll + deltaY * 3;
+
+      const scrollingDown = deltaY > 0;
+      const scrollingUp = deltaY < 0;
+
+      const atStart = currentScroll <= 0;
+      const atEnd = currentScroll >= maxScrollLeft - 1;
+
+      // Check if we should allow page scrolling
+      if ((scrollingDown && atEnd) || (scrollingUp && atStart)) {
+        // If we're at the ends, don't prevent default to allow page scroll
+        if (Math.abs(currentScroll - lastScrollLeftRef.current) < 1) {
+          return;
+        }
+      } else {
+        // Only prevent default if we're still within the card scroll range
         e.preventDefault();
-        el.scrollLeft += deltaX;
+        el.scrollLeft = nextScroll;
       }
 
-      touchStartXRef.current = touchEndX;
+      lastScrollLeftRef.current = currentScroll;
       touchStartYRef.current = touchEndY;
     };
 
     const handleTouchEnd = () => {
-      touchStartXRef.current = 0;
       touchStartYRef.current = 0;
+      lastScrollLeftRef.current = 0;
     };
 
     // Add event listeners
     container.addEventListener("wheel", handleWheel, { passive: false });
-    container.addEventListener("touchstart", handleTouchStart, { passive: true });
-    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+    container.addEventListener("touchstart", handleTouchStart, {
+      passive: true,
+    });
+    container.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
     container.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    // Initial active card update
+    updateActiveCard();
 
     return () => {
       container.removeEventListener("wheel", handleWheel);
       container.removeEventListener("touchstart", handleTouchStart);
       container.removeEventListener("touchmove", handleTouchMove);
       container.removeEventListener("touchend", handleTouchEnd);
+      el.removeEventListener("scroll", updateActiveCard);
     };
   }, []);
 
@@ -123,12 +157,13 @@ const StatsGrid = () => {
         </div>
 
         {/* Scrollable stats */}
-        <div ref={containerRef} className="relative max-w-6xl mx-auto touch-pan-x">
+        <div ref={containerRef} className="relative max-w-6xl mx-auto">
           <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto no-scrollbar"
             style={{
               WebkitOverflowScrolling: "touch",
+              touchAction: "pan-y pinch-zoom",
             }}
           >
             {stats.map((stat, index) => (
@@ -149,7 +184,12 @@ const StatsGrid = () => {
           <div className="flex justify-center mt-4 md:hidden">
             <div className="flex space-x-2">
               {stats.map((_, index) => (
-                <div key={index} className="w-2 h-2 rounded-full bg-gray-600" />
+                <div
+                  key={index}
+                  className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                    index === activeCardIndex ? "bg-white" : "bg-gray-600"
+                  }`}
+                />
               ))}
             </div>
           </div>

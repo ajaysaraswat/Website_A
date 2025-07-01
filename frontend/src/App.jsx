@@ -86,6 +86,7 @@ const App = () => {
                   <section id="why">
                     <StatsGrid />
                   </section>
+                  {/* <WhyCard /> */}
 
                   <TestimonialsSection />
 

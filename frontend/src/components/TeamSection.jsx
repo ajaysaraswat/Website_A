@@ -31,6 +31,34 @@ const teamMembers = [
     image: "/optimized/gaurab.webp",
     bio: "Gaurab mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
   },
+  {
+    id: 5,
+    name: "Vineet Sharma",
+    role: "Founder",
+    image: "/optimized/Vineet.webp",
+    bio: "Vineet brings cutting edge tech to India, big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 6,
+    name: "Vineet Sharma",
+    role: "Founder",
+    image: "/optimized/Vineet.webp",
+    bio: "Vineet brings cutting edge tech to India, big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 7,
+    name: "Vineet Sharma",
+    role: "Founder",
+    image: "/optimized/Vineet.webp",
+    bio: "Vineet brings cutting edge tech to India, big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 8,
+    name: "Vineet Sharma",
+    role: "Founder",
+    image: "/optimized/Vineet.webp",
+    bio: "Vineet brings cutting edge tech to India, big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
 ];
 
 const Team = () => {

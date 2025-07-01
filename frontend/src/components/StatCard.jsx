@@ -7,7 +7,7 @@ export default function StatCard({ title = "ajay", value, label }) {
 
   return (
     <div
-      className="w-full max-w-[480px] md:max-w-[540px] h-auto rounded-3xl bg-transparent text-white flex flex-col justify-center items-center text-center px-10 py-16 md:py-20 shadow-xl"
+      className="w-full max-w-[480px] md:max-w-[540px] h-auto rounded-3xl bg-transparent text-white flex flex-col justify-center items-center text-center px-10 py-8 md:py-20 shadow-xl"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       {/* Top white line */}

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
-import CapabilityCard from "./CapabilityCard";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const ServiceDes = () => {
@@ -17,120 +16,56 @@ const ServiceDes = () => {
     titleLine2: "Services",
     description: "Explore our comprehensive range of services.",
     image: "./optimized/services1R.webp",
+    headline: "Our Services",
+    overview:
+      "At Instrek, we offer a comprehensive range of technology solutions.",
+    capabilities: [
+      "End-to-end implementation",
+      "Expert consultation",
+      "Technical support",
+      "Training programs",
+    ],
+    impact: "Driving digital transformation across industries.",
   };
 
-  const getCapabilities = () => {
-    const defaultCapabilities = [
-      {
-        title: `${serviceData.titleLine1} ${serviceData.titleLine2} Solutions`,
-        image: serviceData.image,
-        description: serviceData.description,
-      },
-      {
-        title: "Implementation & Integration",
-        image: "./optimized/images/digitaltrans.webp",
-        description:
-          "End-to-end implementation and seamless integration with existing systems",
-      },
-      {
-        title: "Consulting & Strategy",
-        image: "./optimized/images/strategic.webp",
-        description:
-          "Expert consultation and strategic planning for optimal deployment",
-      },
-      {
-        title: "Training & Support",
-        image: "./optimized/images/workforceTrain.webp",
-        description:
-          "Comprehensive training programs and ongoing technical support",
-      },
-    ];
-    return defaultCapabilities;
-  };
-
-  const capabilities = getCapabilities();
+  const additionalServices = [
+    {
+      title: "Implementation & Integration",
+      image: "./optimized/images/digitaltrans.webp",
+      description:
+        "End-to-end implementation and seamless integration with existing systems",
+    },
+    {
+      title: "Consulting & Strategy",
+      image: "./optimized/images/strategic.webp",
+      description:
+        "Expert consultation and strategic planning for optimal deployment",
+    },
+    {
+      title: "Training & Support",
+      image: "./optimized/images/workforceTrain.webp",
+      description:
+        "Comprehensive training programs and ongoing technical support",
+    },
+    {
+      title: `${serviceData.titleLine1} ${serviceData.titleLine2} Solutions`,
+      image: serviceData.image,
+      description: serviceData.description,
+    },
+  ];
 
   return (
     <div className="relative bg-black text-white min-h-screen">
-      <main
-        className="relative"
-        style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
-      >
-        {/* Hero Section */}
-        <section className="pt-16 sm:pt-20 pb-4 sm:pb-6 md:pb-8 relative">
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 z-0 h-[300px] sm:h-auto"
-            style={{
-              backgroundImage: `url('${serviceData.image}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-4xl">
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6">
+      {/* Sticky Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">
                 <span className="text-[#ea4820]">{serviceData.titleLine1}</span>{" "}
                 {serviceData.titleLine2}
               </h1>
-              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-6 md:mb-8">
-                {serviceData.description}
-              </p>
-
-              {/* Overview Section */}
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 sm:mb-4">
-                Overview
-              </h2>
-              <p className="text-sm sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-4 sm:mb-8 md:mb-10">
-                At Instrek, our services are designed with precision and purpose
-                to empower businesses across industries. Whether you're
-                initiating a digital transformation or optimizing existing
-                workflows, our expert teams provide tailored solutions that
-                deliver measurable value.
-              </p>
-
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-                Our Capabilities:
-              </h2>
             </div>
-          </div>
-        </section>
-
-        {/* Capabilities Grid */}
-        <section className="pb-4 sm:pb-6 md:pb-8 lg:pb-12 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              {capabilities.map((capability, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col sm:flex-row items-center gap-4 bg-black/40 rounded-lg p-4 sm:p-6"
-                >
-                  <div className="w-full sm:w-1/2">
-                    <img
-                      src={capability.image}
-                      alt={capability.title}
-                      className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="w-full sm:w-1/2 text-center sm:text-left">
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2 text-[#ea4820]">
-                      {capability.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-300">
-                      {capability.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="pb-8 sm:pb-12 md:pb-16 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <button
               onClick={() => {
                 navigate("/");
@@ -141,10 +76,131 @@ const ServiceDes = () => {
                   });
                 }, 0);
               }}
-              className="w-full sm:w-auto bg-[#ea4820] hover:bg-[#d43d1b] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-xl font-semibold transition-all duration-300 hover:scale-105 transform"
+              className="bg-[#ea4820] hover:bg-[#d43d1b] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 hover:scale-105 transform"
             >
               Back to Home
             </button>
+          </div>
+        </div>
+      </header>
+
+      <main
+        className="pt-20"
+        style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+      >
+        {/* Hero Section */}
+        <section className="relative">
+          {/* Background Image with Gradient */}
+          <div className="relative h-[60vh] min-h-[500px]">
+            <div
+              className="absolute inset-0 z-0"
+              style={{
+                backgroundImage: `url('${serviceData.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+
+            {/* Hero Content */}
+            <div className="relative z-10 h-full flex items-center">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="max-w-3xl">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                    <span className="text-[#ea4820]">
+                      {serviceData.titleLine1}
+                    </span>{" "}
+                    <span className="text-white">{serviceData.titleLine2}</span>
+                  </h1>
+                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-200 mb-8">
+                    {serviceData.headline}
+                  </p>
+                  <p className="text-lg sm:text-xl text-gray-300">
+                    {serviceData.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Content Sections */}
+        <section className="py-16 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Overview Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-8 text-[#ea4820]">
+                Overview
+              </h2>
+              <p className="text-lg sm:text-xl leading-relaxed text-gray-200">
+                {serviceData.overview}
+              </p>
+            </div>
+
+            {/* Capabilities Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-8 text-[#ea4820]">
+                Capabilities
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {serviceData.capabilities.map((capability, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <span className="text-[#ea4820] text-2xl">•</span>
+                      <p className="text-lg sm:text-xl text-gray-200">
+                        {capability}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Impact Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-8 text-[#ea4820]">
+                Impact
+              </h2>
+              <div className="bg-gradient-to-r from-[#ea4820]/20 to-black p-8 rounded-lg">
+                <p className="text-lg sm:text-xl leading-relaxed text-gray-200">
+                  {serviceData.impact}
+                </p>
+              </div>
+            </div>
+
+            {/* Additional Services */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-12 text-center text-[#ea4820]">
+                Additional Services
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {additionalServices.map((service, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all duration-300 group"
+                  >
+                    <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#ea4820] group-hover:text-white transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

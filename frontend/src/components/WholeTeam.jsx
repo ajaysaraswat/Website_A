@@ -15,7 +15,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Sanjana Wadhwa",
-    role: "CEO",
+    role: "Chief Executive Officer",
     image: "/optimized/sanjana.webp",
     bio: "Sanjana has over 15+ years of experience in the technology sector, leading teams to deliver innovative solutions globally. And yeah.. Let's talk about FOOD now!",
   },
@@ -31,24 +31,21 @@ const teamMembers = [
     id: 4,
     name: "Sankalp G",
     role: "Head of Trainings",
-    image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/optimized/sankalp.webp",
     bio: "Sankalp is an IIT Bombay software and hardware engineer who leads Skill Development for us. He aims to make the nation skilled in the next gen technologies.",
   },
   {
     id: 5,
     name: "Sharath M",
     role: "Head of Products",
-    image:
-      "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/optimized/sharath.webp",
     bio: "Sharath is an expert in Products/Platforms, Blockchain & IoT, with a passion for developing next-gen technologies. And his favourite joke is 'A product guy tries to walk into a bar but can't because the door isn't scheduled until next release.'",
   },
   {
     id: 6,
     name: "Vishwajeet Chauhan",
     role: "Digital Transformation Expert - Communication",
-    image:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/optimized/vishawajeet.webp",
     bio: "Vishwajeet specializes in data and communications. He is working towards building an ecosystem for a Digital India. If communication is your topic- He's your guy.",
   },
   {
@@ -62,24 +59,44 @@ const teamMembers = [
     id: 8,
     name: "Anjali Chaurasia",
     role: "Lead Recruiter - Technology Ecosystem",
-    image:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/optimized/anjali.jpg",
     bio: "Anjali is building the culture of this company by bringing the right players and partners. Check her schedule, because she is always 'Get ready, (jet)set, and go.'",
   },
   {
     id: 9,
     name: "Vishal Garg",
     role: "Lead Research Analyst",
-    image:
-      "https://images.unsplash.com/photo-1546456073-6712f79251bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/optimized/vishal.webp",
     bio: "Vishal creates old, Practical ideas that fit the moment and rings them to life, helping the team shape smart strategies to drive Instrek's innovative solutions forward.",
   },
   {
     id: 10,
+    name: "Lt Col Narender Singh",
+    role: "Defence Innovations Consultant",
+    image: "/optimized/narend.jpg",
+    bio: " big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 11,
     name: "Gaurab Ganguly",
     role: " Non-Executive Strategic Advisor",
     image: "/optimized/gaurab.webp",
     bio: "Gaurab mentors teams with visionary guidance. A coffee lover, code whisperer, and all-around tech philosopher.",
+  },
+
+  {
+    id: 12,
+    name: "Srilalitha M Srinivasan",
+    role: "Communications Expert",
+    image: "/optimized/sri.webp",
+    bio: "big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
+  {
+    id: 13,
+    name: "Aryavarta Singh",
+    role: "Robotics Expert",
+    image: "/optimized/aryavarta.webp",
+    bio: "big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
   },
 ];
 

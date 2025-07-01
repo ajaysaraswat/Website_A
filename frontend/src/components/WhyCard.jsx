@@ -1,75 +1,78 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import StatCard from "./StatCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalCards = () => {
-  const cardsContainerRef = useRef(null);
+const stats = [
+  {
+    title: "Trusted",
+    value: "500K+",
+    label: "years in digital transformation",
+  },
+  { title: "Global Reach", value: "99.9%", label: "countries served" },
+  { title: "Innovators", value: "< 30s", label: "deployment time" },
+  { title: "Clients", value: "100+", label: "public & private collaborations" },
+  { title: "Reliable", value: "20K+", label: "Client trust" },
+];
+
+const WhyCard = () => {
+  const frameRef = useRef(null);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    const cardsContainer = cardsContainerRef.current;
-    const cards = gsap.utils.toArray(".card");
+    const scrollWidth = scrollRef.current.scrollWidth;
+    const frameWidth = frameRef.current.offsetWidth;
 
-    gsap.to(cardsContainer, {
-      x: () => -(cardsContainer.scrollWidth - window.innerWidth),
+    gsap.to(scrollRef.current, {
+      x: () => -(scrollWidth - frameWidth),
       ease: "none",
       scrollTrigger: {
-        trigger: "#cardsWrapper",
-        start: "top top",
-        end: () => `+=${cardsContainer.scrollWidth - window.innerWidth}`,
-        pin: true,
-        scrub: 0.5,
-        snap: 1 / (cards.length - 1),
-        markers: true,
+        trigger: frameRef.current,
+        start: "top bottom", // start animation when frame comes into view
+        end: () => `+=${scrollWidth}`,
+        scrub: true,
+        pin: false, // Do NOT pin the section
+        anticipatePin: 1,
         invalidateOnRefresh: true,
       },
     });
 
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
-    <>
-      <div className="w-full h-screen flex justify-center">
-        <div className="container mx-auto p-8 flex flex-col justify-center items-center">
-          <h1 className="text-4xl text-center font-semibold mb-12">
-            GSAP ScrollTrigger Horizontal Cards Animation
-          </h1>
-          <p className="text-lg font-medium text-center">
-            Horizontal cards animation when the cards/slides width is not equal
-            to the screen width or 100%
-          </p>
-        </div>
+    <div className="bg-black text-white py-12">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-5xl font-semibold">
+          WHY CHOOSE <span className="text-[#ea4820]">US</span> ?
+        </h2>
       </div>
 
       <div
-        id="cardsWrapper"
-        className="w-full h-screen flex items-center bg-gray-200 overflow-hidden"
+        ref={frameRef}
+        className="relative w-full h-[600px] overflow-hidden border-y border-gray-700"
       >
-        <div
-          ref={cardsContainerRef}
-          id="cardsContainer"
-          className="flex flex-nowrap gap-[50px] px-[50px] py-4"
-        >
-          {["One", "Two", "Three", "Four", "Five", "Six", "Seven"].map(
-            (label, index) => (
-              <div
-                key={index}
-                className="card shadow-md flex justify-center items-center bg-white rounded-lg p-8 w-[400px] h-[400px]"
-              >
-                <h1 className="text-4xl font-semibold">{label}</h1>
-              </div>
-            )
-          )}
+        <div ref={scrollRef} className="flex flex-nowrap gap-10 px-10">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="min-w-[350px] md:min-w-[400px] flex-shrink-0"
+            >
+              <StatCard
+                title={stat.title}
+                value={stat.value}
+                label={stat.label}
+              />
+            </div>
+          ))}
         </div>
       </div>
-
-      <section className="w-full h-screen bg-gray-800 text-white px-4 py-2 flex justify-center items-center text-2xl font-semibold">
-        FINAL SECTION
-      </section>
-    </>
+    </div>
   );
 };
 
-export default HorizontalCards;
+export default WhyCard;

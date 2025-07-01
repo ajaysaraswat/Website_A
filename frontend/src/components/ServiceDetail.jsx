@@ -6,6 +6,10 @@ export default function DroneCard({
   titleLine2,
   description,
   image,
+  headline,
+  overview,
+  capabilities,
+  impact,
 }) {
   const navigate = useNavigate();
 
@@ -17,11 +21,15 @@ export default function DroneCard({
           titleLine2,
           description,
           image,
+          headline,
+          overview,
+          capabilities,
+          impact,
         },
       },
     });
     // Scroll to top after navigation
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (

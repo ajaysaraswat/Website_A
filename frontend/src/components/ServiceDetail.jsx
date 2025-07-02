@@ -34,7 +34,7 @@ export default function DroneCard({
 
   return (
     <div
-      className="relative w-full h-[300px] md:h-[400px] overflow-hidden rounded-lg text-white cursor-pointer transform transition-transform duration-300 hover:scale-105"
+      className=" border boder-white relative w-full h-[400px] md:h-[400px] overflow-hidden rounded-lg text-white cursor-pointer transform transition-transform duration-300 hover:scale-105"
       onClick={handleClick}
     >
       {/* Background Image */}

@@ -83,27 +83,6 @@ export const blogs = [
 
   {
     id: 2,
-    title: "Revolutionizing Agriculture with Drone Technology",
-    category: "AgriTech",
-    description:
-      "Explore how drone technology is transforming traditional farming practices, improving crop yields, and promoting sustainable agriculture.",
-    content: `Modern agriculture is undergoing a dramatic transformation through the adoption of drone technology. These aerial platforms provide farmers with unprecedented insights into their crops and land management.
-
-    Key benefits of agricultural drones include:
-    - Real-time crop health monitoring
-    - Precise application of fertilizers and pesticides
-    - Early detection of pest infestations
-    - Improved irrigation management
-
-    This technology is not just improving efficiency; it's making farming more sustainable and environmentally friendly.`,
-    image: "/optimized/droneR.webp",
-    authorImage: "/optimized/images/Team.webp",
-    author: "Michael Rodriguez",
-    date: "March 18, 2024",
-    readTime: "4 min read",
-  },
-  {
-    id: 3,
     title: "Next Gen Technologies",
     category: "AI & Education",
     description:
@@ -148,49 +127,7 @@ export const blogs = [
   },
 
   {
-    id: 4,
-    title: "Blockchain in Public Services",
-    category: "Blockchain",
-    description:
-      "Discover how blockchain technology is improving transparency and efficiency in government services and public administration.",
-    content: `Blockchain technology is revolutionizing how public services are delivered and managed. From voting systems to record-keeping, this technology is making government operations more transparent and efficient.
-
-    Key applications in public services:
-    - Digital identity management
-    - Secure voting systems
-    - Transparent public records
-    - Efficient resource allocation
-
-    These implementations are creating more trust between citizens and government institutions.`,
-    image: "/optimized/images/blockchainlern.webp",
-    authorImage: "/optimized/images/Team.webp",
-    author: "James Wilson",
-    date: "March 22, 2024",
-    readTime: "5 min read",
-  },
-  {
-    id: 5,
-    title: "Digital Transformation in Education",
-    category: "EdTech",
-    description:
-      "Explore how digital technologies are reshaping education and creating new opportunities for learning and skill development.",
-    content: `The education sector is experiencing a profound transformation through digital technologies. From virtual classrooms to AI-powered learning assistants, technology is making education more accessible and effective.
-
-    Major innovations in educational technology:
-    - Interactive learning platforms
-    - AI-powered tutoring systems
-    - Virtual and augmented reality in education
-    - Adaptive learning technologies
-
-    These advancements are creating more engaging and effective learning experiences for students of all ages.`,
-    image: "/optimized/childedu.webp",
-    authorImage: "/optimized/images/Team.webp",
-    author: "Dr. Lisa Park",
-    date: "March 25, 2024",
-    readTime: "7 min read",
-  },
-  {
-    id: 6,
+    id: 3,
     title: "Sociopreneur Foundation: Innovation with a Purpose",
     category: "Social Innovation",
     description:
@@ -233,5 +170,68 @@ export const blogs = [
     author: "David Brown",
     date: "March 28, 2024",
     readTime: "5 min read",
+  },
+  {
+    id: 4,
+    title: "Digital Transformation in Education",
+    category: "EdTech",
+    description:
+      "Explore how digital technologies are reshaping education and creating new opportunities for learning and skill development.",
+    content: `The education sector is experiencing a profound transformation through digital technologies. From virtual classrooms to AI-powered learning assistants, technology is making education more accessible and effective.
+
+    Major innovations in educational technology:
+    - Interactive learning platforms
+    - AI-powered tutoring systems
+    - Virtual and augmented reality in education
+    - Adaptive learning technologies
+
+    These advancements are creating more engaging and effective learning experiences for students of all ages.`,
+    image: "/optimized/childedu.webp",
+    authorImage: "/optimized/images/Team.webp",
+    author: "Dr. Lisa Park",
+    date: "March 25, 2024",
+    readTime: "7 min read",
+  },
+  {
+    id: 5,
+    title: "Blockchain in Public Services",
+    category: "Blockchain",
+    description:
+      "Discover how blockchain technology is improving transparency and efficiency in government services and public administration.",
+    content: `Blockchain technology is revolutionizing how public services are delivered and managed. From voting systems to record-keeping, this technology is making government operations more transparent and efficient.
+
+    Key applications in public services:
+    - Digital identity management
+    - Secure voting systems
+    - Transparent public records
+    - Efficient resource allocation
+
+    These implementations are creating more trust between citizens and government institutions.`,
+    image: "/optimized/images/blockchainlern.webp",
+    authorImage: "/optimized/images/Team.webp",
+    author: "James Wilson",
+    date: "March 22, 2024",
+    readTime: "5 min read",
+  },
+  {
+    id: 6,
+    title: "Revolutionizing Agriculture with Drone Technology",
+    category: "AgriTech",
+    description:
+      "Explore how drone technology is transforming traditional farming practices, improving crop yields, and promoting sustainable agriculture.",
+    content: `Modern agriculture is undergoing a dramatic transformation through the adoption of drone technology. These aerial platforms provide farmers with unprecedented insights into their crops and land management.
+
+    Key benefits of agricultural drones include:
+    - Real-time crop health monitoring
+    - Precise application of fertilizers and pesticides
+    - Early detection of pest infestations
+    - Improved irrigation management
+
+    This technology is not just improving efficiency; it's making farming more sustainable and environmentally friendly.`,
+    image: "/optimized/droneR.webp",
+    authorImage: "/optimized/images/Team.webp",
+    author: "Michael Rodriguez",
+    date: "March 18, 2024",
+    readTime: "4 min read",
   },
 ];

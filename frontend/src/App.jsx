@@ -70,9 +70,9 @@ const App = () => {
                   </section>
                    */}
                   <section id="services">
-                    {/* <Services /> */}
+                    <Services />
                     {/* <StatsGrid /> */}
-                    <WhyCard />
+                    {/* <WhyCard /> */}
                     {/* <InlineScrollImages /> */}
                   </section>
                   {/* <section id="inline">

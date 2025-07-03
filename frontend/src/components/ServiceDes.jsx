@@ -20,10 +20,22 @@ const ServiceDes = () => {
     overview:
       "At Instrek, we offer a comprehensive range of technology solutions.",
     capabilities: [
-      "End-to-end implementation",
-      "Expert consultation",
-      "Technical support",
-      "Training programs",
+      {
+        image: "./optimized/images/digitaltrans.webp",
+        text: "End-to-end implementation",
+      },
+      {
+        image: "./optimized/images/strategic.webp",
+        text: "Expert consultation",
+      },
+      {
+        image: "./optimized/images/workforceTrain.webp",
+        text: "Technical support",
+      },
+      {
+        image: "./optimized/images/company-overview.webp",
+        text: "Training programs",
+      },
     ],
     impact: "Driving digital transformation across industries.",
   };
@@ -142,17 +154,36 @@ const ServiceDes = () => {
               <h2 className="text-3xl sm:text-4xl font-semibold mb-8 text-[#ea4820]">
                 Capabilities
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {serviceData.capabilities.map((capability, index) => (
                   <div
                     key={index}
-                    className="bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+                    className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-105 border border-white/10"
                   >
-                    <div className="flex items-start space-x-4">
-                      <span className="text-[#ea4820] text-2xl">•</span>
-                      <p className="text-lg sm:text-xl text-gray-200">
-                        {capability}
-                      </p>
+                    <div className="flex flex-col sm:flex-row h-full">
+                      {/* Image Container */}
+                      <div className="w-full sm:w-1/2">
+                        <div className="relative aspect-[4/3] sm:h-full">
+                          <img
+                            src={capability.image}
+                            alt={capability.text}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.src =
+                                "./optimized/images/company-overview.webp";
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        </div>
+                      </div>
+
+                      {/* Text Container */}
+                      <div className="w-full sm:w-1/2 p-6 flex items-center">
+                        <p className="text-lg sm:text-xl text-gray-200 font-medium">
+                          {capability.text}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}

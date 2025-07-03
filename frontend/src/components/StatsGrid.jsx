@@ -96,9 +96,9 @@ const StatsGrid = () => {
 
   return (
     <>
-      <div id="team">
+      {/* <div id="team">
         <Team />
-      </div>
+      </div> */}
 
       <div className="bg-black relative">
         {/* Main Content Container */}

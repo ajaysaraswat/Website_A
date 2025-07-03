@@ -13,26 +13,9 @@ const BlogCard = ({ blog, featured = false }) => {
     navigate(`/blog/${blog.id}`);
   };
 
-  // Simple mapping of blog IDs to placeholder images
-  const getImageUrl = (blogId) => {
-    const imageMap = {
-      "ai-revolution":
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
-      "blockchain-future":
-        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop",
-      "iot-ecosystem":
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop",
-      "quantum-computing":
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&h=400&fit=crop",
-      "cybersecurity-2024":
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop",
-      "edge-computing":
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
-    };
-    return (
-      imageMap[blogId] ||
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop"
-    );
+  // Use the blog's image property directly
+  const getImageUrl = (blog) => {
+    return blog.image || "/optimized/images/digitaltrans.webp"; // Fallback image if blog.image is not available
   };
 
   if (featured) {
@@ -44,9 +27,10 @@ const BlogCard = ({ blog, featured = false }) => {
         {/* Image Container */}
         <div className="aspect-[16/9] overflow-hidden">
           <img
-            src={getImageUrl(blog.id)}
+            src={getImageUrl(blog)}
             alt={blog.title}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
           />
         </div>
 
@@ -64,16 +48,17 @@ const BlogCard = ({ blog, featured = false }) => {
 
           {/* Description */}
           <p className="text-gray-300 text-lg mb-6 line-clamp-3">
-            {blog.excerpt}
+            {blog.description}
           </p>
 
           {/* Author Info and Date */}
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img
-                src={blog.authorImage}
+                src={blog.authorImage || "/optimized/Vineet.webp"} // Fallback author image
                 alt={blog.author}
                 className="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
               />
               <div>
                 <p className="text-white font-medium">{blog.author}</p>
@@ -100,9 +85,10 @@ const BlogCard = ({ blog, featured = false }) => {
 
       <div className="relative h-48 overflow-hidden">
         <img
-          src={getImageUrl(blog.id)}
+          src={getImageUrl(blog)}
           alt={blog.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-800/60 to-transparent" />
       </div>
@@ -117,7 +103,7 @@ const BlogCard = ({ blog, featured = false }) => {
           {blog.title}
         </h3>
         <p className="text-gray-300 mb-4 line-clamp-2 text-sm text-left">
-          {blog.excerpt}
+          {blog.description}
         </p>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3 text-xs text-gray-400">

@@ -1,24 +1,86 @@
 export const blogs = [
   {
     id: 1,
-    title: "The Future of Smart Cities: AI-Driven Urban Planning",
+    title: "Smart Cities Aren’t Just Built They’re Engineered for Life",
     category: "Smart Cities",
     description:
-      "Discover how artificial intelligence is revolutionizing urban planning and development, creating more efficient and sustainable cities for tomorrow.",
-    content: `Smart cities represent the convergence of urban planning and cutting-edge technology. Through the integration of AI and IoT devices, modern cities are becoming more responsive to citizens' needs while optimizing resource usage.
+      "Instrek is building smarter, cleaner, and more connected cities by integrating AI, IoT, clean energy, and citizen-first digital platforms. Here's how we make smart cities truly intelligent.",
+    content: `Understanding the Impact
+  
+  Smart cities represent the convergence of urban planning and cutting-edge technology. Through the integration of AI and IoT devices, modern cities are becoming more responsive to citizens' needs while optimizing resource usage.
+  
+  The implementation of smart technologies in urban environments has shown remarkable results:
+  - 30% reduction in traffic congestion
+  - 25% decrease in energy consumption
+  - 40% improvement in emergency response times
+  
+  When people hear the term "Smart City", they often think of flashy gadgets, futuristic roads, or buildings loaded with sensors. But a truly smart city is much more than that. It’s a living ecosystem—one that uses technology not as a showpiece, but as a tool for impact.
+  
+  At Instrek Technologies, we’re building cities that think, respond, and care. We bring together next-gen infrastructure with AI, IoT, and clean energy to solve real problems and improve lives—at scale.
+  
+  What Makes a City Smart?
+  
+  The heart of a smart city is its digital backbone. Here’s what we put in place to power this transformation:
+  
+  1. Cloud & DevOps – for scalable digital infrastructure.
+  2. Artificial Intelligence, Agentic Systems & Machine Learning – to automate traffic management, healthcare alerts, emergency systems, and predictive urban analytics.
+  3. Internet of Things (IoT) & AIoT – for real-time monitoring of utilities, pollution, smart lighting, and urban mobility.
+  4. Robotics & Embedded Systems – including line-following robots, material handling robots, smart controllers, and automation devices to enhance city operations.
+  5. Advanced Networks – with Digital Highways, Single Frequency Networks, 5G/6G high-capacity, low-latency connectivity to ensure seamless communication.
+  6. Air Purification Technologies – offering unique, filter-free, minimal-maintenance indoor and outdoor air purification systems.
+  7. Drones & AI Surveillance – for agricultural spraying, crowd control, AI-driven alerts, and safety surveillance from both natural and man-made threats.
+  8. Blockchain & Cybersecurity – providing distributed identity, zero-trust verification, NFTs, and resilient digital security frameworks.
+  9. Electric Vehicles (EV) & Smart Mobility – AI-optimized traffic flow, electric vehicles, and sustainable urban transport.
+  
+  From Technology to Impact
+  
+  Smart cities aren’t just about what technology can do — but what it should do.
+  
+  Our deployments focus on solving key urban pain points:
+  
+  1. Clean Air & Health Security  
+  We deploy pollution control systems, air quality monitoring, and unique, low-maintenance air purifiers to help cities breathe cleaner and stay prepared.
+  
+  2. AI-Driven Emergency Systems  
+  Whether it’s flood detection, drone-based surveillance, or security systems, we deliver real-time alerts and automated responses for faster action.
+  
+  3. Intelligent Transport  
+  Our AI-powered traffic management systems, EV infrastructure, and smart public transport solutions reduce congestion, cut emissions, and make urban mobility safer and more efficient.
+  
+  4. Renewable & Sustainable Energy  
+  We integrate solar grids, EV batteries, smart lighting, and energy monitoring systems to build energy-positive, self-sustaining communities.
+  
+  5. Skilling & Urban Jobs  
+  We work with governments to boost skill development in EVs, drones, embedded systems, AI/IoT maintenance, and green tech—creating jobs where they matter most.
+  
+  6. Better Governance  
+  With centralized dashboards, blockchain-backed verification, and public service apps, citizens can access everything from waste reporting to digital document approvals — all from their phones.
+  
+  Our Vision: Smarter Cities, Stronger Communities
+  
+  We don’t believe in “one-size-fits-all” technology. Every city is unique, with its own culture, challenges, and aspirations. That’s why our smart city solutions are modular, adaptable, and inclusive—designed not just for urban elites, but for every citizen.
+  
+  Our mission is simple yet bold:
+  “To transform urban systems into responsive, inclusive, and sustainable engines of growth.”
+  
+  With every deployment, we ask:
+  Is this solving a real problem?
+  Is this improving someone’s life?
+  Is this future-proof?
+  
+  Let’s Build the Future Together
+  
+  Cities are evolving—and they need partners who can keep up with their pace and purpose. At Instrek, we’re building that future.
+  
+  `,
 
-    The implementation of smart technologies in urban environments has shown remarkable results:
-    - 30% reduction in traffic congestion
-    - 25% decrease in energy consumption
-    - 40% improvement in emergency response times
-
-    These advancements are just the beginning of a transformation that will reshape how we live and work in urban spaces.`,
     image: "/optimized/cityR.webp",
     authorImage: "/images/Team.jpg",
     author: "Dr. Sarah Chen",
     date: "March 15, 2024",
     readTime: "5 min read",
   },
+
   {
     id: 2,
     title: "Revolutionizing Agriculture with Drone Technology",
@@ -42,25 +104,49 @@ export const blogs = [
   },
   {
     id: 3,
-    title: "The Impact of AI on Workforce Development",
+    title: "Next Gen Technologies",
     category: "AI & Education",
     description:
-      "Learn how artificial intelligence is shaping the future of workforce training and skill development in the digital age.",
-    content: `As AI continues to evolve, its impact on workforce development becomes increasingly significant. Organizations are leveraging AI to create more effective training programs and identify skill gaps in their workforce.
-
-    Major trends in AI-driven workforce development:
-    - Personalized learning paths
-    - Real-time skill assessment
-    - Predictive career guidance
-    - Automated skill matching
-
-    These innovations are helping both employers and employees adapt to the rapidly changing job market.`,
+      "From Agentic AI to blockchain and IoT, Instrek is turning emerging tech into practical, people-first platforms that solve real-world challenges across education, governance, and public services.",
+    content: `Introduction: Beyond Buzzwords
+  Terms like AI, IoT, and Blockchain often sound like the language of big tech companies. But at Instrek, we see them as practical tools—meant to solve real-world problems, not just look good on a presentation slide.
+  
+  We’re building platforms that put emerging technology to work for people—from automating help desks to building AI agents for public services. Our mission? Make next-gen tech inclusive, scalable, and truly impactful.
+  
+  How We Build the Future
+  Our product teams blend innovation with purpose. Here’s how:
+  
+  - Agentic AI: Conversational systems that work in local languages and contexts
+  - Blockchain: Verifiable digital records for education, identity, and trust
+  - IoT Networks: Devices that talk to each other and to people—from sensors to smartphones
+  - Low-Code/No-Code Tools: So non-tech users can innovate too
+  - Open-Source Frameworks: Faster builds, lower costs, broader adoption
+  
+  Every solution is customized based on who it’s built for—schools, civic bodies, startups, or enterprises.
+  
+  Real Impact in Action
+  
+  AI That Understands You
+  Our multilingual agentic bots are revolutionizing public service delivery—handling over 95% of citizen queries without human intervention.
+  
+  Credential Verification with Blockchain
+  Digital certificates that can’t be faked. Used by training institutions and recruiters to verify skills securely and instantly.
+  
+  IoT-Powered Infrastructure
+  From clean air monitoring to water level alerts—our sensor networks turn data into timely action.
+  
+  Tech Without Barriers
+  With drag-and-drop interfaces and open tools, we empower even non-coders to create apps, dashboards, and workflows.
+  
+  Our Philosophy
+  We believe tech shouldn’t be locked behind jargon or high budgets. At Instrek, we strip complexity, amplify value, and always ask: *How does this help people?*`,
     image: "/optimized/images/workforceTrain.webp",
     authorImage: "/optimized/images/Team.webp",
     author: "Emma Thompson",
     date: "March 20, 2024",
     readTime: "6 min read",
   },
+
   {
     id: 4,
     title: "Blockchain in Public Services",
@@ -105,19 +191,43 @@ export const blogs = [
   },
   {
     id: 6,
-    title: "IoT Solutions for Environmental Monitoring",
-    category: "IoT",
+    title: "Sociopreneur Foundation: Innovation with a Purpose",
+    category: "Social Innovation",
     description:
-      "Learn how Internet of Things (IoT) technology is being used to monitor and protect our environment.",
-    content: `IoT devices are becoming crucial tools in environmental monitoring and protection. These smart sensors and systems help us better understand and respond to environmental challenges.
-
-    Applications in environmental monitoring:
-    - Air quality monitoring
-    - Water quality assessment
-    - Wildlife tracking
-    - Climate change data collection
-
-    This technology is providing valuable data for environmental conservation efforts.`,
+      "Instrek empowers grassroots innovators and nonprofits with digital tools, training, and scalable platforms to drive real social impact.",
+    content: `Short Description (Preview)
+  Instrek empowers social innovators, nonprofits, and grassroots changemakers by providing purpose-built tech, training, and tools that amplify social impact and promote inclusive growth.
+  
+  Full Blog Post (Long Description)
+  
+  Introduction: Tech That Serves
+  Innovation isn't just for unicorn startups or MNCs. It should also serve grassroots changemakers—the ones improving lives in real, measurable ways. That’s why Instrek supports nonprofits, social enterprises, and mission-led teams through the Sociopreneur Foundation model.
+  
+  We bring technology, training, and tools to amplify their work and help them scale.
+  
+  Who We Work With
+  - Youth-led Enterprises : creating jobs through tech
+  - Civic Activists : building digital tools for public transparency
+  - Micro Entrepreneurs : looking to go digital
+  
+  Tools for Social Impact
+  
+  AI for Outreach
+  We create bots that explain policies, assist with forms, or run multilingual campaigns—especially for low-literate or remote audiences.
+  
+  Impact Dashboards
+  Track program reach, visualize outcomes, and simplify reporting to donors and stakeholders.
+  
+  E-learning Platforms
+  For training youth in skills like EV repair, drone assembly, and clean tech maintenance.
+  
+  Digital ID Systems
+  Simple, secure registration and beneficiary verification systems—even in low-connectivity areas.
+  
+  Vision: A Tech Ecosystem That Cares
+  We’re here to level the playing field. Our work with social innovators aims to build an ecosystem where *purpose and technology grow together*.
+  
+  Because the real power of innovation lies not in who invents it—but who it helps.`,
     image: "/optimized/images/env1.webp",
     authorImage: "/optimized/images/Team.webp",
     author: "David Brown",

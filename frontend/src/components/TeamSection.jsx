@@ -75,6 +75,7 @@ const Team = () => {
 
   const handleBackClick = () => {
     navigate("/");
+    // Add a small delay to ensure navigation completes before scrolling
     setTimeout(() => {
       const teamSection = document.getElementById("team");
       if (teamSection) {
@@ -85,8 +86,8 @@ const Team = () => {
 
   return (
     <>
-      <div className="relative w-full min-h-screen">
-        {/* Background Image Layer */}
+      <div className="relative w-full overflow-hidden">
+        {/* Background image layer */}
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -96,10 +97,10 @@ const Team = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-        />
+        ></div>
 
-        {/* Content Layer */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-10">
+        {/* Content layer */}
+        <div className="relative z-10 w-full px-8 py-10 bg-transparent">
           <div>
             <div className="space-y-10">
               <div>
@@ -115,16 +116,17 @@ const Team = () => {
                 <div className="overflow-hidden whitespace-nowrap w-full relative h-10">
                   <style>
                     {`
-                      @keyframes marquee {
-                        0%   { transform: translateX(100%); }
-                        100% { transform: translateX(-100%); }
-                      }
-                    `}
+                  @keyframes marquee {
+                    0%   { transform: translateX(100%); }
+                    100% { transform: translateX(-100%); }
+                  }
+                `}
                   </style>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 items-start">
               {teamMembers.map((member) => (
                 <div key={member.id} className="flex justify-center">
                   <TeamCard
@@ -137,6 +139,7 @@ const Team = () => {
               ))}
             </div>
           </div>
+
           <div className="mt-12 text-center">
             <button
               onClick={() => navigate("/team")}

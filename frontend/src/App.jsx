@@ -7,7 +7,7 @@ const HeroSection = lazy(() => import("./components/HeroSection"));
 const AboutSection = lazy(() => import("./components/AboutSection"));
 //import AboutSection from "./components/AboutSection";
 
-// const TeamSection = lazy(() => import("./components/TeamSection"));
+import TeamSection from "./components/TeamSection";
 
 //import TestimonialsSection from "./components/TestimonialsSection";
 const TestimonialsSection = lazy(() =>
@@ -82,9 +82,10 @@ const App = () => {
                     <LogoCarousel />
                   </section>
 
-                  {/* <section id="team" className="scroll-mt-20">
+                  <section id="team" className="scroll-mt-20">
                     <TeamSection />
-                  </section> */}
+                  </section>
+
                   <section id="why">
                     <StatsGrid />
                   </section>

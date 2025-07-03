@@ -118,12 +118,15 @@ const BlogPost = () => {
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">
             Understanding the Impact
           </h2>
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
+          <pre
+            className="text-gray-300 text-lg leading-relaxed mb-6"
+            style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
+          >
             {blog.content ||
               `In today's rapidly evolving technological landscape, understanding the impact of emerging technologies is crucial. This blog post delves deep into the implications and potential applications of these innovations.
 
               The integration of cutting-edge solutions has revolutionized how businesses operate and how we approach problem-solving in various industries. From artificial intelligence to blockchain technology, each advancement brings new opportunities and challenges.`}
-          </p>
+          </pre>
 
           {/* Key Points */}
           <div className="bg-[#2A2342] rounded-xl p-8 my-12">

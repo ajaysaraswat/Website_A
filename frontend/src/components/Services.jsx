@@ -1027,7 +1027,7 @@ const droneCardData = [
         text: "3D model visualizations on mobile",
       },
       {
-        image: "/optimized/icons/microapp.svg",
+        image: "/optimized/images/strategic.webp",
         text: "Microapps via QR/NFC (e.g., demos, feedback, onboarding)",
       },
       {
@@ -1053,11 +1053,11 @@ const droneCardData = [
         text: "SAPL-aligned STEM kits (Grades 1–12)",
       },
       {
-        image: "/optimized/icons/adult-learning.svg",
+        image: "/optimized/images/strategic.webp",
         text: "Adult skilling labs in Tier 2/3 cities",
       },
       {
-        image: "/optimized/icons/simulator.svg",
+        image: "/optimized/images/strategic.webp",
         text: "Industry-ready simulators and toolkits",
       },
       {
@@ -1079,19 +1079,19 @@ const droneCardData = [
       "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",
     capabilities: [
       {
-        image: "/optimized/icons/traffic.svg",
+        image: "/optimized/images/workforceTrain.webp",
         text: "AI-powered traffic & lighting",
       },
       {
-        image: "/optimized/icons/air.svg",
+        image: "/optimized/images/strategic.webp",
         text: "Indoor/outdoor air purification",
       },
       {
-        image: "/optimized/icons/water.svg",
+        image: "/optimized/images/digitaltrans.webp",
         text: "Water monitoring, safety & disaster systems",
       },
       {
-        image: "/optimized/icons/transport.svg",
+        image: "/optimized/smartcityR1.webp",
         text: "Smart transport & planning dashboards",
       },
     ],

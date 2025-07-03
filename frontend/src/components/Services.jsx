@@ -1175,7 +1175,7 @@ const DroneServices = () => {
             {droneCardData.map((card, index) => (
               <div
                 key={index}
-                className="card min-w-[90vw] sm:min-w-[85vw] md:min-w-[75vw] lg:min-w-[500px] xl:min-w-[600px] 
+                className="card min-w-[75vw] sm:min-w-[85vw] md:min-w-[75vw] lg:min-w-[500px] xl:min-w-[600px] 
                           w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[500px] xl:w-[600px] flex-shrink-0 
                           transform transition-transform duration-500 hover:scale-[1.02]"
               >

@@ -79,6 +79,13 @@ const teamMembers = [
     image: "/optimized/aryavarta.webp",
     bio: "big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
   },
+  {
+    id: 11,
+    name: "Gagan",
+    role: "Robotics Expert",
+    image: "/optimized/gagan.webp",
+    bio: "big ideas to the table, and if you let him probably some Chinese proverbs too. He strategizes like a chess master and thinks so much, we're pretty sure his brain runs on unlimited data!",
+  },
 ];
 
 const WholeTeam = () => {

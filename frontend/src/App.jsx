@@ -90,7 +90,7 @@ const App = () => {
                     <StatsGrid />
                   </section>
 
-                  <TestimonialsSection />
+                  {/* <TestimonialsSection /> */}
 
                   {/* <section id="blog">
                     <BlogSection />

@@ -81,7 +81,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 text-white"
+      className="bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800/80 text-white"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

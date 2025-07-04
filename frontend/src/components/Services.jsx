@@ -607,19 +607,19 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/agricul.webp",
-        text: "Agricultural spraying drones",
+        text: "Commercial Drones ",
       },
       {
         image: "/optimized/images/smartcity.webp",
-        text: "Surveillance & crowd control drones",
+        text: "Military Drones",
       },
       {
         image: "/optimized/images/smarcity1.webp",
-        text: "Emergency response systems",
+        text: "R&D Projects in Drones",
       },
       {
         image: "/optimized/images/workforceTrain.webp",
-        text: "Training for drone pilots and technicians",
+        text: "Connected Drones with Encrypted Communications",
       },
     ],
     impact:
@@ -696,19 +696,19 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/images/aloudailab.webp",
-        text: "Voice-based bots with NLP & multilingual support",
+        text: "Multilingual LLM Development",
       },
       {
         image: "/optimized/images/aiImage.webp",
-        text: "AI for DevOps, diagnosis & customer experience",
+        text: " Agentic AI for Effortless Transactions",
       },
       {
         image: "/optimized/images/digitaltrans.webp",
-        text: "Healthcare AI tools (DietRx, HuntGPT, etc.)",
+        text: "AI for Skill India",
       },
       {
         image: "/optimized/images/workforceTrain.webp",
-        text: "AI training and application development",
+        text: "AI Mentor for Career Success",
       },
     ],
     impact:
@@ -726,19 +726,19 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/images/smartcity.webp",
-        text: "Smart water meters and lighting systems",
+        text: "Predictive Maintainance using IoT",
       },
       {
         image: "/optimized/images/iot.webp",
-        text: "Embedded automation controllers",
+        text: "Industrial IoT for Monitoring",
       },
       {
         image: "/optimized/images/workforceTrain.webp",
-        text: "Predictive maintenance for city assets",
+        text: "Embedded Automation Controllers",
       },
       {
         image: "/optimized/images/digitaltrans.webp",
-        text: "IoT training labs & simulators",
+        text: "Hands on IoT Trainings",
       },
     ],
     impact:
@@ -794,11 +794,11 @@ const droneCardData = [
       },
       {
         image: "/optimized/images/digitaltrans.webp",
-        text: "IoT-integrated microcontrollers",
+        text: "Hands on Robotics Trainings",
       },
       {
         image: "/optimized/images/workforceTrain.webp",
-        text: "End-to-end embedded labs for training",
+        text: "Embedded Roboticd Platforms",
       },
     ],
     impact:
@@ -816,19 +816,19 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/icons/powerbi.svg",
-        text: "Power BI dashboards & ETL pipelines",
+        text: "Strategic Data Consulting for Business Growth",
       },
       {
         image: "/optimized/icons/analytics.svg",
-        text: "Predictive analytics & smart KPIs tracking",
+        text: "Advanced Analytics Delivering Actionable Business Insights",
       },
       {
         image: "/optimized/icons/reporting.svg",
-        text: "Custom reporting systems for healthcare, mobility, and governance",
+        text: "Reliable Data Engineering and Seamless Integration",
       },
       {
         image: "/optimized/icons/migration.svg",
-        text: "Legacy data migration & modernization for scalable analytics",
+        text: "Business Intelligence Solutions for Informed Decisions",
       },
     ],
     impact:
@@ -840,25 +840,25 @@ const droneCardData = [
     description:
       "Accelerate digital delivery with DevOps automation and cloud-native tools.",
     image: "/optimized/agriculR.webp",
-    headline: "Next-Level Infrastructure with AI-Powered DevOps",
+    headline: "Cloud-First. Code-Light. Scalable Always.",
     overview:
-      "We streamline infrastructure management using natural language commands and AI-based workflows.",
+      "Our AI-enabled DevOps services transform the way teams manage cloud infrastructure. Whether you’re migrating securely, deploying at scale, or automating your CI/CD pipelines, we bring flexibility, speed, and simplicity across AWS, Azure, and Google Cloud.",
     capabilities: [
       {
         image: "/optimized/images/robo.webp",
-        text: "Cross-cloud deployment platforms",
+        text: "Cloud Strategy and Secure Migration Services",
       },
       {
         image: "/optimized/images/smartcity.webp",
-        text: "AI-powered DevOps orchestration",
+        text: "Scalable Cloud Infrastructure Design and Management",
       },
       {
         image: "/optimized/icons/workflow.svg",
-        text: "Workflow automation with approval chains",
+        text: "DevOps Automation for Faster Software Delivery",
       },
       {
         image: "/optimized/images/strategic.webp",
-        text: "Infrastructure-as-code and containerization",
+        text: "Continuous Integration and Continuous Deployment Solutions",
       },
     ],
     impact:
@@ -876,15 +876,15 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/icons/ar.svg",
-        text: "Marker-based AR experiences",
+        text: "Redefining Tourism via AR/VR",
       },
       {
         image: "/optimized/icons/3d.svg",
-        text: "3D model visualizations on mobile",
+        text: "3D Model Visualisation on Mobile",
       },
       {
         image: "/optimized/images/strategic.webp",
-        text: "Microapps via QR/NFC (e.g., demos, feedback, onboarding)",
+        text: "AR/VR for Fintech, Marketing/Branding",
       },
       {
         image: "/optimized/icons/vr.svg",
@@ -906,23 +906,52 @@ const droneCardData = [
     capabilities: [
       {
         image: "/optimized/icons/stem.svg",
-        text: "SAPL-aligned STEM kits (Grades 1–12)",
+        text: "Hands on Drone Trainings",
       },
       {
         image: "/optimized/images/strategic.webp",
-        text: "Adult skilling labs in Tier 2/3 cities",
+        text: "Hands on Robotics Trainings",
       },
       {
         image: "/optimized/images/strategic.webp",
-        text: "Industry-ready simulators and toolkits",
+        text: "Hands on Embedded Designs Trainings",
       },
       {
         image: "/optimized/icons/job.svg",
-        text: "Job mapping & smart alerts",
+        text: "Hand on EV & Solar Trainings",
       },
     ],
     impact:
       "Creating a tech-savvy workforce that stays, grows, and innovates locally.",
+  },
+  {
+    titleLine1: "High performing platforms",
+    titleLine2: "and applications",
+    description: "High-Performing Platforms & Applications with AI at the Core",
+    image: "/optimized/images/smartcity1.webp",
+    headline: "High-Performing Platforms & Applications with AI at the Core",
+    overview:
+      "We build secure, scalable platforms and AI-integrated applications that power next-gen experiences across industries. From healthcare to tourism, and CRM to blockchain, our solutions are designed for speed, interoperability, and impact.",
+    capabilities: [
+      {
+        image: "/optimized/images/workforceTrain.webp",
+        text: "Immersive Tourism Platform",
+      },
+      {
+        image: "/optimized/images/strategic.webp",
+        text: "Blockchain Identity Platform",
+      },
+      {
+        image: "/optimized/images/digitaltrans.webp",
+        text: "Adaptive, AI-Enabled CRM",
+      },
+      {
+        image: "/optimized/smartcityR1.webp",
+        text: "Smart Telemedicine for the Digital Age",
+      },
+    ],
+    impact:
+      "Empowering future-ready cities that are sustainable, connected, and citizen-first.",
   },
   {
     titleLine1: "Smart",

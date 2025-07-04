@@ -95,7 +95,7 @@ const Footer = () => {
               <img
                 src="/optimized/Logo_White.webp"
                 alt="Instrek Logo"
-                className="h-20 w-auto"
+                className="h-12 w-24 sm:h-25 sm:w-auto object-contain"
               />
             </div>
 

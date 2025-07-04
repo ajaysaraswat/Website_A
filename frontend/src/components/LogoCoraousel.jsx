@@ -12,24 +12,32 @@ import ICICILogo from "/Rimages/ICICI Bank_Client.svg";
 import TataLogo from "/Rimages/Tata Steel_Client.svg";
 import YesBankLogo from "/Rimages/Yes Bank_Client.svg";
 import UCBerkeleyLogo from "/Rimages/UC Berkeley_Client.svg";
+import Second from "/Rimages/second.svg";
+import Third from "/Rimages/third.svg";
+import NSDC from "/Rimages/NSDC.svg";
+import Suzuki from "/Rimages/suzuki.svg";
+import Sharda from "/Rimages/sharda.svg";
 
 const engagementLogos = [
   { name: "", image: ARTIALogo },
   { name: "", image: NDMALogo },
   { name: "", image: TRAILogo },
   { name: "", image: NITILogo },
-  { name: "", image: "/optimized/second.webp" },
-  { name: "", image: "/optimized/third.webp" },
+  { name: "", image: Second },
+  { name: "", image: Third },
+  { name: "", image: Sharda },
+  { name: "", image: "/optimized/mib2.jpg" },
+  { name: "", image: "/optimized/broadp.png" },
 ];
 
 const clientLogos = [
   { name: "", image: LTLogo },
-  { name: "", image: MazdaLogo },
-  { name: "", image: NagarroLogo },
+  { name: "", image: "/optimized/Syniti.png" },
+  { name: "", image: "/optimized/Traya.png" },
   { name: "", image: ICICILogo },
   { name: "", image: TataLogo },
-  { name: "", image: YesBankLogo },
-  { name: "", image: UCBerkeleyLogo },
+  { name: "", image: NSDC },
+  { name: "", image: Suzuki },
 ];
 
 export const LogoCarousel = () => {

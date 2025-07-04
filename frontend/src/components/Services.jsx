@@ -659,7 +659,7 @@ const droneCardData = [
     titleLine1: "Electric Vehicles",
     titleLine2: "(EVs)",
     description: "Building the EV ecosystem—2W, 3W, batteries & beyond.",
-    image: "/optimized/cityR.webp",
+    image: "/optimized/electric.webp",
     headline: "Empowering eMobility Ecosystems",
     overview:
       "We support India's EV transition with solutions in vehicle assembly, battery tech, and job-ready EV training programs.",
@@ -689,7 +689,7 @@ const droneCardData = [
     titleLine2: "Intelligence",
     description:
       "From traffic systems to medical diagnosis—AI that understands and acts.",
-    image: "/optimized/agriculR.webp",
+    image: "/optimized/images/robo.webp",
     headline: "Making Machines Think Humanly",
     overview:
       "We deploy conversational AI, generative AI, and agentic bots for domains like healthcare, fintech, transport, and education.",
@@ -779,7 +779,7 @@ const droneCardData = [
     titleLine2: "Systems",
     description:
       "Smart automation across industries—from robotics to utilities.",
-    image: "/optimized/images/bulb.webp",
+    image: "/optimized/images/robo.webp",
     headline: "Automation Built from the Core",
     overview:
       "We develop and deploy embedded controllers, remote sensors, and automation modules across verticals.",
@@ -929,7 +929,7 @@ const droneCardData = [
     titleLine2: "Cities",
     description:
       "Connected infrastructure, AI-powered public services, and clean air tech.",
-    image: "/optimized/images/bulb.webp",
+    image: "/optimized/images/smartcity1.webp",
     headline: "Cities That Think, Act, and Care",
     overview:
       "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",
@@ -940,15 +940,15 @@ const droneCardData = [
       },
       {
         image: "/optimized/images/strategic.webp",
-        text: "Indoor/outdoor air purification",
+        text: "5G Radio and High Capacity Low Latency Networks",
       },
       {
         image: "/optimized/images/digitaltrans.webp",
-        text: "Water monitoring, safety & disaster systems",
+        text: "Smart water meters",
       },
       {
         image: "/optimized/smartcityR1.webp",
-        text: "Smart transport & planning dashboards",
+        text: "Single Frequency network for Disaster Management",
       },
     ],
     impact:

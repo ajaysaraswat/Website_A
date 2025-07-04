@@ -16,7 +16,7 @@ const teamMembers = [
     id: 2,
     name: "Sanjana Wadhwa",
     role: "Chief Executive Officer",
-    image: "/optimized/sanjana.webp",
+    image: "/optimized/sanjanO.webp",
     bio: "With over 11 years in technology leadership, Sanjana has led global teams to deliver innovative solutions across industries. An IIM Ahmedabad alum, she brings sharp strategic insight and a collaborative spirit.",
   },
   {
@@ -77,14 +77,14 @@ const teamMembers = [
   },
   {
     id: 11,
-    name: "Gagan",
+    name: "Gagan Menderkar",
     role: "Mechanical Design Expert",
     image: "/optimized/gagan.webp",
     bio: "Gagan makes sure our drones aren’t just clever on paper his simulation and design skills mean they’re strong, reliable, and ready to fly.",
   },
   {
     id: 12,
-    name: "Vivek",
+    name: "Vivek Kolekar",
     role: "Mechanical Design & Manufacturing Expert",
     image: "/optimized/vivek.webp", // (Consider updating with a unique image for Vivek)
     bio: "Vivek turns ideas into real, buildable drone parts. He’s all about making sure our designs work in the real world, not just on a screen.",

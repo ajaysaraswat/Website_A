@@ -16,7 +16,7 @@ const teamMembers = [
     id: 2,
     name: "Sanjana Wadhwa",
     role: "Chief Executive Officer",
-    image: "/optimized/sanjana.webp",
+    image: "/optimized/sanjanO.webp",
     bio: "With over 11 years in technology leadership, Sanjana has led global teams to deliver innovative solutions across industries. An IIM Ahmedabad alum, she brings sharp strategic insight and a collaborative spirit.",
   },
   {

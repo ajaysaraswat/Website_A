@@ -203,7 +203,7 @@ const ServiceDes = () => {
             </div>
 
             {/* Additional Services */}
-            <div>
+            {/* <div>
               <h2 className="text-3xl sm:text-4xl font-semibold mb-12 text-center text-[#ea4820]">
                 Additional Services
               </h2>
@@ -231,7 +231,7 @@ const ServiceDes = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 

@@ -978,7 +978,8 @@ const DroneServices = () => {
         start: "top top",
         end: "+=2000",
         pin: true,
-        scrub: 0.5,
+        // scrub: 0.5,
+        scrub: true,
         snap: {
           snapTo: 1 / (droneCardData.length - 1),
           duration: 0.1,
@@ -1043,7 +1044,7 @@ const DroneServices = () => {
                 key={index}
                 className="card min-w-[75vw] sm:min-w-[85vw] md:min-w-[75vw] lg:min-w-[500px] xl:min-w-[600px] 
                           w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[500px] xl:w-[600px] flex-shrink-0 
-                          transform transition-all duration-500 ease-out hover:scale-[1.02]"
+                          transform transition-all duration-500 ease-out "
               >
                 <DroneCard
                   titleLine1={card.titleLine1}
@@ -1061,25 +1062,25 @@ const DroneServices = () => {
 
           {/* Side Navigation Hints */}
           <div className="absolute left-6 top-1/2 transform -translate-y-1/2 text-white/80 text-sm hidden lg:block">
-            <div className="flex flex-col items-center space-y-3 bg-white/5 px-3 py-4 rounded-full backdrop-blur-sm">
-              <div className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
+            <div className="flex flex-col items-center space-y-3 bg-white/5 px-3 py-4 rounded-full ">
+              {/* <div className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
                 ←
               </div>
               <span className="writing-mode-vertical text-orientation-mixed tracking-wider">
                 Scroll
-              </span>
+              </span> */}
             </div>
           </div>
 
           <div className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white/80 text-sm hidden lg:block">
-            <div className="flex flex-col items-center space-y-3 bg-white/5 px-3 py-4 rounded-full backdrop-blur-sm">
+            {/* <div className="flex flex-col items-center space-y-3 bg-white/5 px-3 py-4 rounded-full backdrop-blur-sm">
               <div className="w-8 h-8 border border-white/30 rounded-full flex items-center justify-center hover:bg-white/10 cursor-pointer transition-colors">
                 →
               </div>
               <span className="writing-mode-vertical text-orientation-mixed tracking-wider">
                 Scroll
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

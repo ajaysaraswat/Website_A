@@ -158,25 +158,25 @@ const StatsGrid = () => {
 
             {/* Side Navigation Hints */}
             <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 text-xs hidden sm:block">
-              <div className="flex flex-col items-center space-y-2">
+              {/* <div className="flex flex-col items-center space-y-2">
                 <div className="w-6 h-6 border border-white/40 rounded-full flex items-center justify-center">
                   ←
                 </div>
                 <span className="writing-mode-vertical text-orientation-mixed">
                   Scroll
                 </span>
-              </div>
+              </div> */}
             </div>
 
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/60 text-xs hidden sm:block">
-              <div className="flex flex-col items-center space-y-2">
+              {/* <div className="flex flex-col items-center space-y-2">
                 <div className="w-6 h-6 border border-white/40 rounded-full flex items-center justify-center">
                   →
                 </div>
                 <span className="writing-mode-vertical text-orientation-mixed">
                   Scroll
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Background Decorative Elements */}

@@ -95,22 +95,10 @@
 //     overview:
 //       "Instrek's drone solutions span agriculture, surveillance, inspections, and emergency response. We offer complete lifecycle support including pilot training, drone repair, and data intelligence.",
 //     capabilities: [
-//       {
-//         image: "/optimized/agricul.webp",
-//         text: "Agricultural spraying drones",
-//       },
-//       {
-//         image: "/optimized/images/smartcity.webp",
-//         text: "Surveillance & crowd control drones",
-//       },
-//       {
-//         image: "/optimized/images/smarcity1.webp",
-//         text: "Emergency response systems",
-//       },
-//       {
-//         image: "/optimized/images/workforceTrain.webp",
-//         text: "Training for drone pilots and technicians",
-//       },
+//       "Agricultural spraying drones",
+//       "Surveillance & crowd control drones",
+//       "Emergency response systems",
+//       "Training for drone pilots and technicians",
 //     ],
 //     impact:
 //       "Our drones optimize yield, improve public safety, and bring real-time insights to city planners and responders.",
@@ -125,22 +113,10 @@
 //     overview:
 //       "We deploy solar-powered systems integrated with IoT and smart energy grids for sustainable growth.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/bulb.webp",
-//         text: "Solar panel installation",
-//       },
-//       {
-//         image: "/optimized/images/strategic.webp",
-//         text: "Smart solar energy monitoring",
-//       },
-//       {
-//         image: "/optimized/images/env1.webp",
-//         text: "Battery storage solutions",
-//       },
-//       {
-//         image: "/optimized/images/digitaltrans.webp",
-//         text: "Renewable energy labs and training programs",
-//       },
+//       "Solar panel installation",
+//       "Smart solar energy monitoring",
+//       "Battery storage solutions",
+//       "Renewable energy labs and training programs",
 //     ],
 //     impact:
 //       "Reducing energy bills and carbon footprints, our systems help communities embrace green energy at scale.",
@@ -154,22 +130,10 @@
 //     overview:
 //       "We support India's EV transition with solutions in vehicle assembly, battery tech, and job-ready EV training programs.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/smartcity.webp",
-//         text: "E-scooters, 3W passenger & cargo EVs",
-//       },
-//       {
-//         image: "/optimized/images/iot.webp",
-//         text: "Battery diagnostics & LFP solutions",
-//       },
-//       {
-//         image: "/optimized/images/workforceTrain.webp",
-//         text: "EV maintenance & repair labs",
-//       },
-//       {
-//         image: "/optimized/images/blockchainlern.webp",
-//         text: "Integrated EV education ecosystem",
-//       },
+//       "E-scooters, 3W passenger & cargo EVs",
+//       "Battery diagnostics & LFP solutions",
+//       "EV maintenance & repair labs",
+//       "Integrated EV education ecosystem",
 //     ],
 //     impact:
 //       "Driving clean, future-ready mobility through innovation and inclusive workforce development.",
@@ -184,22 +148,10 @@
 //     overview:
 //       "We deploy conversational AI, generative AI, and agentic bots for domains like healthcare, fintech, transport, and education.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/aloudailab.webp",
-//         text: "Voice-based bots with NLP & multilingual support",
-//       },
-//       {
-//         image: "/optimized/images/aiImage.webp",
-//         text: "AI for DevOps, diagnosis & customer experience",
-//       },
-//       {
-//         image: "/optimized/images/digitaltrans.webp",
-//         text: "Healthcare AI tools (DietRx, HuntGPT, etc.)",
-//       },
-//       {
-//         image: "/optimized/images/workforceTrain.webp",
-//         text: "AI training and application development",
-//       },
+//       "Voice-based bots with NLP & multilingual support",
+//       "AI for DevOps, diagnosis & customer experience",
+//       "Healthcare AI tools (DietRx, HuntGPT, etc.)",
+//       "AI training and application development",
 //     ],
 //     impact:
 //       "Boosting efficiency and precision across industries while reducing human effort in repetitive tasks.",
@@ -214,22 +166,10 @@
 //     overview:
 //       "We build connected ecosystems for energy, utilities, and mobility using smart sensors, controllers, and IoT hubs.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/smartcity.webp",
-//         text: "Smart water meters and lighting systems",
-//       },
-//       {
-//         image: "/optimized/images/iot.webp",
-//         text: "Embedded automation controllers",
-//       },
-//       {
-//         image: "/optimized/images/workforceTrain.webp",
-//         text: "Predictive maintenance for city assets",
-//       },
-//       {
-//         image: "/optimized/images/digitaltrans.webp",
-//         text: "IoT training labs & simulators",
-//       },
+//       "Smart water meters and lighting systems",
+//       "Embedded automation controllers",
+//       "Predictive maintenance for city assets",
+//       "IoT training labs & simulators",
 //     ],
 //     impact:
 //       "Enabling responsive infrastructure that reduces wastage and enhances city planning.",
@@ -244,22 +184,10 @@
 //     overview:
 //       "From digital ID systems to credential verification, our blockchain solutions deliver data integrity and user ownership.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/blockchainlern.webp",
-//         text: "Blockchain-based identity platforms",
-//       },
-//       {
-//         image: "/optimized/images/strategic.webp",
-//         text: "Consent-driven verification systems",
-//       },
-//       {
-//         image: "/optimized/images/digitaltrans.webp",
-//         text: "Digitally signed certificates & NFTs",
-//       },
-//       {
-//         image: "/optimized/images/company-overview.webp",
-//         text: "Credential management dashboards",
-//       },
+//       "Blockchain-based identity platforms",
+//       "Consent-driven verification systems",
+//       "Digitally signed certificates & NFTs",
+//       "Credential management dashboards",
 //     ],
 //     impact:
 //       "Creating transparent, tamper-proof ecosystems that enhance compliance and digital sovereignty.",
@@ -274,22 +202,10 @@
 //     overview:
 //       "We develop and deploy embedded controllers, remote sensors, and automation modules across verticals.",
 //     capabilities: [
-//       {
-//         image: "/optimized/images/robo.webp",
-//         text: "Remote device control systems",
-//       },
-//       {
-//         image: "/optimized/images/iot.webp",
-//         text: "Embedded robotics platforms",
-//       },
-//       {
-//         image: "/optimized/images/digitaltrans.webp",
-//         text: "IoT-integrated microcontrollers",
-//       },
-//       {
-//         image: "/optimized/images/workforceTrain.webp",
-//         text: "End-to-end embedded labs for training",
-//       },
+//       "Remote device control systems",
+//       "Embedded robotics platforms",
+//       "IoT-integrated microcontrollers",
+//       "End-to-end embedded labs for training",
 //     ],
 //     impact:
 //       "Powering scalable, device-level intelligence to automate operations and enhance control.",
@@ -304,22 +220,10 @@
 //     overview:
 //       "We convert raw data into actionable insights using real-time dashboards, machine learning, and predictive systems.",
 //     capabilities: [
-//       {
-//         image: "/optimized/icons/powerbi.svg",
-//         text: "Power BI dashboards & ETL pipelines",
-//       },
-//       {
-//         image: "/optimized/icons/analytics.svg",
-//         text: "Predictive analytics & smart KPIs tracking",
-//       },
-//       {
-//         image: "/optimized/icons/reporting.svg",
-//         text: "Custom reporting systems for healthcare, mobility, and governance",
-//       },
-//       {
-//         image: "/optimized/icons/migration.svg",
-//         text: "Legacy data migration & modernization for scalable analytics",
-//       },
+//       "Power BI dashboards & ETL pipelines",
+//       "Predictive analytics & smart KPIs tracking",
+//       "Custom reporting systems for healthcare, mobility, and governance",
+//       "Legacy data migration & modernization for scalable analytics",
 //     ],
 //     impact:
 //       "Faster, smarter decision-making across departments and industries.",
@@ -334,22 +238,10 @@
 //     overview:
 //       "We streamline infrastructure management using natural language commands and AI-based workflows.",
 //     capabilities: [
-//       {
-//         image: "/optimized/icons/cloud.svg",
-//         text: "Cross-cloud deployment platforms",
-//       },
-//       {
-//         image: "/optimized/icons/ai-devops.svg",
-//         text: "AI-powered DevOps orchestration",
-//       },
-//       {
-//         image: "/optimized/icons/workflow.svg",
-//         text: "Workflow automation with approval chains",
-//       },
-//       {
-//         image: "/optimized/icons/container.svg",
-//         text: "Infrastructure-as-code and containerization",
-//       },
+//       "Cross-cloud deployment platforms",
+//       "AI-powered DevOps orchestration",
+//       "Workflow automation with approval chains",
+//       "Infrastructure-as-code and containerization",
 //     ],
 //     impact:
 //       "Cut deployment time and cost while increasing scalability and flexibility.",
@@ -364,22 +256,10 @@
 //     overview:
 //       "We deliver no-installation AR/VR microapps for onboarding, marketing, education, and engagement.",
 //     capabilities: [
-//       {
-//         image: "/optimized/icons/ar.svg",
-//         text: "Marker-based AR experiences",
-//       },
-//       {
-//         image: "/optimized/icons/3d.svg",
-//         text: "3D model visualizations on mobile",
-//       },
-//       {
-//         image: "/optimized/icons/microapp.svg",
-//         text: "Microapps via QR/NFC (e.g., demos, feedback, onboarding)",
-//       },
-//       {
-//         image: "/optimized/icons/vr.svg",
-//         text: "Immersive VR walkthroughs for training, exhibitions & simulations",
-//       },
+//       "Marker-based AR experiences",
+//       "3D model visualizations on mobile",
+//       "Microapps via QR/NFC (e.g., demos, feedback, onboarding)",
+//       "Immersive VR walkthroughs for training, exhibitions & simulations",
 //     ],
 //     impact:
 //       "Boosting campaign ROI, engagement, and learning through immersive, frictionless interactions.",
@@ -394,22 +274,10 @@
 //     overview:
 //       "From Grade 1 to 70+, our hands-on training covers AI, EVs, Drones, IoT, and Robotics using certified trainers and modular tools.",
 //     capabilities: [
-//       {
-//         image: "/optimized/icons/stem.svg",
-//         text: "SAPL-aligned STEM kits (Grades 1–12)",
-//       },
-//       {
-//         image: "/optimized/icons/adult-learning.svg",
-//         text: "Adult skilling labs in Tier 2/3 cities",
-//       },
-//       {
-//         image: "/optimized/icons/simulator.svg",
-//         text: "Industry-ready simulators and toolkits",
-//       },
-//       {
-//         image: "/optimized/icons/job.svg",
-//         text: "Job mapping & smart alerts",
-//       },
+//       "SAPL-aligned STEM kits (Grades 1–12)",
+//       "Adult skilling labs in Tier 2/3 cities",
+//       "Industry-ready simulators and toolkits",
+//       "Job mapping & smart alerts",
 //     ],
 //     impact:
 //       "Creating a tech-savvy workforce that stays, grows, and innovates locally.",
@@ -424,22 +292,10 @@
 //     overview:
 //       "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",
 //     capabilities: [
-//       {
-//         image: "/optimized/icons/traffic.svg",
-//         text: "AI-powered traffic & lighting",
-//       },
-//       {
-//         image: "/optimized/icons/air.svg",
-//         text: "Indoor/outdoor air purification",
-//       },
-//       {
-//         image: "/optimized/icons/water.svg",
-//         text: "Water monitoring, safety & disaster systems",
-//       },
-//       {
-//         image: "/optimized/icons/transport.svg",
-//         text: "Smart transport & planning dashboards",
-//       },
+//       "AI-powered traffic & lighting",
+//       "Indoor/outdoor air purification",
+//       "Water monitoring, safety & disaster systems",
+//       "Smart transport & planning dashboards",
 //     ],
 //     impact:
 //       "Empowering future-ready cities that are sustainable, connected, and citizen-first.",
@@ -1116,14 +972,20 @@ const DroneServices = () => {
 
     gsap.to(cardsContainer, {
       x: () => -(cardsContainer.scrollWidth - window.innerWidth + getPadding()),
-      ease: "power1.inOut",
+      ease: "none",
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=1000",
+        end: "+=2000",
         pin: true,
-        scrub: 1,
-        snap: 1 / (droneCardData.length - 1),
+        scrub: 0.5,
+        snap: {
+          snapTo: 1 / (droneCardData.length - 1),
+          duration: 0.1,
+          delay: 0,
+          ease: "power1.out",
+          inertia: false,
+        },
         invalidateOnRefresh: true,
         onUpdate: (self) => {
           const progress = self.progress;
@@ -1166,18 +1028,22 @@ const DroneServices = () => {
           </p>
         </div>
 
-        {/* Cards Container */}
+        {/* Cards Container with smoother transitions */}
         <div className="w-full flex items-center overflow-hidden">
           <div
             ref={cardsContainerRef}
             className="flex flex-nowrap gap-6 md:gap-8 lg:gap-12 xl:gap-16 px-4 sm:px-6 md:px-8 lg:px-12 mt-8"
+            style={{
+              transition: "transform 0.5s ease-out",
+              willChange: "transform",
+            }}
           >
             {droneCardData.map((card, index) => (
               <div
                 key={index}
                 className="card min-w-[75vw] sm:min-w-[85vw] md:min-w-[75vw] lg:min-w-[500px] xl:min-w-[600px] 
                           w-[90vw] sm:w-[85vw] md:w-[75vw] lg:w-[500px] xl:w-[600px] flex-shrink-0 
-                          transform transition-transform duration-500 hover:scale-[1.02]"
+                          transform transition-all duration-500 ease-out hover:scale-[1.02]"
               >
                 <DroneCard
                   titleLine1={card.titleLine1}
@@ -1216,8 +1082,6 @@ const DroneServices = () => {
             </div>
           </div>
         </div>
-
-        {/* Progress Indicators - Below Cards */}
       </div>
     </div>
   );

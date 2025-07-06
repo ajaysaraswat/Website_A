@@ -11,6 +11,7 @@ const teamMembers = [
     role: "Founder",
     image: "/optimized/Vineet.webp",
     bio: "Vineet brings bold ideas and cutting-edge tech strategies to Instrek. An IIM Ahmedabad alum with a knack for big-picture thinking and the details that make them work.",
+    linkedinUrl: "https://www.linkedin.com/in/vineet-sharma-instrek/",
   },
   {
     id: 2,
@@ -18,13 +19,16 @@ const teamMembers = [
     role: "Chief Executive Officer",
     image: "/optimized/sanjanO.webp",
     bio: "With over 11 years in technology leadership, Sanjana has led global teams to deliver innovative solutions across industries. An IIM Ahmedabad alum, she brings sharp strategic insight and a collaborative spirit.",
+    linkedinUrl: "https://www.linkedin.com/in/sanjana-wadhwa-instrek/",
   },
+
   {
     id: 3,
-    name: "Tithika Mittal",
-    role: "Technology Ecosystem Coordinator",
-    image: "/optimized/tithika.webp",
-    bio: "Tithika ensures our products/technologies align with market needs, coordinating development with a keen sense of what’s next on the map.",
+    name: "Sharath M",
+    role: "Fractional CTO",
+    image: "/optimized/sharat.webp",
+    bio: "Sharath specializes in Products/Platforms, Blockchain, and IoT, with a passion for developing next-gen technology solutions that work in the real world.",
+    linkedinUrl: "https://www.linkedin.com/in/sharath-m-instrek/",
   },
   {
     id: 4,
@@ -32,13 +36,15 @@ const teamMembers = [
     role: "Non-Executive Strategic Advisor",
     image: "/optimized/gaurab.webp",
     bio: "A GTM strategist and problem-solver, Gaurab helps teams move smarter and faster with a sharp eye for market fit and tactical execution.",
+    linkedinUrl: "https://www.linkedin.com/in/gaurab-ganguly-instrek/",
   },
   {
     id: 5,
     name: "Anjali Chaurasia",
     role: "Technology Ecosystem Recruiter",
     image: "/optimized/anjali.jpg",
-    bio: "Anjali is shaping Instrek’s culture by finding the right people and partners, always ready to keep us moving forward at speed.",
+    bio: "Anjali is shaping Instrek's culture by finding the right people and partners, always ready to keep us moving forward at speed.",
+    linkedinUrl: "https://www.linkedin.com/in/anjali-chaurasia-instrek/",
   },
   {
     id: 6,
@@ -46,20 +52,23 @@ const teamMembers = [
     role: "Innovations Leader – Robotics & Drones",
     image: "/optimized/narend.jpg",
     bio: "With 25 years in Defence and an IIM Ahmedabad background, Narender now leads our robotics and drone innovations, bringing battle-tested ideas to life at Instrek.",
+    linkedinUrl: "https://www.linkedin.com/in/narender-singh-instrek/",
   },
   {
     id: 7,
-    name: "Srilalitha M Srinivasan",
-    role: "Drone Communications Expert",
-    image: "/optimized/sri.webp",
-    bio: "Sri is working on making our drones talk faster and safer. From secure links to anti-jamming tech, she’s all about keeping our drones connected.",
+    name: "Tithika Mittal",
+    role: "Technology Ecosystem Coordinator",
+    image: "/optimized/tithika.webp",
+    bio: "Tithika ensures our products/technologies align with market needs, coordinating development with a keen sense of what's next on the map.",
+    linkedinUrl: "https://www.linkedin.com/in/tithika-mittal-instrek/",
   },
   {
     id: 8,
-    name: "Aryavarta Singh",
-    role: "Drone Robotics Expert",
-    image: "/optimized/aryavarta.webp",
-    bio: "A true robotics enthusiast who loves building Rovers and AMRs, Aryavarta is the brain behind many of our coolest drone innovations at Instrek.",
+    name: "Anjali Chaurasia",
+    role: "Technology Ecosystem Recruiter",
+    image: "/optimized/anjali.jpg",
+    bio: "Anjali is shaping Instrek's culture by finding the right people and partners, always ready to keep us moving forward at speed.",
+    linkedinUrl: "https://www.linkedin.com/in/anjali-chaurasia-instrek/",
   },
 ];
 
@@ -131,6 +140,7 @@ const Team = () => {
                     role={member.role}
                     image={member.image}
                     bio={member.bio}
+                    linkedinUrl={member.linkedinUrl}
                   />
                 </div>
               ))}

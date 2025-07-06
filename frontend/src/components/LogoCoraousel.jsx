@@ -25,9 +25,11 @@ const engagementLogos = [
   { name: "", image: NITILogo },
   { name: "", image: Second },
   { name: "", image: Third },
-  { name: "", image: Sharda },
-  { name: "", image: "/optimized/mib2.jpg" },
+  { name: "", image: "/optimized/shardalogo.png" },
+
+  { name: "", image: "/optimized/miblogo.png" },
   { name: "", image: "/optimized/broadp.png" },
+  { name: "", image: "/optimized/meitylogo.png" },
 ];
 
 const clientLogos = [
@@ -36,17 +38,17 @@ const clientLogos = [
   { name: "", image: "/optimized/Traya.png" },
   { name: "", image: ICICILogo },
   { name: "", image: TataLogo },
-  { name: "", image: NSDC },
+  { name: "", image: "/optimized/nsdc.png" },
   { name: "", image: Suzuki },
 ];
 
 export const LogoCarousel = () => {
   return (
     <div
-      className="bg-black flex flex-col justify-center py-20 px-4"
+      className="bg-black flex flex-col justify-center py-20 px-2"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <div className="max-w-6xl mx-auto w-full space-y-24">
+      <div className="max-w-7xl mx-auto w-full space-y-24">
         <LogoSection
           title="OUR KEY"
           subtitle="ENGAGEMENTS"

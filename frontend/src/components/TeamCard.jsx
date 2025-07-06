@@ -1,8 +1,16 @@
 import React, { useState } from "react";
+import { Linkedin } from "lucide-react";
 
-const TeamCard = ({ name, role, image, bio }) => {
+const TeamCard = ({ name, role, image, bio, linkedinUrl }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleLinkedInClick = (e) => {
+    e.stopPropagation();
+    if (linkedinUrl) {
+      window.open(linkedinUrl, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <div
@@ -24,9 +32,20 @@ const TeamCard = ({ name, role, image, bio }) => {
 
       {/* Content */}
       <div className="p-4 sm:p-5">
-        <h2 className="text-xl sm:text-2xl font-semibold text-white mb-2">
-          {name}
-        </h2>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-xl sm:text-2xl font-semibold text-white">
+            {name}
+          </h2>
+          {linkedinUrl && (
+            <button
+              onClick={handleLinkedInClick}
+              className="p-1.5 bg-[#ea4820] rounded-md hover:bg-[#d43d1b] transition-colors duration-300 flex items-center justify-center"
+              title="View LinkedIn Profile"
+            >
+              <Linkedin size={16} className="text-white" />
+            </button>
+          )}
+        </div>
         <p className="text-[#ea4820] font-medium text-sm sm:text-base uppercase">
           {role}
         </p>

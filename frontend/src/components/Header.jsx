@@ -1,30 +1,98 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // Icons
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     // Preload the logo image
     const img = new Image();
-    img.src = "./optimized/Logo_White.webp";
+    img.src = "/optimized/Logo_White.webp";
     img.onload = () => setIsLoaded(true);
+    img.onerror = () => {
+      console.error("Failed to load logo image");
+      setIsLoaded(true); // Still show the placeholder even if image fails
+    };
   }, []);
 
+  // Update active menu based on current location and scroll position
+  useEffect(() => {
+    const updateActiveMenu = () => {
+      const pathname = location.pathname;
+
+      // If we're on blog page, set active menu to Blog
+      if (pathname === "/blog" || pathname.startsWith("/blog/")) {
+        setActiveMenu("Blog");
+        return;
+      }
+
+      // If we're on home page, check scroll position for sections
+      if (pathname === "/") {
+        const sections = ["home", "about", "services", "team"];
+        const scrollPosition = window.scrollY + 100; // Offset for header height
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(sections[i]);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            if (scrollPosition >= sectionTop) {
+              setActiveMenu(
+                sections[i].charAt(0).toUpperCase() + sections[i].slice(1)
+              );
+              return;
+            }
+          }
+        }
+
+        // Default to Home if no section is found
+        setActiveMenu("Home");
+      }
+    };
+
+    // Update on scroll and on mount
+    updateActiveMenu();
+    window.addEventListener("scroll", updateActiveMenu);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveMenu);
+    };
+  }, [location.pathname]);
+
   const menuItems = [
-    { label: "Home", link: "#home", isHashLink: true },
-    { label: "About", link: "#about", isHashLink: true },
-    { label: "Services", link: "#services", isHashLink: true },
-    { label: "Team", link: "#team", isHashLink: true },
+    { label: "Home", link: "/", isHashLink: false },
+    { label: "About", link: "/#about", isHashLink: false },
+    { label: "Services", link: "/#services", isHashLink: false },
+    { label: "Team", link: "/#team", isHashLink: false },
     { label: "Blog", link: "/blog", isHashLink: false },
-    { label: "Contact", link: "#contact", isHashLink: true },
+    {
+      label: "Contact",
+      link: "https://www.linkedin.com/company/instrek-technologies/posts/",
+      isHashLink: true,
+    },
   ];
 
   const handleLogoClick = () => {
     window.location.href = "/"; // This will force a page reload and navigate to home
+  };
+
+  const handleNavigation = (item) => {
+    setActiveMenu(item.label);
+    setMenuOpen(false);
+
+    // If it's a hash link (like Contact), let it work normally
+    if (item.isHashLink) {
+      return;
+    }
+
+    // For internal navigation, use React Router
+    if (item.link.startsWith("/#")) {
+      // Navigate to home page first, then scroll to section
+      window.location.href = item.link;
+    }
   };
 
   return (
@@ -37,7 +105,7 @@ const Header = () => {
         <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
           {isLoaded ? (
             <img
-              src="./optimized/Logo_White.webp"
+              src="/optimized/Logo_White.webp"
               alt="Instrek Logo"
               className="h-20 w-25 pl-4 lg:pl-0.5 object-contain"
               loading="eager"
@@ -59,7 +127,7 @@ const Header = () => {
                 className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${
                   activeMenu === item.label ? "text-[#EA6220]" : "text-white"
                 }`}
-                onClick={() => setActiveMenu(item.label)}
+                onClick={() => handleNavigation(item)}
               >
                 {item.label}
                 {activeMenu === item.label && (
@@ -73,7 +141,7 @@ const Header = () => {
                 className={`relative px-3 py-2 text-xl font-medium transition-all duration-300 hover:text-[#EA6220] ${
                   activeMenu === item.label ? "text-[#EA6220]" : "text-white"
                 }`}
-                onClick={() => setActiveMenu(item.label)}
+                onClick={() => handleNavigation(item)}
               >
                 {item.label}
                 {activeMenu === item.label && (
@@ -96,7 +164,7 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu with transition */}
       <div
-        className={`md:hidden px-6 pb-4 space-y-4 bg-[#181344] text-white transition-all duration-300 ease-in-out ${
+        className={`md:hidden px-6  space-y-4 bg-[#181344] text-white transition-all duration-300 ease-in-out ${
           menuOpen
             ? "opacity-100 max-h-96"
             : "opacity-0 max-h-0 overflow-hidden"
@@ -110,10 +178,7 @@ const Header = () => {
               className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${
                 activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
               }`}
-              onClick={() => {
-                setActiveMenu(item.label);
-                setMenuOpen(false);
-              }}
+              onClick={() => handleNavigation(item)}
             >
               {item.label}
             </a>
@@ -124,10 +189,7 @@ const Header = () => {
               className={`block text-base font-medium transition-all duration-300 hover:text-[#EA6220] ${
                 activeMenu === item.label ? "text-[#EA6220]" : "text-gray-300"
               }`}
-              onClick={() => {
-                setActiveMenu(item.label);
-                setMenuOpen(false);
-              }}
+              onClick={() => handleNavigation(item)}
             >
               {item.label}
             </Link>

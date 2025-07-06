@@ -40,11 +40,11 @@ const teamMembers = [
   },
   {
     id: 5,
-    name: "Anjali Chaurasia",
-    role: "Technology Ecosystem Recruiter",
-    image: "/optimized/anjali.jpg",
-    bio: "Anjali is shaping Instrek's culture by finding the right people and partners, always ready to keep us moving forward at speed.",
-    linkedinUrl: "https://www.linkedin.com/in/anjali-chaurasia-instrek/",
+    name: "Sankalp G",
+    role: "Principal Technologist - R&D and Innovations",
+    image: "/optimized/sankalp.webp",
+    bio: "An IIT Bombay innovator, Sankalp loves building next-gen tech across drones, robotics, IoT, and EVs. He's the go-to guy for big, bold ideas at Instrek.",
+    linkedinUrl: "https://www.linkedin.com/in/sankalp-g-instrek/",
   },
   {
     id: 6,

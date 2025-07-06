@@ -630,7 +630,7 @@ const droneCardData = [
     titleLine2: "Energy",
     description:
       "Scalable solar solutions and smart grids for clean, connected cities.",
-    image: "/optimized/images/bulb.webp",
+    image: "/optimized/agriculR.webp",
     headline: "Clean Energy for Smarter Cities",
     overview:
       "We deploy solar-powered systems integrated with IoT and smart energy grids for sustainable growth.",
@@ -809,13 +809,13 @@ const droneCardData = [
     titleLine2: "Analytics",
     description:
       "Transform data into decisions with AI-powered analytics and dashboards.",
-    image: "/optimized/cityR.webp",
+    image: "/optimized/dataa.webp",
     headline: "Decisions That Matter, Driven by Data",
     overview:
       "We convert raw data into actionable insights using real-time dashboards, machine learning, and predictive systems.",
     capabilities: [
       {
-        image: "/optimized/icons/powerbi.svg",
+        image: "/optimized/dataa.webp",
         text: "Strategic Data Consulting for Business Growth",
       },
       {
@@ -899,7 +899,8 @@ const droneCardData = [
     titleLine2: "Skilling",
     description:
       "Hands-on training in AI, Drones, EVs & more. Learn today, earn tomorrow.",
-    image: "/optimized/droneR.webp",
+    image: "/optimized/images/strategic.webp",
+
     headline: "Building India's Tech Talent from Grassroots to Greatness",
     overview:
       "From Grade 1 to 70+, our hands-on training covers AI, EVs, Drones, IoT, and Robotics using certified trainers and modular tools.",
@@ -928,7 +929,7 @@ const droneCardData = [
     titleLine1: "High performing platforms",
     titleLine2: "and applications",
     description: "High-Performing Platforms & Applications with AI at the Core",
-    image: "/optimized/images/smartcity1.webp",
+    image: "/optimized/droneR.webp",
     headline: "High-Performing Platforms & Applications with AI at the Core",
     overview:
       "We build secure, scalable platforms and AI-integrated applications that power next-gen experiences across industries. From healthcare to tourism, and CRM to blockchain, our solutions are designed for speed, interoperability, and impact.",
@@ -958,7 +959,7 @@ const droneCardData = [
     titleLine2: "Cities",
     description:
       "Connected infrastructure, AI-powered public services, and clean air tech.",
-    image: "/optimized/images/smartcity1.webp",
+    image: "/optimized/cityq.webp",
     headline: "Cities That Think, Act, and Care",
     overview:
       "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",

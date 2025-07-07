@@ -599,22 +599,22 @@ const droneCardData = [
     titleLine1: "Drones &",
     titleLine2: "UAVs",
     description:
-      "From agriculture to crowd control—our drones take smart automation to the skies.",
+      "From militry to crowd control-our drones take smart automation to the skies.",
     image: "/optimized/droneR.webp",
     headline: "Redefining Aerial Capabilities with Intelligence",
     overview:
       "Instrek's drone solutions span agriculture, surveillance, inspections, and emergency response. We offer complete lifecycle support including pilot training, drone repair, and data intelligence.",
     capabilities: [
       {
-        image: "/optimized/agricul.webp",
+        image: "/capabilities/commercialdrone.webp",
         text: "Commercial Drones ",
       },
       {
-        image: "/optimized/images/smartcity.webp",
+        image: "/capabilities/Military.webp",
         text: "Military Drones",
       },
       {
-        image: "/optimized/images/smarcity1.webp",
+        image: "/capabilities/RDdrone.webp",
         text: "R&D Projects in Drones",
       },
       {
@@ -636,15 +636,15 @@ const droneCardData = [
       "We deploy solar-powered systems integrated with IoT and smart energy grids for sustainable growth.",
     capabilities: [
       {
-        image: "/optimized/images/bulb.webp",
+        image: "/capabilities/soloeimageinst.webp",
         text: "Solar panel installation",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/monitoring.webp",
         text: "Smart solar energy monitoring",
       },
       {
-        image: "/optimized/images/env1.webp",
+        image: "/capabilities/batterydia.webp",
         text: "Battery storage solutions",
       },
       {
@@ -665,11 +665,11 @@ const droneCardData = [
       "We support India's EV transition with solutions in vehicle assembly, battery tech, and job-ready EV training programs.",
     capabilities: [
       {
-        image: "/optimized/images/smartcity.webp",
+        image: "/capabilities/electric-scooters.webp",
         text: "E-scooters, 3W passenger & cargo EVs",
       },
       {
-        image: "/optimized/images/iot.webp",
+        image: "/capabilities/batterydia.webp",
         text: "Battery diagnostics & LFP solutions",
       },
       {
@@ -707,7 +707,7 @@ const droneCardData = [
         text: "AI for Skill India",
       },
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/Aimentor.webp",
         text: "AI Mentor for Career Success",
       },
     ],
@@ -729,11 +729,11 @@ const droneCardData = [
         text: "Predictive Maintainance using IoT",
       },
       {
-        image: "/optimized/images/iot.webp",
+        image: "/capabilities/industrialIot.webp",
         text: "Industrial IoT for Monitoring",
       },
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/EmbeddedAuto.webp",
         text: "Embedded Automation Controllers",
       },
       {
@@ -755,19 +755,19 @@ const droneCardData = [
       "From digital ID systems to credential verification, our blockchain solutions deliver data integrity and user ownership.",
     capabilities: [
       {
-        image: "/optimized/images/blockchainlern.webp",
+        image: "/capabilities/BlockchainIdenetity.webp",
         text: "Blockchain-based identity platforms",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/consentveri.webp",
         text: "Consent-driven verification systems",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/nfts.webp",
         text: "Digitally signed certificates & NFTs",
       },
       {
-        image: "/optimized/images/company-overview.webp",
+        image: "/capabilities/dashboard.webp",
         text: "Credential management dashboards",
       },
     ],
@@ -839,25 +839,25 @@ const droneCardData = [
     titleLine2: "DevOps",
     description:
       "Accelerate digital delivery with DevOps automation and cloud-native tools.",
-    image: "/optimized/agriculR.webp",
+    image: "/capabilities/cloudinfra.webp",
     headline: "Cloud-First. Code-Light. Scalable Always.",
     overview:
       "Our AI-enabled DevOps services transform the way teams manage cloud infrastructure. Whether you’re migrating securely, deploying at scale, or automating your CI/CD pipelines, we bring flexibility, speed, and simplicity across AWS, Azure, and Google Cloud.",
     capabilities: [
       {
-        image: "/optimized/images/robo.webp",
+        image: "/capabilities/cloudMigration.webp",
         text: "Cloud Strategy and Secure Migration Services",
       },
       {
-        image: "/optimized/images/smartcity.webp",
+        image: "/capabilities/cloudinfra.webp",
         text: "Scalable Cloud Infrastructure Design and Management",
       },
       {
-        image: "/optimized/icons/workflow.svg",
+        image: "/capabilities/cloudDev.webp",
         text: "DevOps Automation for Faster Software Delivery",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/cloudcontinous.webp",
         text: "Continuous Integration and Continuous Deployment Solutions",
       },
     ],
@@ -939,11 +939,11 @@ const droneCardData = [
         text: "Immersive Tourism Platform",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/BlockchainIdentity.webp",
         text: "Blockchain Identity Platform",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/aipoweredimage.webp",
         text: "Adaptive, AI-Enabled CRM",
       },
       {
@@ -965,19 +965,19 @@ const droneCardData = [
       "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",
     capabilities: [
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/aipoweredimage.webp",
         text: "AI-powered traffic & lighting",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/5gradio.webp",
         text: "5G Radio and High Capacity Low Latency Networks",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/watermeter.webp",
         text: "Smart water meters",
       },
       {
-        image: "/optimized/smartcityR1.webp",
+        image: "/capabilities/singlefreq.webp",
         text: "Single Frequency network for Disaster Management",
       },
     ],

@@ -11,7 +11,7 @@ const teamMembers = [
     role: "Founder",
     image: "/optimized/Vineet.webp",
     bio: "Vineet brings bold ideas and cutting-edge tech strategies to Instrek. An IIM Ahmedabad alum with a knack for big-picture thinking and the details that make them work.",
-    linkedinUrl: "https://www.linkedin.com/in/vineet-sharma-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/vineet82/",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const teamMembers = [
     role: "Chief Executive Officer",
     image: "/optimized/sanjanO.webp",
     bio: "With over 11 years in technology leadership, Sanjana has led global teams to deliver innovative solutions across industries. An IIM Ahmedabad alum, she brings sharp strategic insight and a collaborative spirit.",
-    linkedinUrl: "https://www.linkedin.com/in/sanjana-wadhwa-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/sanjanawadhwa94/",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const teamMembers = [
     id: 4,
     name: "Sharath M",
     role: "Fractional CTO",
-    image: "/optimized/sharat.webp",
+    image: "/optimized/sharat2.jpg",
     bio: "Sharath specializes in Products/Platforms, Blockchain, and IoT, with a passion for developing next-gen technology solutions that work in the real world.",
     linkedinUrl: "https://www.linkedin.com/in/sharath-m-instrek/",
   },
@@ -43,7 +43,7 @@ const teamMembers = [
     role: "Technology Ecosystem Coordinator",
     image: "/optimized/tithika.webp",
     bio: "Tithika ensures our products/technologies align with market needs, coordinating development with a keen sense of what's next on the map.",
-    linkedinUrl: "https://www.linkedin.com/in/tithika-mittal-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/tithika-mittal-504775321/",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const teamMembers = [
     role: "Technology Ecosystem Recruiter",
     image: "/optimized/anjali.jpg",
     bio: "Anjali is shaping Instrek's culture by finding the right people and partners, always ready to keep us moving forward at speed.",
-    linkedinUrl: "https://www.linkedin.com/in/anjali-chaurasia-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/anjalic97/",
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ const teamMembers = [
     role: "Innovations Leader – Robotics & Drones",
     image: "/optimized/narend.jpg",
     bio: "With 25 years in Defence and an IIM Ahmedabad background, Narender now leads our robotics and drone innovations, bringing battle-tested ideas to life at Instrek.",
-    linkedinUrl: "https://www.linkedin.com/in/narender-singh-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/narendersingh1168/",
   },
   {
     id: 8,
@@ -67,7 +67,7 @@ const teamMembers = [
     role: "Non-Executive Strategic Advisor",
     image: "/optimized/gaurab.webp",
     bio: "A GTM strategist and problem-solver, Gaurab helps teams move smarter and faster with a sharp eye for market fit and tactical execution.",
-    linkedinUrl: "https://www.linkedin.com/in/gaurab-ganguly-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/gaurabganguly/",
   },
   {
     id: 9,
@@ -75,7 +75,8 @@ const teamMembers = [
     role: "Drone Communications Expert",
     image: "/optimized/sri.webp",
     bio: "Sri is working on making our drones talk faster and safer. From secure links to anti-jamming tech, she's all about keeping our drones connected.",
-    linkedinUrl: "https://www.linkedin.com/in/srilalitha-srinivasan-instrek/",
+    linkedinUrl:
+      "https://www.linkedin.com/in/srilalitha-m-srinivasan-23b531243/",
   },
   {
     id: 10,
@@ -83,7 +84,7 @@ const teamMembers = [
     role: "Drone Robotics Expert",
     image: "/optimized/aryavarta.webp",
     bio: "A true robotics enthusiast who loves building Rovers and AMRs, Aryavarta is the brain behind many of our coolest drone innovations at Instrek.",
-    linkedinUrl: "https://www.linkedin.com/in/aryavarta-singh-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/aryavarta-singh-832689195/",
   },
   {
     id: 11,
@@ -91,7 +92,7 @@ const teamMembers = [
     role: "Mechanical Design Expert",
     image: "/optimized/gagan.webp",
     bio: "Gagan makes sure our drones aren't just clever on paper his simulation and design skills mean they're strong, reliable, and ready to fly.",
-    linkedinUrl: "https://www.linkedin.com/in/gagan-menderkar-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/gagan-menderkar-b3a243255/",
   },
   {
     id: 12,

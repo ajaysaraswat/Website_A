@@ -70,8 +70,8 @@ const Header = () => {
     { label: "Blog", link: "/blog", isHashLink: false },
     {
       label: "Contact",
-      link: "https://www.linkedin.com/company/instrek-technologies/posts/",
-      isHashLink: true,
+      link: "/contact-us",
+      isHashLink: false,
     },
   ];
 
@@ -97,7 +97,7 @@ const Header = () => {
 
   return (
     <header
-      className="absolute z-50 bg-[#221b60] rounded-3xl top-[20px] left-[4%] right-[4%]"
+      className="fixed z-50 bg-[#221b60] rounded-3xl top-[20px] left-[4%] right-[4%]"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
       <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between h-[60px]">

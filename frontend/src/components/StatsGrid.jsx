@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const stats = [
   {
     value: "50+",
-    label: "visionary clients empowered across sectors",
+    label: "Key clients empowered across sectors",
     title: "Visionary Clients",
     upperText: {
       line1: "From Governments to Startups,",
@@ -17,8 +17,8 @@ const stats = [
     },
   },
   {
-    value: "25+",
-    label: "engineer solutions delivered at scale",
+    value: "40+",
+    label: "In-house solutions delivered at scale",
     title: "Engineer Solutions",
     upperText: {
       line1: "AI, XR & Autonomous Systems",
@@ -44,7 +44,7 @@ const stats = [
     },
   },
   {
-    value: "40+",
+    value: "60+",
     label: "cross-disciplinary experts onboard",
     title: "Expert Team",
     upperText: {

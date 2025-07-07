@@ -31,28 +31,55 @@ const Footer = () => {
     setSubmitStatus(null);
 
     try {
-      // Open default email client with pre-filled email
+      // Use Formspree or similar service for direct email sending
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append(
+        "message",
+        `Hello,\n\nI would like to get in touch with you.\n\nMy email: ${email}\n\nBest regards,\n${email}`
+      );
+      formData.append("subject", "Contact from Website");
+
+      // Replace 'YOUR_FORMSPREE_ENDPOINT' with your actual Formspree endpoint
+      const response = await fetch(
+        "https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+        setEmail("");
+        setAgreed(false);
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Email error:", error);
+      // Fallback to mailto link if service is not available
       const subject = encodeURIComponent("Contact from Website");
       const body = encodeURIComponent(
         `Hello,\n\nI would like to get in touch with you.\n\nMy email: ${email}\n\nBest regards,\n${email}`
       );
-      const mailtoLink = `mailto:ajay@gmail.com?subject=${subject}&body=${body}`;
+      const mailtoLink = `mailto:connect@instrek.com?subject=${subject}&body=${body}`;
 
-      // Open the email client
+      // Open email client as fallback
       window.open(mailtoLink, "_blank");
 
       setSubmitStatus({
         type: "success",
-        message: "Email client opened! Please send your message.",
+        message: "Thankyou. We'll be in touch shortly!",
       });
       setEmail("");
       setAgreed(false);
-    } catch (error) {
-      console.error("Email error:", error);
-      setSubmitStatus({
-        type: "error",
-        message: "Sorry, there was an error opening your email client.",
-      });
     } finally {
       setIsSubmitting(false);
     }
@@ -104,27 +131,27 @@ const Footer = () => {
       titleLine1: "Drones &",
       titleLine2: "UAVs",
       description:
-        "From agriculture to crowd control—our drones take smart automation to the skies.",
+        "From militry to crowd control - our drones take smart automation to the skies.",
       image: "/optimized/droneR.webp",
       headline: "Redefining Aerial Capabilities with Intelligence",
       overview:
         "Instrek's drone solutions span agriculture, surveillance, inspections, and emergency response. We offer complete lifecycle support including pilot training, drone repair, and data intelligence.",
       capabilities: [
         {
-          image: "/optimized/agricul.webp",
-          text: "Agricultural spraying drones",
+          image: "/capabilities/commercialdrone.webp",
+          text: "Commercial Drones ",
         },
         {
-          image: "/optimized/images/smartcity.webp",
-          text: "Surveillance & crowd control drones",
+          image: "/capabilities/Military.webp",
+          text: "Military Drones",
         },
         {
-          image: "/optimized/images/smarcity1.webp",
-          text: "Emergency response systems",
+          image: "/capabilities/RDdrone.webp",
+          text: "R&D Projects in Drones",
         },
         {
           image: "/optimized/images/workforceTrain.webp",
-          text: "Training for drone pilots and technicians",
+          text: "Connected Drones with Encrypted Communications",
         },
       ],
       impact:
@@ -135,21 +162,21 @@ const Footer = () => {
       titleLine2: "Energy",
       description:
         "Scalable solar solutions and smart grids for clean, connected cities.",
-      image: "/optimized/images/bulb.webp",
+      image: "/optimized/agriculR.webp",
       headline: "Clean Energy for Smarter Cities",
       overview:
         "We deploy solar-powered systems integrated with IoT and smart energy grids for sustainable growth.",
       capabilities: [
         {
-          image: "/optimized/images/bulb.webp",
+          image: "/capabilities/soloeimageinst.webp",
           text: "Solar panel installation",
         },
         {
-          image: "/optimized/images/strategic.webp",
+          image: "/capabilities/monitoring.webp",
           text: "Smart solar energy monitoring",
         },
         {
-          image: "/optimized/images/env1.webp",
+          image: "/capabilities/batterydia.webp",
           text: "Battery storage solutions",
         },
         {
@@ -164,17 +191,17 @@ const Footer = () => {
       titleLine1: "Electric Vehicles",
       titleLine2: "(EVs)",
       description: "Building the EV ecosystem—2W, 3W, batteries & beyond.",
-      image: "/optimized/cityR.webp",
+      image: "/optimized/electric.webp",
       headline: "Empowering eMobility Ecosystems",
       overview:
         "We support India's EV transition with solutions in vehicle assembly, battery tech, and job-ready EV training programs.",
       capabilities: [
         {
-          image: "/optimized/images/smartcity.webp",
+          image: "/capabilities/electric-scooters.webp",
           text: "E-scooters, 3W passenger & cargo EVs",
         },
         {
-          image: "/optimized/images/iot.webp",
+          image: "/capabilities/batterydia.webp",
           text: "Battery diagnostics & LFP solutions",
         },
         {
@@ -194,26 +221,26 @@ const Footer = () => {
       titleLine2: "Intelligence",
       description:
         "From traffic systems to medical diagnosis—AI that understands and acts.",
-      image: "/optimized/agriculR.webp",
+      image: "/optimized/images/robo.webp",
       headline: "Making Machines Think Humanly",
       overview:
         "We deploy conversational AI, generative AI, and agentic bots for domains like healthcare, fintech, transport, and education.",
       capabilities: [
         {
           image: "/optimized/images/aloudailab.webp",
-          text: "Voice-based bots with NLP & multilingual support",
+          text: "Multilingual LLM Development",
         },
         {
           image: "/optimized/images/aiImage.webp",
-          text: "AI for DevOps, diagnosis & customer experience",
+          text: " Agentic AI for Effortless Transactions",
         },
         {
           image: "/optimized/images/digitaltrans.webp",
-          text: "Healthcare AI tools (DietRx, HuntGPT, etc.)",
+          text: "AI for Skill India",
         },
         {
-          image: "/optimized/images/workforceTrain.webp",
-          text: "AI training and application development",
+          image: "/capabilities/Aimentor.webp",
+          text: "AI Mentor for Career Success",
         },
       ],
       impact:
@@ -231,19 +258,19 @@ const Footer = () => {
       capabilities: [
         {
           image: "/optimized/images/smartcity.webp",
-          text: "Smart water meters and lighting systems",
+          text: "Predictive Maintainance using IoT",
         },
         {
-          image: "/optimized/images/iot.webp",
-          text: "Embedded automation controllers",
+          image: "/capabilities/industrialIot.webp",
+          text: "Industrial IoT for Monitoring",
         },
         {
-          image: "/optimized/images/workforceTrain.webp",
-          text: "Predictive maintenance for city assets",
+          image: "/capabilities/EmbeddedAuto.webp",
+          text: "Embedded Automation Controllers",
         },
         {
           image: "/optimized/images/digitaltrans.webp",
-          text: "IoT training labs & simulators",
+          text: "Hands on IoT Trainings",
         },
       ],
       impact:
@@ -260,19 +287,19 @@ const Footer = () => {
         "From digital ID systems to credential verification, our blockchain solutions deliver data integrity and user ownership.",
       capabilities: [
         {
-          image: "/optimized/images/blockchainlern.webp",
+          image: "/capabilities/BlockchainIdenetity.webp",
           text: "Blockchain-based identity platforms",
         },
         {
-          image: "/optimized/images/strategic.webp",
+          image: "/capabilities/consentveri.webp",
           text: "Consent-driven verification systems",
         },
         {
-          image: "/optimized/images/digitaltrans.webp",
+          image: "/capabilities/nfts.webp",
           text: "Digitally signed certificates & NFTs",
         },
         {
-          image: "/optimized/images/company-overview.webp",
+          image: "/capabilities/dashboard.webp",
           text: "Credential management dashboards",
         },
       ],
@@ -284,7 +311,7 @@ const Footer = () => {
       titleLine2: "Systems",
       description:
         "Smart automation across industries—from robotics to utilities.",
-      image: "/optimized/images/bulb.webp",
+      image: "/optimized/images/robo.webp",
       headline: "Automation Built from the Core",
       overview:
         "We develop and deploy embedded controllers, remote sensors, and automation modules across verticals.",
@@ -299,11 +326,11 @@ const Footer = () => {
         },
         {
           image: "/optimized/images/digitaltrans.webp",
-          text: "IoT-integrated microcontrollers",
+          text: "Hands on Robotics Trainings",
         },
         {
           image: "/optimized/images/workforceTrain.webp",
-          text: "End-to-end embedded labs for training",
+          text: "Embedded Roboticd Platforms",
         },
       ],
       impact:
@@ -314,26 +341,26 @@ const Footer = () => {
       titleLine2: "Analytics",
       description:
         "Transform data into decisions with AI-powered analytics and dashboards.",
-      image: "/optimized/cityR.webp",
+      image: "/optimized/dataa.webp",
       headline: "Decisions That Matter, Driven by Data",
       overview:
         "We convert raw data into actionable insights using real-time dashboards, machine learning, and predictive systems.",
       capabilities: [
         {
-          image: "/optimized/icons/powerbi.svg",
-          text: "Power BI dashboards & ETL pipelines",
+          image: "/optimized/dataa.webp",
+          text: "Strategic Data Consulting for Business Growth",
         },
         {
           image: "/optimized/icons/analytics.svg",
-          text: "Predictive analytics & smart KPIs tracking",
+          text: "Advanced Analytics Delivering Actionable Business Insights",
         },
         {
           image: "/optimized/icons/reporting.svg",
-          text: "Custom reporting systems for healthcare, mobility, and governance",
+          text: "Reliable Data Engineering and Seamless Integration",
         },
         {
           image: "/optimized/icons/migration.svg",
-          text: "Legacy data migration & modernization for scalable analytics",
+          text: "Business Intelligence Solutions for Informed Decisions",
         },
       ],
       impact:
@@ -344,86 +371,57 @@ const Footer = () => {
       titleLine2: "DevOps",
       description:
         "Accelerate digital delivery with DevOps automation and cloud-native tools.",
-      image: "/optimized/agriculR.webp",
-      headline: "Next-Level Infrastructure with AI-Powered DevOps",
+      image: "/capabilities/cloudinfra.webp",
+      headline: "Cloud-First. Code-Light. Scalable Always.",
       overview:
-        "We streamline infrastructure management using natural language commands and AI-based workflows.",
+        "Our AI-enabled DevOps services transform the way teams manage cloud infrastructure. Whether you’re migrating securely, deploying at scale, or automating your CI/CD pipelines, we bring flexibility, speed, and simplicity across AWS, Azure, and Google Cloud.",
       capabilities: [
         {
-          image: "/optimized/images/robo.webp",
-          text: "Cross-cloud deployment platforms",
+          image: "/capabilities/cloudMigration.webp",
+          text: "Cloud Strategy and Secure Migration Services",
         },
         {
-          image: "/optimized/images/smartcity.webp",
-          text: "AI-powered DevOps orchestration",
+          image: "/capabilities/cloudinfra.webp",
+          text: "Scalable Cloud Infrastructure Design and Management",
         },
         {
-          image: "/optimized/icons/workflow.svg",
-          text: "Workflow automation with approval chains",
+          image: "/capabilities/cloudDev.webp",
+          text: "DevOps Automation for Faster Software Delivery",
         },
         {
-          image: "/optimized/images/strategic.webp",
-          text: "Infrastructure-as-code and containerization",
+          image: "/capabilities/cloudcontinous.webp",
+          text: "Continuous Integration and Continuous Deployment Solutions",
         },
       ],
       impact:
         "Cut deployment time and cost while increasing scalability and flexibility.",
-    },
-    arvr: {
-      titleLine1: "AR/VR &",
-      titleLine2: "Microapps",
-      description:
-        "Augmented campaigns, 3D demos & remote learning—no downloads required.",
-      image: "/optimized/skillR.webp",
-      headline: "Interactivity Without Barriers",
-      overview:
-        "We deliver no-installation AR/VR microapps for onboarding, marketing, education, and engagement.",
-      capabilities: [
-        {
-          image: "/optimized/icons/ar.svg",
-          text: "Marker-based AR experiences",
-        },
-        {
-          image: "/optimized/icons/3d.svg",
-          text: "3D model visualizations on mobile",
-        },
-        {
-          image: "/optimized/images/strategic.webp",
-          text: "Microapps via QR/NFC (e.g., demos, feedback, onboarding)",
-        },
-        {
-          image: "/optimized/icons/vr.svg",
-          text: "Immersive VR walkthroughs for training, exhibitions & simulations",
-        },
-      ],
-      impact:
-        "Boosting campaign ROI, engagement, and learning through immersive, frictionless interactions.",
     },
     skilling: {
       titleLine1: "Tech",
       titleLine2: "Skilling",
       description:
         "Hands-on training in AI, Drones, EVs & more. Learn today, earn tomorrow.",
-      image: "/optimized/droneR.webp",
+      image: "/optimized/images/strategic.webp",
+
       headline: "Building India's Tech Talent from Grassroots to Greatness",
       overview:
         "From Grade 1 to 70+, our hands-on training covers AI, EVs, Drones, IoT, and Robotics using certified trainers and modular tools.",
       capabilities: [
         {
           image: "/optimized/icons/stem.svg",
-          text: "SAPL-aligned STEM kits (Grades 1–12)",
+          text: "Hands on Drone Trainings",
         },
         {
           image: "/optimized/images/strategic.webp",
-          text: "Adult skilling labs in Tier 2/3 cities",
+          text: "Hands on Robotics Trainings",
         },
         {
           image: "/optimized/images/strategic.webp",
-          text: "Industry-ready simulators and toolkits",
+          text: "Hands on Embedded Designs Trainings",
         },
         {
           image: "/optimized/icons/job.svg",
-          text: "Job mapping & smart alerts",
+          text: "Hand on EV & Solar Trainings",
         },
       ],
       impact:
@@ -434,26 +432,26 @@ const Footer = () => {
       titleLine2: "Cities",
       description:
         "Connected infrastructure, AI-powered public services, and clean air tech.",
-      image: "/optimized/images/bulb.webp",
+      image: "/optimized/cityq.webp",
       headline: "Cities That Think, Act, and Care",
       overview:
         "Our technology stack builds cleaner, more efficient urban ecosystems with smart connectivity, clean air, and AI-driven governance.",
       capabilities: [
         {
-          image: "/optimized/images/workforceTrain.webp",
+          image: "/capabilities/aipoweredimage.webp",
           text: "AI-powered traffic & lighting",
         },
         {
-          image: "/optimized/images/strategic.webp",
-          text: "Indoor/outdoor air purification",
+          image: "/capabilities/5gradio.webp",
+          text: "5G Radio and High Capacity Low Latency Networks",
         },
         {
-          image: "/optimized/images/digitaltrans.webp",
-          text: "Water monitoring, safety & disaster systems",
+          image: "/capabilities/watermeter.webp",
+          text: "Smart water meters",
         },
         {
-          image: "/optimized/smartcityR1.webp",
-          text: "Smart transport & planning dashboards",
+          image: "/capabilities/singlefreq.webp",
+          text: "Single Frequency network for Disaster Management",
         },
       ],
       impact:
@@ -466,8 +464,8 @@ const Footer = () => {
       { name: "Our Team", href: "/team" },
       { name: "Why choose us", href: "#why" },
       {
-        name: "Connect us ",
-        href: "https://www.linkedin.com/company/instrek-technologies/posts/",
+        name: "Contact us ",
+        href: "/contact-us",
       },
       { name: "Privacy Policy", href: "/privacy-policy" },
     ],
@@ -477,15 +475,15 @@ const Footer = () => {
       { name: "Electric Vehicles", serviceKey: "evs" },
       { name: "Artificial Intelligence", serviceKey: "ai" },
       { name: "Internet of Things (IoT)", serviceKey: "iot" },
-      { name: "Blockchain & Identity", serviceKey: "blockchain" },
+      { name: "Robotics Systems", serviceKey: "embedded" },
     ],
     techServices: [
-      { name: "Embedded Systems", serviceKey: "embedded" },
       { name: "Data & Analytics", serviceKey: "analytics" },
       { name: "Cloud & DevOps", serviceKey: "cloud" },
       { name: "AR/VR & Microapps", serviceKey: "arvr" },
       { name: "Tech Skilling", serviceKey: "skilling" },
       { name: "Smart Cities", serviceKey: "smartCities" },
+      { name: "Blockchain & Identity", serviceKey: "blockchain" },
     ],
   };
 
@@ -522,7 +520,7 @@ const Footer = () => {
                 Get in Touch
               </h3>
               <p className="text-gray-300 mb-4">
-                Enter your email to contact us directly
+                Reach out to us - let's talk possibilities.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">

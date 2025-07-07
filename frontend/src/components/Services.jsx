@@ -926,6 +926,36 @@ const droneCardData = [
       "Creating a tech-savvy workforce that stays, grows, and innovates locally.",
   },
   {
+    titleLine1: "Integrated Examination & Intelligent",
+    titleLine2: "Document Management Solutions",
+    description:
+      "Smart automation across industries—from robotics to utilities.",
+    image: "/capabilities/intelligent.webp",
+    headline: "Automation Built from the Core",
+    overview:
+      "We deliver secure, efficient, AI-powered solutions spanning the entire examination lifecycle with smooth, error-free pre- and post-exam management. Our end-to-end OMR services include precision printing, advanced data capture software, and secure, accurate processing. We offer high-quality scanning with AI-based OCR and intelligent document management systems for secure, searchable digital assets. Additionally, we develop tailored portals and on-screen marking solutions for seamless, technology-driven assessment experiences.",
+    capabilities: [
+      {
+        image: "/capabilities/Aimentor.webp",
+        text: "Examination Lifecycle Solutions",
+      },
+      {
+        image: "/optimized/images/iot.webp",
+        text: "OMR Solutions",
+      },
+      {
+        image: "/capabilities/consentveri.webp",
+        text: "Scanning & Digitization",
+      },
+      {
+        image: "/capabilities/dashboard.webp",
+        text: "Custom Platforms & On-Screen Marking",
+      },
+    ],
+    impact:
+      "Powering scalable, device-level intelligence to automate operations and enhance control.",
+  },
+  {
     titleLine1: "High performing platforms",
     titleLine2: "and applications",
     description: "High-Performing Platforms & Applications with AI at the Core",

@@ -44,7 +44,7 @@ const teamMembers = [
     role: "Principal Technologist - R&D and Innovations",
     image: "/optimized/sankalp.webp",
     bio: "An IIT Bombay innovator, Sankalp loves building next-gen tech across drones, robotics, IoT, and EVs. He's the go-to guy for big, bold ideas at Instrek.",
-    linkedinUrl: "https://www.linkedin.com/in/sankalp-g-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/sankalp-gupta-tcoe-811733248/",
   },
   {
     id: 6,

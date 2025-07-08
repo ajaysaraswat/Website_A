@@ -869,7 +869,7 @@ const droneCardData = [
     titleLine2: "Microapps",
     description:
       "Augmented campaigns, 3D demos & remote learning—no downloads required.",
-    image: "/capabilities/ARVRFIN.jpg",
+    image: "/capabilities/ARVRFIN.webp",
     headline: "Interactivity Without Barriers",
     overview:
       "We deliver no-installation AR/VR microapps for onboarding, marketing, education, and engagement.",

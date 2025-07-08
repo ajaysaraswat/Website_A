@@ -75,10 +75,6 @@ const teamMembers = [
 const Team = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const handleBackClick = () => {
     navigate("/");
     // Add a small delay to ensure navigation completes before scrolling

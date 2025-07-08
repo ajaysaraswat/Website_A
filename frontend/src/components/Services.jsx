@@ -618,7 +618,7 @@ const droneCardData = [
         text: "R&D Projects in Drones",
       },
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/connectedDrones.webp",
         text: "Connected Drones with Encrypted Communications",
       },
     ],
@@ -648,7 +648,7 @@ const droneCardData = [
         text: "Battery storage solutions",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/RenewableLabs.webp",
         text: "Renewable energy labs and training programs",
       },
     ],
@@ -677,7 +677,7 @@ const droneCardData = [
         text: "EV maintenance & repair labs",
       },
       {
-        image: "/optimized/images/blockchainlern.webp",
+        image: "/capabilities/EVmaintance.webp",
         text: "Integrated EV education ecosystem",
       },
     ],
@@ -703,7 +703,7 @@ const droneCardData = [
         text: " Agentic AI for Effortless Transactions",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/AiForSkill.webp",
         text: "AI for Skill India",
       },
       {
@@ -725,7 +725,7 @@ const droneCardData = [
       "We build connected ecosystems for energy, utilities, and mobility using smart sensors, controllers, and IoT hubs.",
     capabilities: [
       {
-        image: "/optimized/images/smartcity.webp",
+        image: "/capabilities/Pridictive.webp",
         text: "Predictive Maintainance using IoT",
       },
       {
@@ -737,7 +737,7 @@ const droneCardData = [
         text: "Embedded Automation Controllers",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/Handson.webp",
         text: "Hands on IoT Trainings",
       },
     ],
@@ -749,13 +749,13 @@ const droneCardData = [
     titleLine2: "Identity",
     description:
       "Digital identity, zero-trust systems, and secure transactions powered by blockchain.",
-    image: "/optimized/droneR.webp",
+    image: "/capabilities/BlockchainIdentity.webp",
     headline: "Decentralized Trust for the Digital Age",
     overview:
       "From digital ID systems to credential verification, our blockchain solutions deliver data integrity and user ownership.",
     capabilities: [
       {
-        image: "/capabilities/BlockchainIdenetity.webp",
+        image: "/capabilities/BlockchainBased.webp",
         text: "Blockchain-based identity platforms",
       },
       {
@@ -789,15 +789,15 @@ const droneCardData = [
         text: "Remote device control systems",
       },
       {
-        image: "/optimized/images/iot.webp",
+        image: "/capabilities/EmbeddedRobo.webp",
         text: "Embedded robotics platforms",
       },
       {
-        image: "/optimized/images/digitaltrans.webp",
+        image: "/capabilities/HandsOnRobo.webp",
         text: "Hands on Robotics Trainings",
       },
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/EmbeddedAuto.webp",
         text: "Embedded Roboticd Platforms",
       },
     ],
@@ -819,15 +819,15 @@ const droneCardData = [
         text: "Strategic Data Consulting for Business Growth",
       },
       {
-        image: "/optimized/icons/analytics.svg",
+        image: "/capabilities/AdvancedAnaly.webp",
         text: "Advanced Analytics Delivering Actionable Business Insights",
       },
       {
-        image: "/optimized/icons/reporting.svg",
+        image: "/capabilities/ReliableData.webp",
         text: "Reliable Data Engineering and Seamless Integration",
       },
       {
-        image: "/optimized/icons/migration.svg",
+        image: "/capabilities/BussinessIntelli.webp",
         text: "Business Intelligence Solutions for Informed Decisions",
       },
     ],
@@ -869,25 +869,25 @@ const droneCardData = [
     titleLine2: "Microapps",
     description:
       "Augmented campaigns, 3D demos & remote learning—no downloads required.",
-    image: "/optimized/skillR.webp",
+    image: "/capabilities/ARVRFIN.jpg",
     headline: "Interactivity Without Barriers",
     overview:
       "We deliver no-installation AR/VR microapps for onboarding, marketing, education, and engagement.",
     capabilities: [
       {
-        image: "/optimized/icons/ar.svg",
+        image: "/capabilities/Redifing.webp",
         text: "Redefining Tourism via AR/VR",
       },
       {
-        image: "/optimized/icons/3d.svg",
+        image: "/capabilities/3DmodelVizu.webp",
         text: "3D Model Visualisation on Mobile",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/ARVRFIN.webp",
         text: "AR/VR for Fintech, Marketing/Branding",
       },
       {
-        image: "/optimized/icons/vr.svg",
+        image: "/capabilities/ImmersiveVr.webp",
         text: "Immersive VR walkthroughs for training, exhibitions & simulations",
       },
     ],
@@ -906,11 +906,11 @@ const droneCardData = [
       "From Grade 1 to 70+, our hands-on training covers AI, EVs, Drones, IoT, and Robotics using certified trainers and modular tools.",
     capabilities: [
       {
-        image: "/optimized/icons/stem.svg",
+        image: "/capabilities/Handson.webp",
         text: "Hands on Drone Trainings",
       },
       {
-        image: "/optimized/images/strategic.webp",
+        image: "/capabilities/HandsOnRobo.webp",
         text: "Hands on Robotics Trainings",
       },
       {
@@ -918,7 +918,7 @@ const droneCardData = [
         text: "Hands on Embedded Designs Trainings",
       },
       {
-        image: "/optimized/icons/job.svg",
+        image: "/capabilities/RenewableLabs.webp",
         text: "Hand on EV & Solar Trainings",
       },
     ],
@@ -940,7 +940,7 @@ const droneCardData = [
         text: "Examination Lifecycle Solutions",
       },
       {
-        image: "/optimized/images/iot.webp",
+        image: "/optimized/images/strategic.webp",
         text: "OMR Solutions",
       },
       {
@@ -969,7 +969,7 @@ const droneCardData = [
         text: "Immersive Tourism Platform",
       },
       {
-        image: "/capabilities/BlockchainIdentity.webp",
+        image: "/capabilities/BlockchainBased.webp",
         text: "Blockchain Identity Platform",
       },
       {

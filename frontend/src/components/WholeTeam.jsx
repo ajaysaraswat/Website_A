@@ -3,6 +3,7 @@ import TeamCard from "./TeamCard";
 //const TeamCard = lazy(() => import("./TeamCard"));
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import Header from "./Header";
 
 const teamMembers = [
   {
@@ -100,16 +101,12 @@ const teamMembers = [
     role: "Mechanical Design & Manufacturing Expert",
     image: "/optimized/vivek.webp", // (Consider updating with a unique image for Vivek)
     bio: "Vivek turns ideas into real, buildable drone parts. He's all about making sure our designs work in the real world, not just on a screen.",
-    linkedinUrl: "https://www.linkedin.com/in/vivek-kolekar-instrek/",
+    linkedinUrl: "https://www.linkedin.com/in/vivek-kolekar-19689721b",
   },
 ];
 
 const WholeTeam = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleBackClick = () => {
     navigate("/");
@@ -123,7 +120,8 @@ const WholeTeam = () => {
 
   return (
     <>
-      <div className="w-full px-8 py-10 bg-[#121212]">
+      <Header />
+      <div className="w-full px-8 py-10 bg-[#121212] pt-[80px]">
         <div>
           <div className="space-y-10">
             <div>

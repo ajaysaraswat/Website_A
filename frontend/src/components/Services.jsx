@@ -926,10 +926,10 @@ const droneCardData = [
       "Creating a tech-savvy workforce that stays, grows, and innovates locally.",
   },
   {
-    titleLine1: "Integrated Examination & Intelligent",
-    titleLine2: "Document Management Solutions",
+    titleLine1: "AI Driven Examination &",
+    titleLine2: " Document Solutions",
     description:
-      "Smart automation across industries—from robotics to utilities.",
+      "Smart automation across industries-from robotics to utilities.",
     image: "/capabilities/intelligent.webp",
     headline: "Automation Built from the Core",
     overview:

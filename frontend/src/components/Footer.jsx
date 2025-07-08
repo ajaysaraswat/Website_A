@@ -95,14 +95,8 @@ const Footer = () => {
       return;
     }
 
-    // For regular routes, navigate first then scroll
+    // For regular routes, navigate
     navigate(href);
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }, 0);
   };
 
   const handleServiceClick = (serviceData) => {
@@ -111,18 +105,10 @@ const Footer = () => {
         service: serviceData,
       },
     });
-    // Scroll to top after navigation
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleLogoClick = () => {
     navigate("/");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }, 0);
   };
 
   // Service data matching the structure from Services.jsx

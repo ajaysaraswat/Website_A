@@ -17,9 +17,10 @@ import ContactSection from "./components/ContactSection";
 //import Footer from "./components/Footer";
 const Footer = lazy(() => import("./components/Footer"));
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import ScrollToTop from "./components/ScrollToTop";
 import Why from "./components/Why";
 import WhyCard from "./components/WhyCard";
-//const WhyCard = lazy(() => import("./components/WhyCard"));
+//const WhyCard = lazy(() => => import("./components/WhyCard"));
 
 import Technology from "./components/Technology";
 
@@ -46,6 +47,7 @@ const LoadingSpinner = () => (
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="font-[Neue_Montreal] overflow-x-hidden">
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>

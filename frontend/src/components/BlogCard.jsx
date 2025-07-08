@@ -7,9 +7,6 @@ const BlogCard = ({ blog, featured = false }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // First scroll to top
-    window.scrollTo(0, 0);
-    // Then navigate
     navigate(`/blog/${blog.id}`);
   };
 

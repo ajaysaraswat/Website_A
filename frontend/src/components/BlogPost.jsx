@@ -17,18 +17,9 @@ const BlogPost = () => {
     img.onload = () => setIsLoaded(true);
   }, []);
 
-  // Scroll to top when component mounts
-  useEffect(() => {
-    // Force scroll to top immediately when component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
   const blog = blogs.find((b) => b.id === parseInt(id));
 
   const handleBackClick = () => {
-    // First scroll to top
-    window.scrollTo(0, 0);
-    // Then navigate
     navigate("/blog");
   };
 

@@ -33,7 +33,7 @@ const Header = () => {
       // If we're on home page, check scroll position for sections
       if (pathname === "/") {
         const sections = ["home", "about", "services", "team"];
-        const scrollPosition = window.scrollY + 100; // Offset for header height
+        const scrollPosition = window.scrollY + 120; // Increased offset for header height
 
         for (let i = sections.length - 1; i >= 0; i--) {
           const section = document.getElementById(sections[i]);
@@ -97,10 +97,10 @@ const Header = () => {
 
   return (
     <header
-      className="fixed z-50 bg-[#221b60] rounded-3xl top-[20px] left-[4%] right-[4%]"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#221b60] w-full"
       style={{ fontFamily: "'PP Neue Montreal', sans-serif" }}
     >
-      <div className="max-w-7xl mx-auto px-1 py-3 flex items-center justify-between h-[60px]">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-[60px]">
         {/* Logo with loading state */}
         <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
           {isLoaded ? (

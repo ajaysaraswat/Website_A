@@ -7,11 +7,6 @@ const ServiceDes = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Scroll to top when component mounts - changed to instant behavior
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, []);
-
   const serviceData = location.state?.service || {
     titleLine1: "Our",
     titleLine2: "Services",
@@ -69,12 +64,6 @@ const ServiceDes = () => {
 
   const handleLogoClick = () => {
     navigate("/");
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }, 0);
   };
 
   const handleLinkClick = (href) => {
@@ -87,14 +76,8 @@ const ServiceDes = () => {
       return;
     }
 
-    // For regular routes, navigate first then scroll
+    // For regular routes, navigate
     navigate(href);
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }, 0);
   };
 
   return (

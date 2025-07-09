@@ -30,14 +30,14 @@ const ContactSection = () => {
             title="Email Us"
             description="Reach out directly to our support team"
             actionText="connect@instrek.com"
-            actionHref="mailto:connect@instrek.com"
+            actionHref="mailto:connect@instrek.com?subject=Inquiry from Instrek Website&body=Hello,%0D%0A%0D%0AI would like to learn more about your services.%0D%0A%0D%0ABest regards,"
           />
 
           <ContactCard
             icon={<Calendar className="w-8 h-8" />}
             title="Schedule a Demo"
-            description="See Instrek in action with a personalized demo"
-            actionText="Book a time slot"
+            description="Schedule a demo meeting - both you and Instrek will receive calendar invites"
+            actionText="Schedule Demo"
             isButton={true}
           />
         </div>

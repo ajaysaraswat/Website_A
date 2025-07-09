@@ -11,7 +11,7 @@ const ContactCard = ({
   isButton = false,
 }) => {
   return (
-    <div className="bg-purple-600 rounded-2xl border border-border/50 p-8 text-center hover:shadow-lg transition-all duration-300 hover:border-border/80">
+    <div className="bg-white rounded-2xl border border-border/50 p-8 text-center hover:shadow-lg transition-all duration-300 hover:border-border/80">
       <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
         <div className="text-primary-foreground text-2xl">{icon}</div>
       </div>

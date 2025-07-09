@@ -779,7 +779,7 @@ const droneCardData = [
     titleLine2: "Systems",
     description:
       "Smart automation across industries—from robotics to utilities.",
-    image: "/optimized/images/robo.webp",
+    image: "/capabilities/roboticsystem.avif",
     headline: "Automation Built from the Core",
     overview:
       "We develop and deploy embedded controllers, remote sensors, and automation modules across verticals.",
@@ -959,25 +959,25 @@ const droneCardData = [
     titleLine1: "High performing platforms",
     titleLine2: "and applications",
     description: "High-Performing Platforms & Applications with AI at the Core",
-    image: "/optimized/droneR.webp",
+    image: "/capabilities/HighPerformance.webp",
     headline: "High-Performing Platforms & Applications with AI at the Core",
     overview:
       "We build secure, scalable platforms and AI-integrated applications that power next-gen experiences across industries. From healthcare to tourism, and CRM to blockchain, our solutions are designed for speed, interoperability, and impact.",
     capabilities: [
       {
-        image: "/optimized/images/workforceTrain.webp",
+        image: "/capabilities/immersivetour.webp",
         text: "Immersive Tourism Platform",
       },
       {
-        image: "/capabilities/BlockchainBased.webp",
+        image: "/capabilities/BlockchainBasedIden.webp",
         text: "Blockchain Identity Platform",
       },
       {
-        image: "/capabilities/aipoweredimage.webp",
+        image: "/capabilities/CRM.png",
         text: "Adaptive, AI-Enabled CRM",
       },
       {
-        image: "/optimized/smartcityR1.webp",
+        image: "/capabilities/telemedicine.jpg",
         text: "Smart Telemedicine for the Digital Age",
       },
     ],

@@ -84,7 +84,7 @@ export default function StatCard({ title = "ajay", value, label, upperText }) {
 
       {/* Subtitle with improved styling */}
       <div className="relative">
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-2xl text-white leading-relaxed text-center max-w-[90%] relative z-10">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-xl xl:text-2xl text-white leading-relaxed text-center max-w-[95%] lg:max-w-[85%] xl:max-w-[80%] relative z-10">
           {label}
         </p>
 

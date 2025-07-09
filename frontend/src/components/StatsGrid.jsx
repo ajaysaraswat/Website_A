@@ -106,7 +106,7 @@ const StatsGrid = () => {
           {/* Fixed Position Header */}
           <div className="absolute top-8 left-0 right-0 z-20">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white px-4 mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold pt-8 text-white px-4 mb-8">
                 WHY CHOOSE <span className="text-[#ea4820]">US</span> ?
               </h2>
               <p className="text-2xl sm:text-2xl md:text-3xl lg:text-3xl  text-white ">
@@ -124,8 +124,8 @@ const StatsGrid = () => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="card min-w-[96vw] sm:min-w-[92vw] md:min-w-[80vw] lg:min-w-[420px] xl:min-w-[480px] 
-                            w-[96vw] sm:w-[92vw] md:w-[80vw] lg:w-[420px] xl:w-[480px] flex-shrink-0"
+                  className="card min-w-[96vw] sm:min-w-[92vw] md:min-w-[80vw] lg:min-w-[500px] xl:min-w-[600px] 2xl:min-w-[700px] 
+                            w-[96vw] sm:w-[92vw] md:w-[80vw] lg:w-[520px] xl:w-[600px] 2xl:w-[700px] flex-shrink-0"
                 >
                   <StatCard
                     title={stat.title}

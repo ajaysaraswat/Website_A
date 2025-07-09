@@ -26,7 +26,7 @@ const stats = [
     },
   },
   {
-    value: "20+",
+    value: "25+",
     label: "in-house deep-tech innovations",
     title: "Deep-Tech R&D",
     upperText: {

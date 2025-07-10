@@ -1,13 +1,8 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useScrollPosition } from "./useScrollPosition";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    // Scroll to top whenever pathname changes
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // Use the custom hook to handle scroll position management
+  useScrollPosition();
 
   return null;
 };

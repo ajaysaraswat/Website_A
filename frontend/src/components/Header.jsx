@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // Icons
 import { Link, useLocation } from "react-router-dom";
+import { useScrollPosition } from "./useScrollPosition";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const location = useLocation();
+  const { saveCurrentScrollPosition, clearSavedScrollPosition } =
+    useScrollPosition();
 
   useEffect(() => {
     // Preload the logo image
@@ -76,6 +79,10 @@ const Header = () => {
   ];
 
   const handleLogoClick = () => {
+    // Save current scroll position if we're on home page
+    if (window.location.pathname === "/") {
+      saveCurrentScrollPosition();
+    }
     window.location.href = "/"; // This will force a page reload and navigate to home
   };
 
@@ -88,8 +95,15 @@ const Header = () => {
       return;
     }
 
+    // Save current scroll position if we're on home page and navigating away
+    if (window.location.pathname === "/" && !item.link.startsWith("/#")) {
+      saveCurrentScrollPosition();
+    }
+
     // For internal navigation, use React Router
     if (item.link.startsWith("/#")) {
+      // Clear saved scroll position when navigating to specific sections
+      clearSavedScrollPosition();
       // Navigate to home page first, then scroll to section
       window.location.href = item.link;
     }

@@ -36,7 +36,7 @@ const ContactCard = ({
         endDate.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
 
       // Include both user and Instrek emails in the event
-      const userEmail = "user@example.com"; // This would be captured from user input
+      const userEmail = ""; // This would be captured from user input
       const instrekEmail = "connect@instrek.com";
       const attendees = encodeURIComponent(`${userEmail},${instrekEmail}`);
 

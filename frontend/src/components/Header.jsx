@@ -103,18 +103,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-[60px]">
         {/* Logo with loading state */}
         <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
-          {isLoaded ? (
-            <img
-              src="/optimized/Logo_White.webp"
-              alt="Instrek Logo"
-              className="h-20 w-25 pl-4 lg:pl-0.5 object-contain"
-              loading="eager"
-              width="100"
-              height="80"
-            />
-          ) : (
-            <div className="h-20 w-25 pl-4 lg:pl-0.5 bg-gray-700 animate-pulse" />
-          )}
+          <img
+            src="/optimized/Logo_White.webp"
+            alt="Instrek Logo"
+            className="h-20 w-25 pl-4 lg:pl-0.5 object-contain"
+            loading="eager"
+            width="100"
+            height="80"
+          />
         </div>
 
         {/* Desktop Nav */}

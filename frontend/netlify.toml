@@ -8,4 +8,11 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18" 
+  NODE_VERSION = "18"
+
+# Form configuration
+[[headers]]
+  for = "/form.html"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block" 

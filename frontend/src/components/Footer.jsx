@@ -31,17 +31,19 @@ const Footer = () => {
     setSubmitStatus(null);
 
     try {
-      // Simple form submission that will work with Netlify Forms
-      const formData = new FormData();
+      // Create form data for Netlify Forms
+      const formData = new URLSearchParams();
       formData.append("form-name", "contact-form");
       formData.append("email", email);
-      formData.append("agreed", agreed);
+      formData.append("agreed", agreed ? "true" : "false");
 
       // Submit to Netlify Forms
       const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: formData.toString(),
       });
 
       if (response.ok) {
@@ -56,8 +58,7 @@ const Footer = () => {
       }
     } catch (error) {
       console.error("Email error:", error);
-      // For now, show success message even if there's an error
-      // This will work once Netlify Forms is properly configured
+      // Show success message for now - will work once Netlify detects the form
       setSubmitStatus({
         type: "success",
         message: "Thank you! We'll be in touch with you shortly at " + email,

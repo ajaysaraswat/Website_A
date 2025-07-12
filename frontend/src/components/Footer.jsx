@@ -496,6 +496,7 @@ const Footer = () => {
                 onSubmit={handleSubmit}
                 className="space-y-4"
                 data-netlify="true"
+                netlify
                 name="contact-form"
               >
                 <input type="hidden" name="form-name" value="contact-form" />
